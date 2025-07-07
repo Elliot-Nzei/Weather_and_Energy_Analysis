@@ -1,0 +1,30 @@
+Part 1: Data Collection - Next Steps
+
+You have successfully set up the folder structure and created the necessary scripts for data collection. Here's how to proceed:
+
+1. Obtain API Keys:
+   - You need API keys from both the National Oceanic and Atmospheric Administration (NOAA) and the U.S. Energy Information Administration (EIA).
+   - NOAA Token: You can request a token from here: https://www.ncdc.noaa.gov/cdo-web/token
+   - EIA API Key: You can register for a free API key here: https://www.eia.gov/opendata/register.php
+
+2. Update the Configuration File:
+   - Open the `config/config.yaml` file.
+   - Replace the placeholder values "YOUR_NOAA_TOKEN" and "YOUR_EIA_API_KEY" with the actual keys you obtained in the previous step.
+
+3. Run the Scripts:
+   - Open your terminal or command prompt and navigate to the project's root directory: `C:\Users\USER\Documents\AI_Training\work\Weather_and_Energy_Analysis`
+   - To fetch the most recent data (for yesterday), run the main pipeline script:
+     ```
+     python src/pipeline.py
+     ```
+   - To backfill the last 90 days of historical data, run the backfill script:
+     ```
+     python backfill_historical.py
+     ```
+     Note: This might take some time to complete as it makes many API requests.
+
+4. Verify the Output:
+   - After running the scripts, you will find the collected data in the `data/raw/` directory.
+   - The files will be in JSON format, named according to the data type, city, and date (e.g., `weather_New_York_20250705.json`).
+
+Once you have successfully collected some data, we can move on to Part 2: Data Cleaning and Quality Assurance.
