@@ -17,7 +17,7 @@ def load_config():
 
 def get_weather_data(city, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
-    url = f"https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,TAVG&units=standard"
+    url = f"https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
     headers = {'token': api_key}
     retries = 3
     for i in range(retries):
@@ -26,17 +26,38 @@ def get_weather_data(city, date, api_key):
             response.raise_for_status()
             data = response.json()
             if 'results' in data:
-                tmax, tmin = None, None
+                tmax, tmin, prcp, snow, snwd, awnd, tsun, wdf2, wsf2 = None, None, None, None, None, None, None, None, None
                 for entry in data['results']:
                     if entry.get('datatype') == 'TMAX':
                         tmax = entry.get('value')
                     elif entry.get('datatype') == 'TMIN':
                         tmin = entry.get('value')
+                    elif entry.get('datatype') == 'PRCP':
+                        prcp = entry.get('value')
+                    elif entry.get('datatype') == 'SNOW':
+                        snow = entry.get('value')
+                    elif entry.get('datatype') == 'SNWD':
+                        snwd = entry.get('value')
+                    elif entry.get('datatype') == 'AWND':
+                        awnd = entry.get('value')
+                    elif entry.get('datatype') == 'TSUN':
+                        tsun = entry.get('value')
+                    elif entry.get('datatype') == 'WDF2':
+                        wdf2 = entry.get('value')
+                    elif entry.get('datatype') == 'WSF2':
+                        wsf2 = entry.get('value')
                 return {
                     "date": date,
                     "city": city['name'],
                     "tmax_f": tmax,
                     "tmin_f": tmin,
+                    "prcp": prcp,
+                    "snow": snow,
+                    "snwd": snwd,
+                    "awnd": awnd,
+                    "tsun": tsun,
+                    "wdf2": wdf2,
+                    "wsf2": wsf2,
                     "timestamp_utc": f"{date}T12:00:00Z"
                 }
             else:
@@ -56,7 +77,7 @@ def get_energy_data(city, date, api_key):
             response = requests.get(url)
             response.raise_for_status()
             data = response.json()
-            if 'response' in data and 'data' in data['response'] and len(data['response']['data']) > 0:
+            if 'response' in data and 'data' in data['response'] and len(data['response']) > 0:
                 return [{
                     "date": date,
                     "region": city['eia_region_code'],
@@ -83,7 +104,7 @@ def save_to_csv(data, data_type):
 
     with open(filepath, 'a', newline='') as f:
         if data_type == 'weather':
-            fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'timestamp_utc']
+            fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'prcp', 'snow', 'snwd', 'awnd', 'tsun', 'wdf2', 'wsf2', 'timestamp_utc']
         elif data_type == 'energy':
             fieldnames = ['date', 'region', 'demand_mwh', 'timestamp_utc']
         else:
