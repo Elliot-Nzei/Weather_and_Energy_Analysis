@@ -3,6 +3,7 @@ import yaml
 import os
 import logging
 import time
+import csv
 from datetime import datetime, timedelta
 
 # Configure logging
@@ -16,7 +17,7 @@ def load_config():
 
 def get_weather_data(city, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
-    url = f"https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN&units=standard"
+    url = f"https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,TAVG&units=standard"
     headers = {'token': api_key}
     retries = 3
     for i in range(retries):
@@ -24,9 +25,20 @@ def get_weather_data(city, date, api_key):
             response = requests.get(url, headers=headers)
             response.raise_for_status()
             data = response.json()
-            print(f"NOAA response for {city['name']} on {date}: {data}")  # Debug print
             if 'results' in data:
-                return data['results']
+                tmax, tmin = None, None
+                for entry in data['results']:
+                    if entry.get('datatype') == 'TMAX':
+                        tmax = entry.get('value')
+                    elif entry.get('datatype') == 'TMIN':
+                        tmin = entry.get('value')
+                return {
+                    "date": date,
+                    "city": city['name'],
+                    "tmax_f": tmax,
+                    "tmin_f": tmin,
+                    "timestamp_utc": f"{date}T12:00:00Z"
+                }
             else:
                 logging.warning(f"No weather data for {city['name']} on {date}")
                 return None
@@ -44,9 +56,13 @@ def get_energy_data(city, date, api_key):
             response = requests.get(url)
             response.raise_for_status()
             data = response.json()
-            print(f"EIA response for {city['name']} on {date}: {data}")  # Debug print
             if 'response' in data and 'data' in data['response'] and len(data['response']['data']) > 0:
-                return data['response']['data']
+                return [{
+                    "date": date,
+                    "region": city['eia_region_code'],
+                    "demand_mwh": entry.get('value'),
+                    "timestamp_utc": f"{date}T12:00:00Z"
+                } for entry in data['response']['data']]
             else:
                 logging.warning(f"No energy data for {city['name']} on {date}")
                 return None
@@ -55,14 +71,31 @@ def get_energy_data(city, date, api_key):
             time.sleep(2 ** i)
     return None
 
-def save_data(data, data_type, city_name, date):
-    """Saves the fetched data to a JSON file."""
+def save_to_csv(data, data_type):
+    """Appends data to a CSV file."""
     raw_data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
     if not os.path.exists(raw_data_path):
         os.makedirs(raw_data_path)
-    filename = f"{data_type}_{city_name.replace(' ', '_')}_{date.replace('-', '')}.json"
-    filepath = os.path.join(raw_data_path, filename)
-    with open(filepath, 'w') as f:
-        f.write(str(data))
-    logging.info(f"Saved {data_type} data for {city_name} on {date} to {filepath}")
 
+    filename = f"{data_type}_data.csv"
+    filepath = os.path.join(raw_data_path, filename)
+    file_exists = os.path.isfile(filepath)
+
+    with open(filepath, 'a', newline='') as f:
+        if data_type == 'weather':
+            fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'timestamp_utc']
+        elif data_type == 'energy':
+            fieldnames = ['date', 'region', 'demand_mwh', 'timestamp_utc']
+        else:
+            return
+
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+        if not file_exists:
+            writer.writeheader()
+
+        if isinstance(data, list):
+            writer.writerows(data)
+        else:
+            writer.writerow(data)
+    logging.info(f"Saved {data_type} data to {filepath}")
