@@ -1,0 +1,53 @@
+US Weather and Energy Analysis Project Plan
+Project Goal
+Develop an automated pipeline that analyzes how weather impacts electricity usage across
+five major US cities, providing valuable insights for energy companies.
+Business Impact
+Problem: Inaccurate demand forecasting causes millions in losses for energy companies.
+Solution: Integrate weather and energy data to drive more accurate predictions.
+Value: Better forecasting, reduced waste, optimized power generation, cost savings.
+System Overview
+Daily Trigger via Cron or Scheduler
+→ Part 1: Data Collection
+→ Part 2: Data Cleaning and Quality Assurance
+→ Part 3: Statistical Analysis
+→ Part 4: Streamlit Visualization Dashboard
+---
+Part 1: Data Collection
+Objective
+Automate the collection of weather and energy usage data daily for 5 cities using public
+APIs.
+You Will Build
+src/data_fetcher.py: Python module to collect weather and energy data
+src/pipeline.py: Entry script to run the entire ETL process
+config/config.yaml: Configuration file storing API keys, station IDs, and region codes
+backfill_historical.py: Script to collect 90 days of historical data
+Required APIs
+NOAA Climate Data API: https://www.ncei.noaa.gov/cdo-web/api/v2
+EIA Electricity Data API: https://api.eia.gov/v2/electricity/
+NOAA Token: https://www.ncdc.noaa.gov/cdo-web/token
+EIA Token: https://www.eia.gov/opendata/register.php
+City Reference Table
+| City | State | NOAA Station ID | EIA Region Code |
+|----------|----------|------------------------|------------------| | New York | New York |
+GHCND:USW00094728 | NYIS | | Chicago | Illinois | GHCND:USW00094846 |
+PJM | | Houston | Texas | GHCND:USW00012960 | ERCO | | Phoenix |
+Arizona | GHCND:USW00023183 | AZPS | | Seattle | Washington |
+GHCND:USW00024233 | SCL |
+Key Requirements
+Handle API failures with logging and continue execution
+Implement retry logic with exponential backoff
+Store weather and energy data separately in data/raw/
+Include UTC timestamps in saved records
+Store each day’s file with naming format: weather_YYYYMMDD.json and
+energy_YYYYMMDD.json
+Sample Output Structure (JSON)
+weather_20240115.json
+[
+{ "date": "2024-01-15", "city": "New York", "tmax_f": 45.2, "tmin_f": 32.1, "timestamp_utc":
+"2024-01-15T12:00:00Z" } ]
+energy_20240115.json
+[
+{ "date": "2024-01-15", "region": "NYIS", "demand_mwh": 25847.5, "timestamp_utc":
+"2024-01-15T12:00:00Z" } ]
+---

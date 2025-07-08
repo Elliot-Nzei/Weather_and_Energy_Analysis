@@ -1,5 +1,8 @@
 noaa_token: "ZDSGasuVcVtzyBFfMQRKQLeARhgZApmW"
 eia_api_key: "KgKa5GBFiHkiDimOv3GJn6z1RDjDtwGrezIsO3Fp"
+api_endpoints:
+  noaa: "https://www.ncdc.noaa.gov/cdo-web/api/v2/data"
+  eia: "https://api.eia.gov/v2/electricity/rto/region-data/data/"
 cities:
   - name: "New York"
     state: "New York"

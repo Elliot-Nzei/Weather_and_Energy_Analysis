@@ -17,13 +17,15 @@ def load_config():
 
 def get_weather_data(city, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
-    url = f"https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
+    config = load_config()
+    base_url = config['api_endpoints']['noaa']
+    url = f"{base_url}?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
     headers = {'token': api_key}
     retries = 3
     for i in range(retries):
         try:
             response = requests.get(url, headers=headers)
-            response.raise_for_status()
+            response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
             data = response.json()
             if 'results' in data:
                 tmax, tmin, prcp, snow, snwd, awnd, tsun, wdf2, wsf2 = None, None, None, None, None, None, None, None, None
@@ -63,19 +65,38 @@ def get_weather_data(city, date, api_key):
             else:
                 logging.warning(f"No weather data for {city['name']} on {date}")
                 return None
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 401:
+                logging.error(f"Authentication error for NOAA API. Check your API token: {e}")
+                return None # No point in retrying if authentication fails
+            elif e.response.status_code == 404:
+                logging.warning(f"NOAA API endpoint not found: {e}")
+            elif e.response.status_code == 429:
+                logging.warning(f"Rate limit exceeded for NOAA API. Retrying... {e}")
+            else:
+                logging.error(f"HTTP error fetching weather data for {city['name']}: {e}")
+            time.sleep(2 ** i) # Exponential backoff
+        except requests.exceptions.ConnectionError as e:
+            logging.error(f"Network connection error for NOAA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.Timeout as e:
+            logging.error(f"Timeout error for NOAA API: {e}")
+            time.sleep(2 ** i)
         except requests.exceptions.RequestException as e:
-            logging.error(f"Error fetching weather data for {city['name']}: {e}")
+            logging.error(f"An unexpected error occurred with NOAA API: {e}")
             time.sleep(2 ** i)
     return None
 
 def get_energy_data(city, date, api_key):
     """Fetches energy data for a given city and date from the EIA API."""
-    url = f"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={city['eia_region_code']}&start={date}&end={date}"
+    config = load_config()
+    base_url = config['api_endpoints']['eia']
+    url = f"{base_url}?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={city['eia_region_code']}&start={date}&end={date}"
     retries = 3
     for i in range(retries):
         try:
             response = requests.get(url)
-            response.raise_for_status()
+            response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
             data = response.json()
             if 'response' in data and 'data' in data['response'] and len(data['response']) > 0:
                 return [{
@@ -87,8 +108,25 @@ def get_energy_data(city, date, api_key):
             else:
                 logging.warning(f"No energy data for {city['name']} on {date}")
                 return None
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 401:
+                logging.error(f"Authentication error for EIA API. Check your API key: {e}")
+                return None # No point in retrying if authentication fails
+            elif e.response.status_code == 404:
+                logging.warning(f"EIA API endpoint not found: {e}")
+            elif e.response.status_code == 429:
+                logging.warning(f"Rate limit exceeded for EIA API. Retrying... {e}")
+            else:
+                logging.error(f"HTTP error fetching energy data for {city['name']}: {e}")
+            time.sleep(2 ** i) # Exponential backoff
+        except requests.exceptions.ConnectionError as e:
+            logging.error(f"Network connection error for EIA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.Timeout as e:
+            logging.error(f"Timeout error for EIA API: {e}")
+            time.sleep(2 ** i)
         except requests.exceptions.RequestException as e:
-            logging.error(f"Error fetching energy data for {city['name']}: {e}")
+            logging.error(f"An unexpected error occurred with EIA API: {e}")
             time.sleep(2 ** i)
     return None
 
