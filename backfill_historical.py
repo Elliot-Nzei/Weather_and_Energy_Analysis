@@ -2,6 +2,10 @@ import os
 import sys
 from datetime import datetime, timedelta
 import pandas as pd
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Add the src directory to the Python path
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))

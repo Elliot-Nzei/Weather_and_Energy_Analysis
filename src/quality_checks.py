@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import logging
 from datetime import datetime, timedelta
+import yaml
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -11,8 +12,8 @@ def perform_quality_checks(df):
 
     # 1. Missing data detection
     missing_data = df.isnull().sum()
-    logging.info(f"Missing data:
-{missing_data[missing_data > 0]}")
+    logging.info(f"""Missing data:
+{missing_data[missing_data > 0]}""")
     df['has_missing_data'] = df.isnull().any(axis=1)
 
     # 2. Outlier detection
