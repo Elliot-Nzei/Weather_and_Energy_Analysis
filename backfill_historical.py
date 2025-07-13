@@ -63,5 +63,50 @@ def backfill_historical_data():
         # Perform statistical analysis
         analyze_data()
 
+def backfill_weather_only():
+    """Fetches the last 90 days of weather data for configured cities and saves to CSV."""
+    config = load_config()
+    api_keys = {
+        "noaa": config["noaa_token"]
+    }
+    raw_data_path = os.path.join(os.path.dirname(__file__), 'data', 'raw')
+    weather_csv_path = os.path.join(raw_data_path, 'weather_data.csv')
+    if os.path.exists(weather_csv_path):
+        os.remove(weather_csv_path)
+    today = datetime.now()
+    for i in range(90):
+        date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
+        for city in config["cities"]:
+            weather_data = get_weather_data(city, date, api_keys["noaa"])
+            if weather_data:
+                save_to_csv(weather_data, "weather")
+
+def backfill_energy_only():
+    """Fetches the last 90 days of energy data for configured cities and saves to CSV."""
+    config = load_config()
+    api_keys = {
+        "eia": config["eia_api_key"]
+    }
+    raw_data_path = os.path.join(os.path.dirname(__file__), 'data', 'raw')
+    energy_csv_path = os.path.join(raw_data_path, 'energy_data.csv')
+    if os.path.exists(energy_csv_path):
+        os.remove(energy_csv_path)
+    today = datetime.now()
+    for i in range(90):
+        date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
+        for city in config["cities"]:
+            energy_data = get_energy_data(city, date, api_keys["eia"])
+            if energy_data:
+                save_to_csv(energy_data, "energy")
+
 if __name__ == "__main__":
-    backfill_historical_data()
+    import sys
+    if len(sys.argv) > 1:
+        if sys.argv[1] == '--weather-only':
+            backfill_weather_only()
+        elif sys.argv[1] == '--energy-only':
+            backfill_energy_only()
+        else:
+            backfill_historical_data()
+    else:
+        backfill_historical_data()
