@@ -191,3 +191,1569 @@ date,city,period,respondent,respondent-name,type,type-name,value,value-units
 ,Houston,2025-07-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71075,megawatthours
 ,Houston,2025-07-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,73457,megawatthours
 ,Houston,2025-07-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-5,megawatthours
+,Phoenix,2025-07-08T00,AZPS,Arizona Public Service Company,D,Demand,7228,megawatthours
+,Phoenix,2025-07-08T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7693,megawatthours
+,Phoenix,2025-07-08T00,AZPS,Arizona Public Service Company,NG,Net generation,5209,megawatthours
+,Phoenix,2025-07-08T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2019,megawatthours
+,Seattle,2025-07-08T00,SCL,Seattle City Light,D,Demand,1241,megawatthours
+,Seattle,2025-07-08T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1154,megawatthours
+,Seattle,2025-07-08T00,SCL,Seattle City Light,NG,Net generation,881,megawatthours
+,Seattle,2025-07-08T00,SCL,Seattle City Light,TI,Total interchange,-360,megawatthours
+,New York,2025-07-07T00,NYIS,New York Independent System Operator,D,Demand,26082,megawatthours
+,New York,2025-07-07T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,24340,megawatthours
+,New York,2025-07-07T00,NYIS,New York Independent System Operator,NG,Net generation,22605,megawatthours
+,New York,2025-07-07T00,NYIS,New York Independent System Operator,TI,Total interchange,-3477,megawatthours
+,Houston,2025-07-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,68493,megawatthours
+,Houston,2025-07-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71372,megawatthours
+,Houston,2025-07-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,68785,megawatthours
+,Houston,2025-07-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,291,megawatthours
+,Phoenix,2025-07-07T00,AZPS,Arizona Public Service Company,D,Demand,7124,megawatthours
+,Phoenix,2025-07-07T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7563,megawatthours
+,Phoenix,2025-07-07T00,AZPS,Arizona Public Service Company,NG,Net generation,4734,megawatthours
+,Phoenix,2025-07-07T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2390,megawatthours
+,Seattle,2025-07-07T00,SCL,Seattle City Light,D,Demand,1034,megawatthours
+,Seattle,2025-07-07T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,975,megawatthours
+,Seattle,2025-07-07T00,SCL,Seattle City Light,NG,Net generation,587,megawatthours
+,Seattle,2025-07-07T00,SCL,Seattle City Light,TI,Total interchange,-447,megawatthours
+,New York,2025-07-06T00,NYIS,New York Independent System Operator,D,Demand,23150,megawatthours
+,New York,2025-07-06T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,20965,megawatthours
+,New York,2025-07-06T00,NYIS,New York Independent System Operator,NG,Net generation,20480,megawatthours
+,New York,2025-07-06T00,NYIS,New York Independent System Operator,TI,Total interchange,-2670,megawatthours
+,Chicago,2025-07-06T00,PJM,"PJM Interconnection, LLC",D,Demand,128891,megawatthours
+,Chicago,2025-07-06T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,124903,megawatthours
+,Chicago,2025-07-06T00,PJM,"PJM Interconnection, LLC",NG,Net generation,133018,megawatthours
+,Chicago,2025-07-06T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,661,megawatthours
+,Houston,2025-07-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63431,megawatthours
+,Houston,2025-07-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,67225,megawatthours
+,Houston,2025-07-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63668,megawatthours
+,Houston,2025-07-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,237,megawatthours
+,Phoenix,2025-07-06T00,AZPS,Arizona Public Service Company,D,Demand,6498,megawatthours
+,Phoenix,2025-07-06T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7042,megawatthours
+,Phoenix,2025-07-06T00,AZPS,Arizona Public Service Company,NG,Net generation,3987,megawatthours
+,Phoenix,2025-07-06T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2511,megawatthours
+,Seattle,2025-07-06T00,SCL,Seattle City Light,D,Demand,975,megawatthours
+,Seattle,2025-07-06T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,933,megawatthours
+,Seattle,2025-07-06T00,SCL,Seattle City Light,NG,Net generation,592,megawatthours
+,Seattle,2025-07-06T00,SCL,Seattle City Light,TI,Total interchange,-383,megawatthours
+,New York,2025-07-05T00,NYIS,New York Independent System Operator,D,Demand,20518,megawatthours
+,New York,2025-07-05T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,20096,megawatthours
+,New York,2025-07-05T00,NYIS,New York Independent System Operator,NG,Net generation,18379,megawatthours
+,New York,2025-07-05T00,NYIS,New York Independent System Operator,TI,Total interchange,-2139,megawatthours
+,Chicago,2025-07-05T00,PJM,"PJM Interconnection, LLC",D,Demand,121176,megawatthours
+,Chicago,2025-07-05T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,123169,megawatthours
+,Chicago,2025-07-05T00,PJM,"PJM Interconnection, LLC",NG,Net generation,123660,megawatthours
+,Chicago,2025-07-05T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,308,megawatthours
+,Houston,2025-07-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63456,megawatthours
+,Houston,2025-07-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,66680,megawatthours
+,Houston,2025-07-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63306,megawatthours
+,Houston,2025-07-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-149,megawatthours
+,Phoenix,2025-07-05T00,AZPS,Arizona Public Service Company,D,Demand,5804,megawatthours
+,Phoenix,2025-07-05T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6645,megawatthours
+,Phoenix,2025-07-05T00,AZPS,Arizona Public Service Company,NG,Net generation,3054,megawatthours
+,Phoenix,2025-07-05T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2750,megawatthours
+,Seattle,2025-07-05T00,SCL,Seattle City Light,D,Demand,1005,megawatthours
+,Seattle,2025-07-05T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,925,megawatthours
+,Seattle,2025-07-05T00,SCL,Seattle City Light,NG,Net generation,760,megawatthours
+,Seattle,2025-07-05T00,SCL,Seattle City Light,TI,Total interchange,-245,megawatthours
+,New York,2025-07-04T00,NYIS,New York Independent System Operator,D,Demand,22366,megawatthours
+,New York,2025-07-04T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,23406,megawatthours
+,New York,2025-07-04T00,NYIS,New York Independent System Operator,NG,Net generation,20882,megawatthours
+,New York,2025-07-04T00,NYIS,New York Independent System Operator,TI,Total interchange,-1484,megawatthours
+,Chicago,2025-07-04T00,PJM,"PJM Interconnection, LLC",D,Demand,132129,megawatthours
+,Chicago,2025-07-04T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,130207,megawatthours
+,Chicago,2025-07-04T00,PJM,"PJM Interconnection, LLC",NG,Net generation,135962,megawatthours
+,Chicago,2025-07-04T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,424,megawatthours
+,Houston,2025-07-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,64329,megawatthours
+,Houston,2025-07-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71610,megawatthours
+,Houston,2025-07-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,64181,megawatthours
+,Houston,2025-07-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-148,megawatthours
+,Phoenix,2025-07-04T00,AZPS,Arizona Public Service Company,D,Demand,5780,megawatthours
+,Phoenix,2025-07-04T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6336,megawatthours
+,Phoenix,2025-07-04T00,AZPS,Arizona Public Service Company,NG,Net generation,2982,megawatthours
+,Phoenix,2025-07-04T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2798,megawatthours
+,Seattle,2025-07-04T00,SCL,Seattle City Light,D,Demand,1010,megawatthours
+,Seattle,2025-07-04T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1049,megawatthours
+,Seattle,2025-07-04T00,SCL,Seattle City Light,NG,Net generation,602,megawatthours
+,Seattle,2025-07-04T00,SCL,Seattle City Light,TI,Total interchange,-408,megawatthours
+,New York,2025-07-03T00,NYIS,New York Independent System Operator,D,Demand,24882,megawatthours
+,New York,2025-07-03T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,24004,megawatthours
+,New York,2025-07-03T00,NYIS,New York Independent System Operator,NG,Net generation,22652,megawatthours
+,New York,2025-07-03T00,NYIS,New York Independent System Operator,TI,Total interchange,-2230,megawatthours
+,Chicago,2025-07-03T00,PJM,"PJM Interconnection, LLC",D,Demand,132113,megawatthours
+,Chicago,2025-07-03T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,126147,megawatthours
+,Chicago,2025-07-03T00,PJM,"PJM Interconnection, LLC",NG,Net generation,137428,megawatthours
+,Chicago,2025-07-03T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,713,megawatthours
+,Houston,2025-07-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70576,megawatthours
+,Houston,2025-07-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,73848,megawatthours
+,Houston,2025-07-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70406,megawatthours
+,Houston,2025-07-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-170,megawatthours
+,Phoenix,2025-07-03T00,AZPS,Arizona Public Service Company,D,Demand,6831,megawatthours
+,Phoenix,2025-07-03T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7258,megawatthours
+,Phoenix,2025-07-03T00,AZPS,Arizona Public Service Company,NG,Net generation,3825,megawatthours
+,Phoenix,2025-07-03T00,AZPS,Arizona Public Service Company,TI,Total interchange,-3006,megawatthours
+,Seattle,2025-07-03T00,SCL,Seattle City Light,D,Demand,1157,megawatthours
+,Seattle,2025-07-03T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1143,megawatthours
+,Seattle,2025-07-03T00,SCL,Seattle City Light,NG,Net generation,574,megawatthours
+,Seattle,2025-07-03T00,SCL,Seattle City Light,TI,Total interchange,-583,megawatthours
+,New York,2025-07-02T00,NYIS,New York Independent System Operator,D,Demand,25459,megawatthours
+,New York,2025-07-02T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,25510,megawatthours
+,New York,2025-07-02T00,NYIS,New York Independent System Operator,NG,Net generation,22360,megawatthours
+,New York,2025-07-02T00,NYIS,New York Independent System Operator,TI,Total interchange,-3099,megawatthours
+,Chicago,2025-07-02T00,PJM,"PJM Interconnection, LLC",D,Demand,126965,megawatthours
+,Chicago,2025-07-02T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,127993,megawatthours
+,Chicago,2025-07-02T00,PJM,"PJM Interconnection, LLC",NG,Net generation,133214,megawatthours
+,Chicago,2025-07-02T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1404,megawatthours
+,Houston,2025-07-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,72703,megawatthours
+,Houston,2025-07-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75664,megawatthours
+,Houston,2025-07-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,72484,megawatthours
+,Houston,2025-07-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-219,megawatthours
+,Phoenix,2025-07-02T00,AZPS,Arizona Public Service Company,D,Demand,7612,megawatthours
+,Phoenix,2025-07-02T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7913,megawatthours
+,Phoenix,2025-07-02T00,AZPS,Arizona Public Service Company,NG,Net generation,4334,megawatthours
+,Phoenix,2025-07-02T00,AZPS,Arizona Public Service Company,TI,Total interchange,-3278,megawatthours
+,Seattle,2025-07-02T00,SCL,Seattle City Light,D,Demand,1247,megawatthours
+,Seattle,2025-07-02T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1239,megawatthours
+,Seattle,2025-07-02T00,SCL,Seattle City Light,NG,Net generation,908,megawatthours
+,Seattle,2025-07-02T00,SCL,Seattle City Light,TI,Total interchange,-339,megawatthours
+,New York,2025-07-01T00,NYIS,New York Independent System Operator,D,Demand,26622,megawatthours
+,New York,2025-07-01T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,25804,megawatthours
+,New York,2025-07-01T00,NYIS,New York Independent System Operator,NG,Net generation,23002,megawatthours
+,New York,2025-07-01T00,NYIS,New York Independent System Operator,TI,Total interchange,-3620,megawatthours
+,Chicago,2025-07-01T00,PJM,"PJM Interconnection, LLC",D,Demand,136132,megawatthours
+,Chicago,2025-07-01T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,132181,megawatthours
+,Chicago,2025-07-01T00,PJM,"PJM Interconnection, LLC",NG,Net generation,141586,megawatthours
+,Chicago,2025-07-01T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,906,megawatthours
+,Houston,2025-07-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,72362,megawatthours
+,Houston,2025-07-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76224,megawatthours
+,Houston,2025-07-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,72304,megawatthours
+,Houston,2025-07-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-57,megawatthours
+,Phoenix,2025-07-01T00,AZPS,Arizona Public Service Company,D,Demand,7940,megawatthours
+,Phoenix,2025-07-01T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,8395,megawatthours
+,Phoenix,2025-07-01T00,AZPS,Arizona Public Service Company,NG,Net generation,5289,megawatthours
+,Phoenix,2025-07-01T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2651,megawatthours
+,Seattle,2025-07-01T00,SCL,Seattle City Light,D,Demand,1279,megawatthours
+,Seattle,2025-07-01T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1203,megawatthours
+,Seattle,2025-07-01T00,SCL,Seattle City Light,NG,Net generation,749,megawatthours
+,Seattle,2025-07-01T00,SCL,Seattle City Light,TI,Total interchange,-530,megawatthours
+,New York,2025-06-30T00,NYIS,New York Independent System Operator,D,Demand,24560,megawatthours
+,New York,2025-06-30T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,22711,megawatthours
+,New York,2025-06-30T00,NYIS,New York Independent System Operator,NG,Net generation,20900,megawatthours
+,New York,2025-06-30T00,NYIS,New York Independent System Operator,TI,Total interchange,-3660,megawatthours
+,Chicago,2025-06-30T00,PJM,"PJM Interconnection, LLC",D,Demand,135168,megawatthours
+,Chicago,2025-06-30T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,128235,megawatthours
+,Chicago,2025-06-30T00,PJM,"PJM Interconnection, LLC",NG,Net generation,141103,megawatthours
+,Chicago,2025-06-30T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,589,megawatthours
+,Houston,2025-06-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,73451,megawatthours
+,Houston,2025-06-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,74594,megawatthours
+,Houston,2025-06-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,73517,megawatthours
+,Houston,2025-06-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,66,megawatthours
+,Phoenix,2025-06-30T00,AZPS,Arizona Public Service Company,D,Demand,7510,megawatthours
+,Phoenix,2025-06-30T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7951,megawatthours
+,Phoenix,2025-06-30T00,AZPS,Arizona Public Service Company,NG,Net generation,4280,megawatthours
+,Phoenix,2025-06-30T00,AZPS,Arizona Public Service Company,TI,Total interchange,-3230,megawatthours
+,Seattle,2025-06-30T00,SCL,Seattle City Light,D,Demand,1029,megawatthours
+,Seattle,2025-06-30T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,976,megawatthours
+,Seattle,2025-06-30T00,SCL,Seattle City Light,NG,Net generation,708,megawatthours
+,Seattle,2025-06-30T00,SCL,Seattle City Light,TI,Total interchange,-321,megawatthours
+,New York,2025-06-29T00,NYIS,New York Independent System Operator,D,Demand,22683,megawatthours
+,New York,2025-06-29T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21093,megawatthours
+,New York,2025-06-29T00,NYIS,New York Independent System Operator,NG,Net generation,18574,megawatthours
+,New York,2025-06-29T00,NYIS,New York Independent System Operator,TI,Total interchange,-4109,megawatthours
+,Chicago,2025-06-29T00,PJM,"PJM Interconnection, LLC",D,Demand,126106,megawatthours
+,Chicago,2025-06-29T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,120288,megawatthours
+,Chicago,2025-06-29T00,PJM,"PJM Interconnection, LLC",NG,Net generation,128243,megawatthours
+,Chicago,2025-06-29T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,861,megawatthours
+,Houston,2025-06-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,76267,megawatthours
+,Houston,2025-06-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76513,megawatthours
+,Houston,2025-06-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,76282,megawatthours
+,Houston,2025-06-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,15,megawatthours
+,Phoenix,2025-06-29T00,AZPS,Arizona Public Service Company,D,Demand,7055,megawatthours
+,Phoenix,2025-06-29T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7499,megawatthours
+,Phoenix,2025-06-29T00,AZPS,Arizona Public Service Company,NG,Net generation,4450,megawatthours
+,Phoenix,2025-06-29T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2605,megawatthours
+,New York,2025-06-28T00,NYIS,New York Independent System Operator,D,Demand,18943,megawatthours
+,New York,2025-06-28T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,19505,megawatthours
+,New York,2025-06-28T00,NYIS,New York Independent System Operator,NG,Net generation,16216,megawatthours
+,New York,2025-06-28T00,NYIS,New York Independent System Operator,TI,Total interchange,-2727,megawatthours
+,Chicago,2025-06-28T00,PJM,"PJM Interconnection, LLC",D,Demand,116900,megawatthours
+,Chicago,2025-06-28T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,119810,megawatthours
+,Chicago,2025-06-28T00,PJM,"PJM Interconnection, LLC",NG,Net generation,124454,megawatthours
+,Chicago,2025-06-28T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,697,megawatthours
+,Houston,2025-06-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75477,megawatthours
+,Houston,2025-06-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76345,megawatthours
+,Houston,2025-06-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75441,megawatthours
+,Houston,2025-06-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-34,megawatthours
+,Phoenix,2025-06-28T00,AZPS,Arizona Public Service Company,D,Demand,6694,megawatthours
+,Phoenix,2025-06-28T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6953,megawatthours
+,Phoenix,2025-06-28T00,AZPS,Arizona Public Service Company,NG,Net generation,4134,megawatthours
+,Phoenix,2025-06-28T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2560,megawatthours
+,Seattle,2025-06-28T00,SCL,Seattle City Light,D,Demand,1061,megawatthours
+,Seattle,2025-06-28T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1004,megawatthours
+,Seattle,2025-06-28T00,SCL,Seattle City Light,NG,Net generation,508,megawatthours
+,Seattle,2025-06-28T00,SCL,Seattle City Light,TI,Total interchange,-553,megawatthours
+,New York,2025-06-27T00,NYIS,New York Independent System Operator,D,Demand,20194,megawatthours
+,New York,2025-06-27T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21450,megawatthours
+,New York,2025-06-27T00,NYIS,New York Independent System Operator,NG,Net generation,18225,megawatthours
+,New York,2025-06-27T00,NYIS,New York Independent System Operator,TI,Total interchange,-1969,megawatthours
+,Chicago,2025-06-27T00,PJM,"PJM Interconnection, LLC",D,Demand,136730,megawatthours
+,Chicago,2025-06-27T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,133666,megawatthours
+,Chicago,2025-06-27T00,PJM,"PJM Interconnection, LLC",NG,Net generation,137935,megawatthours
+,Chicago,2025-06-27T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-253,megawatthours
+,Houston,2025-06-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,72848,megawatthours
+,Houston,2025-06-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,74149,megawatthours
+,Houston,2025-06-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,72863,megawatthours
+,Houston,2025-06-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,17,megawatthours
+,Phoenix,2025-06-27T00,AZPS,Arizona Public Service Company,D,Demand,6291,megawatthours
+,Phoenix,2025-06-27T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6731,megawatthours
+,Phoenix,2025-06-27T00,AZPS,Arizona Public Service Company,NG,Net generation,4562,megawatthours
+,Phoenix,2025-06-27T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1729,megawatthours
+,Seattle,2025-06-27T00,SCL,Seattle City Light,D,Demand,1010,megawatthours
+,Seattle,2025-06-27T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1000,megawatthours
+,Seattle,2025-06-27T00,SCL,Seattle City Light,NG,Net generation,690,megawatthours
+,Seattle,2025-06-27T00,SCL,Seattle City Light,TI,Total interchange,-320,megawatthours
+,New York,2025-06-26T00,NYIS,New York Independent System Operator,D,Demand,30324,megawatthours
+,New York,2025-06-26T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,27572,megawatthours
+,New York,2025-06-26T00,NYIS,New York Independent System Operator,NG,Net generation,26242,megawatthours
+,New York,2025-06-26T00,NYIS,New York Independent System Operator,TI,Total interchange,-4082,megawatthours
+,Chicago,2025-06-26T00,PJM,"PJM Interconnection, LLC",D,Demand,145435,megawatthours
+,Chicago,2025-06-26T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,139696,megawatthours
+,Chicago,2025-06-26T00,PJM,"PJM Interconnection, LLC",NG,Net generation,148608,megawatthours
+,Chicago,2025-06-26T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,69,megawatthours
+,Houston,2025-06-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,71557,megawatthours
+,Houston,2025-06-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,72938,megawatthours
+,Houston,2025-06-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,71576,megawatthours
+,Houston,2025-06-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,19,megawatthours
+,Phoenix,2025-06-26T00,AZPS,Arizona Public Service Company,D,Demand,5825,megawatthours
+,Phoenix,2025-06-26T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6261,megawatthours
+,Phoenix,2025-06-26T00,AZPS,Arizona Public Service Company,NG,Net generation,4014,megawatthours
+,Phoenix,2025-06-26T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1811,megawatthours
+,Seattle,2025-06-26T00,SCL,Seattle City Light,D,Demand,1021,megawatthours
+,Seattle,2025-06-26T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1032,megawatthours
+,Seattle,2025-06-26T00,SCL,Seattle City Light,NG,Net generation,610,megawatthours
+,Seattle,2025-06-26T00,SCL,Seattle City Light,TI,Total interchange,-411,megawatthours
+,New York,2025-06-25T00,NYIS,New York Independent System Operator,D,Demand,31720,megawatthours
+,New York,2025-06-25T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,29905,megawatthours
+,New York,2025-06-25T00,NYIS,New York Independent System Operator,NG,Net generation,28504,megawatthours
+,New York,2025-06-25T00,NYIS,New York Independent System Operator,TI,Total interchange,-3216,megawatthours
+,Chicago,2025-06-25T00,PJM,"PJM Interconnection, LLC",D,Demand,154755,megawatthours
+,Chicago,2025-06-25T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,145175,megawatthours
+,Chicago,2025-06-25T00,PJM,"PJM Interconnection, LLC",NG,Net generation,157397,megawatthours
+,Chicago,2025-06-25T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,579,megawatthours
+,Houston,2025-06-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75505,megawatthours
+,Houston,2025-06-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76036,megawatthours
+,Houston,2025-06-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75776,megawatthours
+,Houston,2025-06-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,270,megawatthours
+,Phoenix,2025-06-25T00,AZPS,Arizona Public Service Company,D,Demand,5582,megawatthours
+,Phoenix,2025-06-25T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6202,megawatthours
+,Phoenix,2025-06-25T00,AZPS,Arizona Public Service Company,NG,Net generation,4539,megawatthours
+,Phoenix,2025-06-25T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1043,megawatthours
+,Seattle,2025-06-25T00,SCL,Seattle City Light,D,Demand,1165,megawatthours
+,Seattle,2025-06-25T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1094,megawatthours
+,Seattle,2025-06-25T00,SCL,Seattle City Light,NG,Net generation,860,megawatthours
+,Seattle,2025-06-25T00,SCL,Seattle City Light,TI,Total interchange,-305,megawatthours
+,New York,2025-06-24T00,NYIS,New York Independent System Operator,D,Demand,29801,megawatthours
+,New York,2025-06-24T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,28492,megawatthours
+,New York,2025-06-24T00,NYIS,New York Independent System Operator,NG,Net generation,26658,megawatthours
+,New York,2025-06-24T00,NYIS,New York Independent System Operator,TI,Total interchange,-3143,megawatthours
+,Chicago,2025-06-24T00,PJM,"PJM Interconnection, LLC",D,Demand,158200,megawatthours
+,Chicago,2025-06-24T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,146541,megawatthours
+,Chicago,2025-06-24T00,PJM,"PJM Interconnection, LLC",NG,Net generation,159398,megawatthours
+,Chicago,2025-06-24T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,66,megawatthours
+,Houston,2025-06-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,76373,megawatthours
+,Houston,2025-06-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76233,megawatthours
+,Houston,2025-06-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,76369,megawatthours
+,Houston,2025-06-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-4,megawatthours
+,Phoenix,2025-06-24T00,AZPS,Arizona Public Service Company,D,Demand,5493,megawatthours
+,Phoenix,2025-06-24T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5987,megawatthours
+,Phoenix,2025-06-24T00,AZPS,Arizona Public Service Company,NG,Net generation,3860,megawatthours
+,Phoenix,2025-06-24T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1633,megawatthours
+,Seattle,2025-06-24T00,SCL,Seattle City Light,D,Demand,1110,megawatthours
+,Seattle,2025-06-24T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1063,megawatthours
+,Seattle,2025-06-24T00,SCL,Seattle City Light,NG,Net generation,395,megawatthours
+,Seattle,2025-06-24T00,SCL,Seattle City Light,TI,Total interchange,-715,megawatthours
+,New York,2025-06-23T00,NYIS,New York Independent System Operator,D,Demand,26174,megawatthours
+,New York,2025-06-23T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,27053,megawatthours
+,New York,2025-06-23T00,NYIS,New York Independent System Operator,NG,Net generation,22769,megawatthours
+,New York,2025-06-23T00,NYIS,New York Independent System Operator,TI,Total interchange,-3405,megawatthours
+,Chicago,2025-06-23T00,PJM,"PJM Interconnection, LLC",D,Demand,142419,megawatthours
+,Chicago,2025-06-23T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,136311,megawatthours
+,Chicago,2025-06-23T00,PJM,"PJM Interconnection, LLC",NG,Net generation,147391,megawatthours
+,Chicago,2025-06-23T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,356,megawatthours
+,Houston,2025-06-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75761,megawatthours
+,Houston,2025-06-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75823,megawatthours
+,Houston,2025-06-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75849,megawatthours
+,Houston,2025-06-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,89,megawatthours
+,Phoenix,2025-06-23T00,AZPS,Arizona Public Service Company,D,Demand,5368,megawatthours
+,Phoenix,2025-06-23T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6071,megawatthours
+,Phoenix,2025-06-23T00,AZPS,Arizona Public Service Company,NG,Net generation,3487,megawatthours
+,Phoenix,2025-06-23T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1881,megawatthours
+,Seattle,2025-06-23T00,SCL,Seattle City Light,D,Demand,974,megawatthours
+,Seattle,2025-06-23T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,927,megawatthours
+,Seattle,2025-06-23T00,SCL,Seattle City Light,NG,Net generation,435,megawatthours
+,Seattle,2025-06-23T00,SCL,Seattle City Light,TI,Total interchange,-539,megawatthours
+,New York,2025-06-22T00,NYIS,New York Independent System Operator,D,Demand,22822,megawatthours
+,New York,2025-06-22T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,22226,megawatthours
+,New York,2025-06-22T00,NYIS,New York Independent System Operator,NG,Net generation,20373,megawatthours
+,New York,2025-06-22T00,NYIS,New York Independent System Operator,TI,Total interchange,-2449,megawatthours
+,Chicago,2025-06-22T00,PJM,"PJM Interconnection, LLC",D,Demand,132216,megawatthours
+,Chicago,2025-06-22T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,123547,megawatthours
+,Chicago,2025-06-22T00,PJM,"PJM Interconnection, LLC",NG,Net generation,136760,megawatthours
+,Chicago,2025-06-22T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,306,megawatthours
+,Houston,2025-06-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74762,megawatthours
+,Houston,2025-06-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75833,megawatthours
+,Houston,2025-06-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75051,megawatthours
+,Houston,2025-06-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,288,megawatthours
+,Phoenix,2025-06-22T00,AZPS,Arizona Public Service Company,D,Demand,5730,megawatthours
+,Phoenix,2025-06-22T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6581,megawatthours
+,Phoenix,2025-06-22T00,AZPS,Arizona Public Service Company,NG,Net generation,3479,megawatthours
+,Phoenix,2025-06-22T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2251,megawatthours
+,Seattle,2025-06-22T00,SCL,Seattle City Light,D,Demand,948,megawatthours
+,Seattle,2025-06-22T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,914,megawatthours
+,Seattle,2025-06-22T00,SCL,Seattle City Light,NG,Net generation,496,megawatthours
+,Seattle,2025-06-22T00,SCL,Seattle City Light,TI,Total interchange,-452,megawatthours
+,New York,2025-06-21T00,NYIS,New York Independent System Operator,D,Demand,21455,megawatthours
+,New York,2025-06-21T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21380,megawatthours
+,New York,2025-06-21T00,NYIS,New York Independent System Operator,NG,Net generation,19363,megawatthours
+,New York,2025-06-21T00,NYIS,New York Independent System Operator,TI,Total interchange,-2092,megawatthours
+,Chicago,2025-06-21T00,PJM,"PJM Interconnection, LLC",D,Demand,119183,megawatthours
+,Chicago,2025-06-21T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,113904,megawatthours
+,Chicago,2025-06-21T00,PJM,"PJM Interconnection, LLC",NG,Net generation,126001,megawatthours
+,Chicago,2025-06-21T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,620,megawatthours
+,Houston,2025-06-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,76582,megawatthours
+,Houston,2025-06-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,74557,megawatthours
+,Houston,2025-06-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,76736,megawatthours
+,Houston,2025-06-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,155,megawatthours
+,Phoenix,2025-06-21T00,AZPS,Arizona Public Service Company,D,Demand,6067,megawatthours
+,Phoenix,2025-06-21T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7051,megawatthours
+,Phoenix,2025-06-21T00,AZPS,Arizona Public Service Company,NG,Net generation,3932,megawatthours
+,Phoenix,2025-06-21T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2135,megawatthours
+,Seattle,2025-06-21T00,SCL,Seattle City Light,D,Demand,1026,megawatthours
+,Seattle,2025-06-21T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,997,megawatthours
+,Seattle,2025-06-21T00,SCL,Seattle City Light,NG,Net generation,520,megawatthours
+,Seattle,2025-06-21T00,SCL,Seattle City Light,TI,Total interchange,-506,megawatthours
+,New York,2025-06-20T00,NYIS,New York Independent System Operator,D,Demand,23594,megawatthours
+,New York,2025-06-20T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,22816,megawatthours
+,New York,2025-06-20T00,NYIS,New York Independent System Operator,NG,Net generation,21776,megawatthours
+,New York,2025-06-20T00,NYIS,New York Independent System Operator,TI,Total interchange,-1818,megawatthours
+,Chicago,2025-06-20T00,PJM,"PJM Interconnection, LLC",D,Demand,114546,megawatthours
+,Chicago,2025-06-20T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,113704,megawatthours
+,Chicago,2025-06-20T00,PJM,"PJM Interconnection, LLC",NG,Net generation,119422,megawatthours
+,Chicago,2025-06-20T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,721,megawatthours
+,Houston,2025-06-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,76724,megawatthours
+,Houston,2025-06-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,77382,megawatthours
+,Houston,2025-06-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,76799,megawatthours
+,Houston,2025-06-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,75,megawatthours
+,Phoenix,2025-06-20T00,AZPS,Arizona Public Service Company,D,Demand,7239,megawatthours
+,Phoenix,2025-06-20T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,8054,megawatthours
+,Phoenix,2025-06-20T00,AZPS,Arizona Public Service Company,NG,Net generation,4701,megawatthours
+,Phoenix,2025-06-20T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2538,megawatthours
+,Seattle,2025-06-20T00,SCL,Seattle City Light,D,Demand,997,megawatthours
+,Seattle,2025-06-20T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1006,megawatthours
+,Seattle,2025-06-20T00,SCL,Seattle City Light,NG,Net generation,666,megawatthours
+,Seattle,2025-06-20T00,SCL,Seattle City Light,TI,Total interchange,-331,megawatthours
+,New York,2025-06-19T00,NYIS,New York Independent System Operator,D,Demand,21993,megawatthours
+,New York,2025-06-19T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21925,megawatthours
+,New York,2025-06-19T00,NYIS,New York Independent System Operator,NG,Net generation,19055,megawatthours
+,New York,2025-06-19T00,NYIS,New York Independent System Operator,TI,Total interchange,-2938,megawatthours
+,Chicago,2025-06-19T00,PJM,"PJM Interconnection, LLC",D,Demand,122047,megawatthours
+,Chicago,2025-06-19T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,117921,megawatthours
+,Chicago,2025-06-19T00,PJM,"PJM Interconnection, LLC",NG,Net generation,127456,megawatthours
+,Chicago,2025-06-19T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,589,megawatthours
+,Houston,2025-06-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75716,megawatthours
+,Houston,2025-06-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,78361,megawatthours
+,Houston,2025-06-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75768,megawatthours
+,Houston,2025-06-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,53,megawatthours
+,Phoenix,2025-06-19T00,AZPS,Arizona Public Service Company,D,Demand,7384,megawatthours
+,Phoenix,2025-06-19T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7652,megawatthours
+,Phoenix,2025-06-19T00,AZPS,Arizona Public Service Company,NG,Net generation,4876,megawatthours
+,Phoenix,2025-06-19T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2508,megawatthours
+,Seattle,2025-06-19T00,SCL,Seattle City Light,D,Demand,1070,megawatthours
+,Seattle,2025-06-19T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1015,megawatthours
+,Seattle,2025-06-19T00,SCL,Seattle City Light,NG,Net generation,557,megawatthours
+,Seattle,2025-06-19T00,SCL,Seattle City Light,TI,Total interchange,-513,megawatthours
+,New York,2025-06-18T00,NYIS,New York Independent System Operator,D,Demand,18988,megawatthours
+,New York,2025-06-18T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18936,megawatthours
+,New York,2025-06-18T00,NYIS,New York Independent System Operator,NG,Net generation,17702,megawatthours
+,New York,2025-06-18T00,NYIS,New York Independent System Operator,TI,Total interchange,-1286,megawatthours
+,Chicago,2025-06-18T00,PJM,"PJM Interconnection, LLC",D,Demand,117205,megawatthours
+,Chicago,2025-06-18T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,109706,megawatthours
+,Chicago,2025-06-18T00,PJM,"PJM Interconnection, LLC",NG,Net generation,120457,megawatthours
+,Chicago,2025-06-18T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,883,megawatthours
+,Houston,2025-06-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75851,megawatthours
+,Houston,2025-06-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75973,megawatthours
+,Houston,2025-06-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75872,megawatthours
+,Houston,2025-06-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,22,megawatthours
+,Phoenix,2025-06-18T00,AZPS,Arizona Public Service Company,D,Demand,7017,megawatthours
+,Phoenix,2025-06-18T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7486,megawatthours
+,Phoenix,2025-06-18T00,AZPS,Arizona Public Service Company,NG,Net generation,4427,megawatthours
+,Phoenix,2025-06-18T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2590,megawatthours
+,Seattle,2025-06-18T00,SCL,Seattle City Light,D,Demand,1092,megawatthours
+,Seattle,2025-06-18T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1033,megawatthours
+,Seattle,2025-06-18T00,SCL,Seattle City Light,NG,Net generation,787,megawatthours
+,Seattle,2025-06-18T00,SCL,Seattle City Light,TI,Total interchange,-305,megawatthours
+,New York,2025-06-17T00,NYIS,New York Independent System Operator,D,Demand,18400,megawatthours
+,New York,2025-06-17T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18225,megawatthours
+,New York,2025-06-17T00,NYIS,New York Independent System Operator,NG,Net generation,17246,megawatthours
+,New York,2025-06-17T00,NYIS,New York Independent System Operator,TI,Total interchange,-1154,megawatthours
+,Chicago,2025-06-17T00,PJM,"PJM Interconnection, LLC",D,Demand,106453,megawatthours
+,Chicago,2025-06-17T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,103520,megawatthours
+,Chicago,2025-06-17T00,PJM,"PJM Interconnection, LLC",NG,Net generation,111180,megawatthours
+,Chicago,2025-06-17T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,939,megawatthours
+,Houston,2025-06-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74588,megawatthours
+,Houston,2025-06-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,72658,megawatthours
+,Houston,2025-06-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74720,megawatthours
+,Houston,2025-06-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,131,megawatthours
+,Phoenix,2025-06-17T00,AZPS,Arizona Public Service Company,D,Demand,7137,megawatthours
+,Phoenix,2025-06-17T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7582,megawatthours
+,Phoenix,2025-06-17T00,AZPS,Arizona Public Service Company,NG,Net generation,4996,megawatthours
+,Phoenix,2025-06-17T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2141,megawatthours
+,Seattle,2025-06-17T00,SCL,Seattle City Light,D,Demand,1089,megawatthours
+,Seattle,2025-06-17T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1044,megawatthours
+,Seattle,2025-06-17T00,SCL,Seattle City Light,NG,Net generation,709,megawatthours
+,Seattle,2025-06-17T00,SCL,Seattle City Light,TI,Total interchange,-380,megawatthours
+,New York,2025-06-16T00,NYIS,New York Independent System Operator,D,Demand,16349,megawatthours
+,New York,2025-06-16T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16546,megawatthours
+,New York,2025-06-16T00,NYIS,New York Independent System Operator,NG,Net generation,14805,megawatthours
+,New York,2025-06-16T00,NYIS,New York Independent System Operator,TI,Total interchange,-1544,megawatthours
+,Chicago,2025-06-16T00,PJM,"PJM Interconnection, LLC",D,Demand,96809,megawatthours
+,Chicago,2025-06-16T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,94907,megawatthours
+,Chicago,2025-06-16T00,PJM,"PJM Interconnection, LLC",NG,Net generation,100960,megawatthours
+,Chicago,2025-06-16T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,521,megawatthours
+,Houston,2025-06-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,62262,megawatthours
+,Houston,2025-06-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,68853,megawatthours
+,Houston,2025-06-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,62307,megawatthours
+,Houston,2025-06-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,45,megawatthours
+,Phoenix,2025-06-16T00,AZPS,Arizona Public Service Company,D,Demand,7033,megawatthours
+,Phoenix,2025-06-16T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,7589,megawatthours
+,Phoenix,2025-06-16T00,AZPS,Arizona Public Service Company,NG,Net generation,5013,megawatthours
+,Phoenix,2025-06-16T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2020,megawatthours
+,Seattle,2025-06-16T00,SCL,Seattle City Light,D,Demand,964,megawatthours
+,Seattle,2025-06-16T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,914,megawatthours
+,Seattle,2025-06-16T00,SCL,Seattle City Light,NG,Net generation,883,megawatthours
+,Seattle,2025-06-16T00,SCL,Seattle City Light,TI,Total interchange,-81,megawatthours
+,New York,2025-06-15T00,NYIS,New York Independent System Operator,D,Demand,16333,megawatthours
+,New York,2025-06-15T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16301,megawatthours
+,New York,2025-06-15T00,NYIS,New York Independent System Operator,NG,Net generation,15600,megawatthours
+,New York,2025-06-15T00,NYIS,New York Independent System Operator,TI,Total interchange,-733,megawatthours
+,Chicago,2025-06-15T00,PJM,"PJM Interconnection, LLC",D,Demand,99933,megawatthours
+,Chicago,2025-06-15T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,95683,megawatthours
+,Chicago,2025-06-15T00,PJM,"PJM Interconnection, LLC",NG,Net generation,102583,megawatthours
+,Chicago,2025-06-15T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,252,megawatthours
+,Houston,2025-06-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,73572,megawatthours
+,Houston,2025-06-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,70083,megawatthours
+,Houston,2025-06-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,73809,megawatthours
+,Houston,2025-06-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,236,megawatthours
+,Phoenix,2025-06-15T00,AZPS,Arizona Public Service Company,D,Demand,6523,megawatthours
+,Phoenix,2025-06-15T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6885,megawatthours
+,Phoenix,2025-06-15T00,AZPS,Arizona Public Service Company,NG,Net generation,4653,megawatthours
+,Phoenix,2025-06-15T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1870,megawatthours
+,Seattle,2025-06-15T00,SCL,Seattle City Light,D,Demand,931,megawatthours
+,Seattle,2025-06-15T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,892,megawatthours
+,Seattle,2025-06-15T00,SCL,Seattle City Light,NG,Net generation,784,megawatthours
+,Seattle,2025-06-15T00,SCL,Seattle City Light,TI,Total interchange,-147,megawatthours
+,New York,2025-06-14T00,NYIS,New York Independent System Operator,D,Demand,19044,megawatthours
+,New York,2025-06-14T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18781,megawatthours
+,New York,2025-06-14T00,NYIS,New York Independent System Operator,NG,Net generation,16784,megawatthours
+,New York,2025-06-14T00,NYIS,New York Independent System Operator,TI,Total interchange,-2260,megawatthours
+,Chicago,2025-06-14T00,PJM,"PJM Interconnection, LLC",D,Demand,109824,megawatthours
+,Chicago,2025-06-14T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,109271,megawatthours
+,Chicago,2025-06-14T00,PJM,"PJM Interconnection, LLC",NG,Net generation,111915,megawatthours
+,Chicago,2025-06-14T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,381,megawatthours
+,Houston,2025-06-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74293,megawatthours
+,Houston,2025-06-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,70984,megawatthours
+,Houston,2025-06-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74532,megawatthours
+,Houston,2025-06-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,239,megawatthours
+,Phoenix,2025-06-14T00,AZPS,Arizona Public Service Company,D,Demand,5919,megawatthours
+,Phoenix,2025-06-14T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6667,megawatthours
+,Phoenix,2025-06-14T00,AZPS,Arizona Public Service Company,NG,Net generation,4547,megawatthours
+,Phoenix,2025-06-14T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1372,megawatthours
+,Seattle,2025-06-14T00,SCL,Seattle City Light,D,Demand,1021,megawatthours
+,Seattle,2025-06-14T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,981,megawatthours
+,Seattle,2025-06-14T00,SCL,Seattle City Light,NG,Net generation,644,megawatthours
+,Seattle,2025-06-14T00,SCL,Seattle City Light,TI,Total interchange,-377,megawatthours
+,New York,2025-06-13T00,NYIS,New York Independent System Operator,D,Demand,22153,megawatthours
+,New York,2025-06-13T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21769,megawatthours
+,New York,2025-06-13T00,NYIS,New York Independent System Operator,NG,Net generation,20612,megawatthours
+,New York,2025-06-13T00,NYIS,New York Independent System Operator,TI,Total interchange,-1541,megawatthours
+,Chicago,2025-06-13T00,PJM,"PJM Interconnection, LLC",D,Demand,124223,megawatthours
+,Chicago,2025-06-13T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,121190,megawatthours
+,Chicago,2025-06-13T00,PJM,"PJM Interconnection, LLC",NG,Net generation,124669,megawatthours
+,Chicago,2025-06-13T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,688,megawatthours
+,Houston,2025-06-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63398,megawatthours
+,Houston,2025-06-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64587,megawatthours
+,Houston,2025-06-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63283,megawatthours
+,Houston,2025-06-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-114,megawatthours
+,Phoenix,2025-06-13T00,AZPS,Arizona Public Service Company,D,Demand,5827,megawatthours
+,Phoenix,2025-06-13T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6970,megawatthours
+,Phoenix,2025-06-13T00,AZPS,Arizona Public Service Company,NG,Net generation,3771,megawatthours
+,Phoenix,2025-06-13T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2056,megawatthours
+,Seattle,2025-06-13T00,SCL,Seattle City Light,D,Demand,985,megawatthours
+,Seattle,2025-06-13T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,990,megawatthours
+,Seattle,2025-06-13T00,SCL,Seattle City Light,NG,Net generation,441,megawatthours
+,Seattle,2025-06-13T00,SCL,Seattle City Light,TI,Total interchange,-544,megawatthours
+,New York,2025-06-12T00,NYIS,New York Independent System Operator,D,Demand,20643,megawatthours
+,New York,2025-06-12T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,20764,megawatthours
+,New York,2025-06-12T00,NYIS,New York Independent System Operator,NG,Net generation,19309,megawatthours
+,New York,2025-06-12T00,NYIS,New York Independent System Operator,TI,Total interchange,-1334,megawatthours
+,Chicago,2025-06-12T00,PJM,"PJM Interconnection, LLC",D,Demand,119675,megawatthours
+,Chicago,2025-06-12T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,113782,megawatthours
+,Chicago,2025-06-12T00,PJM,"PJM Interconnection, LLC",NG,Net generation,120880,megawatthours
+,Chicago,2025-06-12T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,739,megawatthours
+,Houston,2025-06-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,62997,megawatthours
+,Houston,2025-06-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,61492,megawatthours
+,Houston,2025-06-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,62996,megawatthours
+,Houston,2025-06-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,0,megawatthours
+,Phoenix,2025-06-12T00,AZPS,Arizona Public Service Company,D,Demand,6081,megawatthours
+,Phoenix,2025-06-12T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6918,megawatthours
+,Phoenix,2025-06-12T00,AZPS,Arizona Public Service Company,NG,Net generation,4096,megawatthours
+,Phoenix,2025-06-12T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1985,megawatthours
+,Seattle,2025-06-12T00,SCL,Seattle City Light,D,Demand,1037,megawatthours
+,Seattle,2025-06-12T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1085,megawatthours
+,Seattle,2025-06-12T00,SCL,Seattle City Light,NG,Net generation,592,megawatthours
+,Seattle,2025-06-12T00,SCL,Seattle City Light,TI,Total interchange,-445,megawatthours
+,New York,2025-06-11T00,NYIS,New York Independent System Operator,D,Demand,18730,megawatthours
+,New York,2025-06-11T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,19024,megawatthours
+,New York,2025-06-11T00,NYIS,New York Independent System Operator,NG,Net generation,17307,megawatthours
+,New York,2025-06-11T00,NYIS,New York Independent System Operator,TI,Total interchange,-1423,megawatthours
+,Chicago,2025-06-11T00,PJM,"PJM Interconnection, LLC",D,Demand,108576,megawatthours
+,Chicago,2025-06-11T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,102176,megawatthours
+,Chicago,2025-06-11T00,PJM,"PJM Interconnection, LLC",NG,Net generation,110122,megawatthours
+,Chicago,2025-06-11T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,762,megawatthours
+,Houston,2025-06-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,69242,megawatthours
+,Houston,2025-06-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,70532,megawatthours
+,Houston,2025-06-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,69193,megawatthours
+,Houston,2025-06-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-48,megawatthours
+,Phoenix,2025-06-11T00,AZPS,Arizona Public Service Company,D,Demand,6100,megawatthours
+,Phoenix,2025-06-11T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6741,megawatthours
+,Phoenix,2025-06-11T00,AZPS,Arizona Public Service Company,NG,Net generation,4725,megawatthours
+,Phoenix,2025-06-11T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1375,megawatthours
+,Seattle,2025-06-11T00,SCL,Seattle City Light,D,Demand,1234,megawatthours
+,Seattle,2025-06-11T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1164,megawatthours
+,Seattle,2025-06-11T00,SCL,Seattle City Light,NG,Net generation,806,megawatthours
+,Seattle,2025-06-11T00,SCL,Seattle City Light,TI,Total interchange,-428,megawatthours
+,New York,2025-06-10T00,NYIS,New York Independent System Operator,D,Demand,18135,megawatthours
+,New York,2025-06-10T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18160,megawatthours
+,New York,2025-06-10T00,NYIS,New York Independent System Operator,NG,Net generation,16499,megawatthours
+,New York,2025-06-10T00,NYIS,New York Independent System Operator,TI,Total interchange,-1636,megawatthours
+,Chicago,2025-06-10T00,PJM,"PJM Interconnection, LLC",D,Demand,103923,megawatthours
+,Chicago,2025-06-10T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,100018,megawatthours
+,Chicago,2025-06-10T00,PJM,"PJM Interconnection, LLC",NG,Net generation,106319,megawatthours
+,Chicago,2025-06-10T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,410,megawatthours
+,Houston,2025-06-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75240,megawatthours
+,Houston,2025-06-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75292,megawatthours
+,Houston,2025-06-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75304,megawatthours
+,Houston,2025-06-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,66,megawatthours
+,Phoenix,2025-06-10T00,AZPS,Arizona Public Service Company,D,Demand,6061,megawatthours
+,Phoenix,2025-06-10T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6912,megawatthours
+,Phoenix,2025-06-10T00,AZPS,Arizona Public Service Company,NG,Net generation,4617,megawatthours
+,Phoenix,2025-06-10T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1444,megawatthours
+,Seattle,2025-06-10T00,SCL,Seattle City Light,D,Demand,1315,megawatthours
+,Seattle,2025-06-10T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1239,megawatthours
+,Seattle,2025-06-10T00,SCL,Seattle City Light,NG,Net generation,604,megawatthours
+,Seattle,2025-06-10T00,SCL,Seattle City Light,TI,Total interchange,-711,megawatthours
+,New York,2025-06-09T00,NYIS,New York Independent System Operator,D,Demand,18030,megawatthours
+,New York,2025-06-09T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17924,megawatthours
+,New York,2025-06-09T00,NYIS,New York Independent System Operator,NG,Net generation,16661,megawatthours
+,New York,2025-06-09T00,NYIS,New York Independent System Operator,TI,Total interchange,-1369,megawatthours
+,Chicago,2025-06-09T00,PJM,"PJM Interconnection, LLC",D,Demand,97196,megawatthours
+,Chicago,2025-06-09T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,93010,megawatthours
+,Chicago,2025-06-09T00,PJM,"PJM Interconnection, LLC",NG,Net generation,100766,megawatthours
+,Chicago,2025-06-09T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,96,megawatthours
+,Houston,2025-06-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75727,megawatthours
+,Houston,2025-06-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,77960,megawatthours
+,Houston,2025-06-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75800,megawatthours
+,Houston,2025-06-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,74,megawatthours
+,Phoenix,2025-06-09T00,AZPS,Arizona Public Service Company,D,Demand,5823,megawatthours
+,Phoenix,2025-06-09T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6701,megawatthours
+,Phoenix,2025-06-09T00,AZPS,Arizona Public Service Company,NG,Net generation,4173,megawatthours
+,Phoenix,2025-06-09T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1650,megawatthours
+,Seattle,2025-06-09T00,SCL,Seattle City Light,D,Demand,1185,megawatthours
+,Seattle,2025-06-09T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1102,megawatthours
+,Seattle,2025-06-09T00,SCL,Seattle City Light,NG,Net generation,858,megawatthours
+,Seattle,2025-06-09T00,SCL,Seattle City Light,TI,Total interchange,-327,megawatthours
+,New York,2025-06-08T00,NYIS,New York Independent System Operator,D,Demand,18964,megawatthours
+,New York,2025-06-08T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18613,megawatthours
+,New York,2025-06-08T00,NYIS,New York Independent System Operator,NG,Net generation,17113,megawatthours
+,New York,2025-06-08T00,NYIS,New York Independent System Operator,TI,Total interchange,-1851,megawatthours
+,Chicago,2025-06-08T00,PJM,"PJM Interconnection, LLC",D,Demand,102872,megawatthours
+,Chicago,2025-06-08T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,95102,megawatthours
+,Chicago,2025-06-08T00,PJM,"PJM Interconnection, LLC",NG,Net generation,106361,megawatthours
+,Chicago,2025-06-08T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,746,megawatthours
+,Houston,2025-06-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74993,megawatthours
+,Houston,2025-06-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,76783,megawatthours
+,Houston,2025-06-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74900,megawatthours
+,Houston,2025-06-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-92,megawatthours
+,Phoenix,2025-06-08T00,AZPS,Arizona Public Service Company,D,Demand,5535,megawatthours
+,Phoenix,2025-06-08T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6096,megawatthours
+,Phoenix,2025-06-08T00,AZPS,Arizona Public Service Company,NG,Net generation,3928,megawatthours
+,Phoenix,2025-06-08T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1607,megawatthours
+,Seattle,2025-06-08T00,SCL,Seattle City Light,D,Demand,1061,megawatthours
+,Seattle,2025-06-08T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,993,megawatthours
+,Seattle,2025-06-08T00,SCL,Seattle City Light,NG,Net generation,694,megawatthours
+,Seattle,2025-06-08T00,SCL,Seattle City Light,TI,Total interchange,-367,megawatthours
+,New York,2025-06-07T00,NYIS,New York Independent System Operator,D,Demand,21096,megawatthours
+,New York,2025-06-07T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,20333,megawatthours
+,New York,2025-06-07T00,NYIS,New York Independent System Operator,NG,Net generation,19236,megawatthours
+,New York,2025-06-07T00,NYIS,New York Independent System Operator,TI,Total interchange,-1860,megawatthours
+,Chicago,2025-06-07T00,PJM,"PJM Interconnection, LLC",D,Demand,108467,megawatthours
+,Chicago,2025-06-07T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,103892,megawatthours
+,Chicago,2025-06-07T00,PJM,"PJM Interconnection, LLC",NG,Net generation,114457,megawatthours
+,Chicago,2025-06-07T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,747,megawatthours
+,Houston,2025-06-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75710,megawatthours
+,Houston,2025-06-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,75340,megawatthours
+,Houston,2025-06-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75736,megawatthours
+,Houston,2025-06-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,27,megawatthours
+,Phoenix,2025-06-07T00,AZPS,Arizona Public Service Company,D,Demand,5529,megawatthours
+,Phoenix,2025-06-07T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6137,megawatthours
+,Phoenix,2025-06-07T00,AZPS,Arizona Public Service Company,NG,Net generation,4082,megawatthours
+,Phoenix,2025-06-07T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1447,megawatthours
+,Seattle,2025-06-07T00,SCL,Seattle City Light,D,Demand,1165,megawatthours
+,Seattle,2025-06-07T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1119,megawatthours
+,Seattle,2025-06-07T00,SCL,Seattle City Light,NG,Net generation,613,megawatthours
+,Seattle,2025-06-07T00,SCL,Seattle City Light,TI,Total interchange,-552,megawatthours
+,New York,2025-06-06T00,NYIS,New York Independent System Operator,D,Demand,22614,megawatthours
+,New York,2025-06-06T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,22062,megawatthours
+,New York,2025-06-06T00,NYIS,New York Independent System Operator,NG,Net generation,21098,megawatthours
+,New York,2025-06-06T00,NYIS,New York Independent System Operator,TI,Total interchange,-1516,megawatthours
+,Chicago,2025-06-06T00,PJM,"PJM Interconnection, LLC",D,Demand,113362,megawatthours
+,Chicago,2025-06-06T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,107490,megawatthours
+,Chicago,2025-06-06T00,PJM,"PJM Interconnection, LLC",NG,Net generation,117649,megawatthours
+,Chicago,2025-06-06T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1087,megawatthours
+,Houston,2025-06-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75060,megawatthours
+,Houston,2025-06-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,72807,megawatthours
+,Houston,2025-06-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75066,megawatthours
+,Houston,2025-06-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,7,megawatthours
+,Phoenix,2025-06-06T00,AZPS,Arizona Public Service Company,D,Demand,5245,megawatthours
+,Phoenix,2025-06-06T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5891,megawatthours
+,Phoenix,2025-06-06T00,AZPS,Arizona Public Service Company,NG,Net generation,3681,megawatthours
+,Phoenix,2025-06-06T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1564,megawatthours
+,Seattle,2025-06-06T00,SCL,Seattle City Light,D,Demand,1056,megawatthours
+,Seattle,2025-06-06T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1047,megawatthours
+,Seattle,2025-06-06T00,SCL,Seattle City Light,NG,Net generation,802,megawatthours
+,Seattle,2025-06-06T00,SCL,Seattle City Light,TI,Total interchange,-254,megawatthours
+,New York,2025-06-05T00,NYIS,New York Independent System Operator,D,Demand,20733,megawatthours
+,New York,2025-06-05T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,21158,megawatthours
+,New York,2025-06-05T00,NYIS,New York Independent System Operator,NG,Net generation,18636,megawatthours
+,New York,2025-06-05T00,NYIS,New York Independent System Operator,TI,Total interchange,-2097,megawatthours
+,Chicago,2025-06-05T00,PJM,"PJM Interconnection, LLC",D,Demand,115211,megawatthours
+,Chicago,2025-06-05T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,109024,megawatthours
+,Chicago,2025-06-05T00,PJM,"PJM Interconnection, LLC",NG,Net generation,119102,megawatthours
+,Chicago,2025-06-05T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,863,megawatthours
+,Houston,2025-06-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,68838,megawatthours
+,Houston,2025-06-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,69329,megawatthours
+,Houston,2025-06-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,68783,megawatthours
+,Houston,2025-06-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-55,megawatthours
+,Phoenix,2025-06-05T00,AZPS,Arizona Public Service Company,D,Demand,4785,megawatthours
+,Phoenix,2025-06-05T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5586,megawatthours
+,Phoenix,2025-06-05T00,AZPS,Arizona Public Service Company,NG,Net generation,3586,megawatthours
+,Phoenix,2025-06-05T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1199,megawatthours
+,Seattle,2025-06-05T00,SCL,Seattle City Light,D,Demand,1014,megawatthours
+,Seattle,2025-06-05T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1031,megawatthours
+,Seattle,2025-06-05T00,SCL,Seattle City Light,NG,Net generation,807,megawatthours
+,Seattle,2025-06-05T00,SCL,Seattle City Light,TI,Total interchange,-207,megawatthours
+,New York,2025-06-04T00,NYIS,New York Independent System Operator,D,Demand,18126,megawatthours
+,New York,2025-06-04T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,18544,megawatthours
+,New York,2025-06-04T00,NYIS,New York Independent System Operator,NG,Net generation,17120,megawatthours
+,New York,2025-06-04T00,NYIS,New York Independent System Operator,TI,Total interchange,-1006,megawatthours
+,Chicago,2025-06-04T00,PJM,"PJM Interconnection, LLC",D,Demand,106920,megawatthours
+,Chicago,2025-06-04T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,102517,megawatthours
+,Chicago,2025-06-04T00,PJM,"PJM Interconnection, LLC",NG,Net generation,111411,megawatthours
+,Chicago,2025-06-04T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,794,megawatthours
+,Phoenix,2025-06-04T00,AZPS,Arizona Public Service Company,D,Demand,5194,megawatthours
+,Phoenix,2025-06-04T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5766,megawatthours
+,Phoenix,2025-06-04T00,AZPS,Arizona Public Service Company,NG,Net generation,3668,megawatthours
+,Phoenix,2025-06-04T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1526,megawatthours
+,Seattle,2025-06-04T00,SCL,Seattle City Light,D,Demand,1083,megawatthours
+,Seattle,2025-06-04T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1041,megawatthours
+,Seattle,2025-06-04T00,SCL,Seattle City Light,NG,Net generation,855,megawatthours
+,Seattle,2025-06-04T00,SCL,Seattle City Light,TI,Total interchange,-228,megawatthours
+,Houston,2025-06-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74715,megawatthours
+,Houston,2025-06-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,73455,megawatthours
+,Houston,2025-06-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74754,megawatthours
+,Houston,2025-06-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,39,megawatthours
+,Phoenix,2025-06-03T00,AZPS,Arizona Public Service Company,D,Demand,4379,megawatthours
+,Phoenix,2025-06-03T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5206,megawatthours
+,Phoenix,2025-06-03T00,AZPS,Arizona Public Service Company,NG,Net generation,3403,megawatthours
+,Phoenix,2025-06-03T00,AZPS,Arizona Public Service Company,TI,Total interchange,-976,megawatthours
+,Seattle,2025-06-03T00,SCL,Seattle City Light,D,Demand,1052,megawatthours
+,Seattle,2025-06-03T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1026,megawatthours
+,Seattle,2025-06-03T00,SCL,Seattle City Light,NG,Net generation,846,megawatthours
+,Seattle,2025-06-03T00,SCL,Seattle City Light,TI,Total interchange,-206,megawatthours
+,New York,2025-06-02T00,NYIS,New York Independent System Operator,D,Demand,15335,megawatthours
+,New York,2025-06-02T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15109,megawatthours
+,New York,2025-06-02T00,NYIS,New York Independent System Operator,NG,Net generation,14620,megawatthours
+,New York,2025-06-02T00,NYIS,New York Independent System Operator,TI,Total interchange,-715,megawatthours
+,Chicago,2025-06-02T00,PJM,"PJM Interconnection, LLC",D,Demand,81792,megawatthours
+,Chicago,2025-06-02T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,81931,megawatthours
+,Chicago,2025-06-02T00,PJM,"PJM Interconnection, LLC",NG,Net generation,89364,megawatthours
+,Chicago,2025-06-02T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,701,megawatthours
+,Houston,2025-06-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,71638,megawatthours
+,Houston,2025-06-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71100,megawatthours
+,Houston,2025-06-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,71590,megawatthours
+,Houston,2025-06-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-48,megawatthours
+,Phoenix,2025-06-02T00,AZPS,Arizona Public Service Company,D,Demand,4362,megawatthours
+,Phoenix,2025-06-02T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4732,megawatthours
+,Phoenix,2025-06-02T00,AZPS,Arizona Public Service Company,NG,Net generation,2525,megawatthours
+,Phoenix,2025-06-02T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1837,megawatthours
+,Seattle,2025-06-02T00,SCL,Seattle City Light,D,Demand,920,megawatthours
+,Seattle,2025-06-02T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,924,megawatthours
+,Seattle,2025-06-02T00,SCL,Seattle City Light,NG,Net generation,859,megawatthours
+,Seattle,2025-06-02T00,SCL,Seattle City Light,TI,Total interchange,-61,megawatthours
+,New York,2025-06-01T00,NYIS,New York Independent System Operator,D,Demand,15610,megawatthours
+,New York,2025-06-01T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15245,megawatthours
+,New York,2025-06-01T00,NYIS,New York Independent System Operator,NG,Net generation,14850,megawatthours
+,New York,2025-06-01T00,NYIS,New York Independent System Operator,TI,Total interchange,-760,megawatthours
+,Chicago,2025-06-01T00,PJM,"PJM Interconnection, LLC",D,Demand,80593,megawatthours
+,Chicago,2025-06-01T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,80693,megawatthours
+,Chicago,2025-06-01T00,PJM,"PJM Interconnection, LLC",NG,Net generation,88284,megawatthours
+,Chicago,2025-06-01T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1313,megawatthours
+,Houston,2025-06-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,67529,megawatthours
+,Houston,2025-06-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,66155,megawatthours
+,Houston,2025-06-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,67570,megawatthours
+,Houston,2025-06-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,42,megawatthours
+,Phoenix,2025-06-01T00,AZPS,Arizona Public Service Company,D,Demand,5805,megawatthours
+,Phoenix,2025-06-01T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5858,megawatthours
+,Phoenix,2025-06-01T00,AZPS,Arizona Public Service Company,NG,Net generation,3377,megawatthours
+,Phoenix,2025-06-01T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2428,megawatthours
+,Seattle,2025-06-01T00,SCL,Seattle City Light,D,Demand,925,megawatthours
+,Seattle,2025-06-01T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,922,megawatthours
+,Seattle,2025-06-01T00,SCL,Seattle City Light,NG,Net generation,821,megawatthours
+,Seattle,2025-06-01T00,SCL,Seattle City Light,TI,Total interchange,-104,megawatthours
+,New York,2025-05-31T00,NYIS,New York Independent System Operator,D,Demand,17204,megawatthours
+,New York,2025-05-31T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17188,megawatthours
+,New York,2025-05-31T00,NYIS,New York Independent System Operator,NG,Net generation,16129,megawatthours
+,New York,2025-05-31T00,NYIS,New York Independent System Operator,TI,Total interchange,-1075,megawatthours
+,Chicago,2025-05-31T00,PJM,"PJM Interconnection, LLC",D,Demand,90934,megawatthours
+,Chicago,2025-05-31T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,87373,megawatthours
+,Chicago,2025-05-31T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95543,megawatthours
+,Chicago,2025-05-31T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,801,megawatthours
+,Houston,2025-05-31T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63854,megawatthours
+,Houston,2025-05-31T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64666,megawatthours
+,Houston,2025-05-31T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63657,megawatthours
+,Houston,2025-05-31T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-197,megawatthours
+,Phoenix,2025-05-31T00,AZPS,Arizona Public Service Company,D,Demand,5787,megawatthours
+,Phoenix,2025-05-31T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,6076,megawatthours
+,Phoenix,2025-05-31T00,AZPS,Arizona Public Service Company,NG,Net generation,4630,megawatthours
+,Phoenix,2025-05-31T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1157,megawatthours
+,Seattle,2025-05-31T00,SCL,Seattle City Light,D,Demand,1091,megawatthours
+,Seattle,2025-05-31T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1021,megawatthours
+,Seattle,2025-05-31T00,SCL,Seattle City Light,NG,Net generation,851,megawatthours
+,Seattle,2025-05-31T00,SCL,Seattle City Light,TI,Total interchange,-240,megawatthours
+,New York,2025-05-30T00,NYIS,New York Independent System Operator,D,Demand,16812,megawatthours
+,New York,2025-05-30T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16880,megawatthours
+,New York,2025-05-30T00,NYIS,New York Independent System Operator,NG,Net generation,15557,megawatthours
+,New York,2025-05-30T00,NYIS,New York Independent System Operator,TI,Total interchange,-1255,megawatthours
+,Chicago,2025-05-30T00,PJM,"PJM Interconnection, LLC",D,Demand,91119,megawatthours
+,Chicago,2025-05-30T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,92060,megawatthours
+,Chicago,2025-05-30T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95060,megawatthours
+,Chicago,2025-05-30T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1048,megawatthours
+,Houston,2025-05-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70745,megawatthours
+,Houston,2025-05-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,69245,megawatthours
+,Houston,2025-05-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70792,megawatthours
+,Houston,2025-05-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,47,megawatthours
+,Phoenix,2025-05-30T00,AZPS,Arizona Public Service Company,D,Demand,5095,megawatthours
+,Phoenix,2025-05-30T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5721,megawatthours
+,Phoenix,2025-05-30T00,AZPS,Arizona Public Service Company,NG,Net generation,2557,megawatthours
+,Phoenix,2025-05-30T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2538,megawatthours
+,Seattle,2025-05-30T00,SCL,Seattle City Light,D,Demand,991,megawatthours
+,Seattle,2025-05-30T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1006,megawatthours
+,Seattle,2025-05-30T00,SCL,Seattle City Light,NG,Net generation,792,megawatthours
+,Seattle,2025-05-30T00,SCL,Seattle City Light,TI,Total interchange,-199,megawatthours
+,New York,2025-05-29T00,NYIS,New York Independent System Operator,D,Demand,16848,megawatthours
+,New York,2025-05-29T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16680,megawatthours
+,New York,2025-05-29T00,NYIS,New York Independent System Operator,NG,Net generation,16168,megawatthours
+,New York,2025-05-29T00,NYIS,New York Independent System Operator,TI,Total interchange,-680,megawatthours
+,Chicago,2025-05-29T00,PJM,"PJM Interconnection, LLC",D,Demand,87674,megawatthours
+,Chicago,2025-05-29T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,88150,megawatthours
+,Chicago,2025-05-29T00,PJM,"PJM Interconnection, LLC",NG,Net generation,90857,megawatthours
+,Chicago,2025-05-29T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1657,megawatthours
+,Houston,2025-05-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63411,megawatthours
+,Houston,2025-05-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,62126,megawatthours
+,Houston,2025-05-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63316,megawatthours
+,Houston,2025-05-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-95,megawatthours
+,Phoenix,2025-05-29T00,AZPS,Arizona Public Service Company,D,Demand,5184,megawatthours
+,Phoenix,2025-05-29T00,AZPS,Arizona Public Service Company,NG,Net generation,3400,megawatthours
+,Phoenix,2025-05-29T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1784,megawatthours
+,Seattle,2025-05-29T00,SCL,Seattle City Light,D,Demand,1116,megawatthours
+,Seattle,2025-05-29T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1122,megawatthours
+,Seattle,2025-05-29T00,SCL,Seattle City Light,NG,Net generation,714,megawatthours
+,Seattle,2025-05-29T00,SCL,Seattle City Light,TI,Total interchange,-402,megawatthours
+,New York,2025-05-28T00,NYIS,New York Independent System Operator,D,Demand,17178,megawatthours
+,New York,2025-05-28T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17554,megawatthours
+,New York,2025-05-28T00,NYIS,New York Independent System Operator,NG,Net generation,15504,megawatthours
+,New York,2025-05-28T00,NYIS,New York Independent System Operator,TI,Total interchange,-1674,megawatthours
+,Chicago,2025-05-28T00,PJM,"PJM Interconnection, LLC",D,Demand,87642,megawatthours
+,Chicago,2025-05-28T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,86162,megawatthours
+,Chicago,2025-05-28T00,PJM,"PJM Interconnection, LLC",NG,Net generation,92918,megawatthours
+,Chicago,2025-05-28T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1255,megawatthours
+,Houston,2025-05-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,68580,megawatthours
+,Houston,2025-05-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64714,megawatthours
+,Houston,2025-05-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,68403,megawatthours
+,Houston,2025-05-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-176,megawatthours
+,Phoenix,2025-05-28T00,AZPS,Arizona Public Service Company,D,Demand,5155,megawatthours
+,Phoenix,2025-05-28T00,AZPS,Arizona Public Service Company,NG,Net generation,4100,megawatthours
+,Seattle,2025-05-28T00,SCL,Seattle City Light,D,Demand,1065,megawatthours
+,Seattle,2025-05-28T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1023,megawatthours
+,Seattle,2025-05-28T00,SCL,Seattle City Light,NG,Net generation,578,megawatthours
+,Seattle,2025-05-28T00,SCL,Seattle City Light,TI,Total interchange,-487,megawatthours
+,New York,2025-05-27T00,NYIS,New York Independent System Operator,D,Demand,15610,megawatthours
+,New York,2025-05-27T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15868,megawatthours
+,New York,2025-05-27T00,NYIS,New York Independent System Operator,NG,Net generation,15153,megawatthours
+,New York,2025-05-27T00,NYIS,New York Independent System Operator,TI,Total interchange,-457,megawatthours
+,Chicago,2025-05-27T00,PJM,"PJM Interconnection, LLC",D,Demand,82202,megawatthours
+,Chicago,2025-05-27T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,81412,megawatthours
+,Chicago,2025-05-27T00,PJM,"PJM Interconnection, LLC",NG,Net generation,88706,megawatthours
+,Chicago,2025-05-27T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,979,megawatthours
+,Houston,2025-05-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,61320,megawatthours
+,Houston,2025-05-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,67129,megawatthours
+,Houston,2025-05-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,61313,megawatthours
+,Houston,2025-05-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-7,megawatthours
+,Phoenix,2025-05-27T00,AZPS,Arizona Public Service Company,D,Demand,4790,megawatthours
+,Phoenix,2025-05-27T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5658,megawatthours
+,Phoenix,2025-05-27T00,AZPS,Arizona Public Service Company,NG,Net generation,3307,megawatthours
+,Seattle,2025-05-27T00,SCL,Seattle City Light,D,Demand,999,megawatthours
+,Seattle,2025-05-27T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,905,megawatthours
+,Seattle,2025-05-27T00,SCL,Seattle City Light,NG,Net generation,364,megawatthours
+,Seattle,2025-05-27T00,SCL,Seattle City Light,TI,Total interchange,-635,megawatthours
+,New York,2025-05-26T00,NYIS,New York Independent System Operator,D,Demand,14836,megawatthours
+,New York,2025-05-26T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15243,megawatthours
+,New York,2025-05-26T00,NYIS,New York Independent System Operator,NG,Net generation,14323,megawatthours
+,New York,2025-05-26T00,NYIS,New York Independent System Operator,TI,Total interchange,-513,megawatthours
+,Chicago,2025-05-26T00,PJM,"PJM Interconnection, LLC",D,Demand,77247,megawatthours
+,Chicago,2025-05-26T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,81078,megawatthours
+,Chicago,2025-05-26T00,PJM,"PJM Interconnection, LLC",NG,Net generation,84636,megawatthours
+,Chicago,2025-05-26T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,897,megawatthours
+,Houston,2025-05-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74629,megawatthours
+,Houston,2025-05-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,74988,megawatthours
+,Houston,2025-05-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74783,megawatthours
+,Houston,2025-05-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,154,megawatthours
+,Phoenix,2025-05-26T00,AZPS,Arizona Public Service Company,D,Demand,4627,megawatthours
+,Phoenix,2025-05-26T00,AZPS,Arizona Public Service Company,NG,Net generation,3307,megawatthours
+,Phoenix,2025-05-26T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1320,megawatthours
+,Seattle,2025-05-26T00,SCL,Seattle City Light,D,Demand,944,megawatthours
+,Seattle,2025-05-26T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,924,megawatthours
+,Seattle,2025-05-26T00,SCL,Seattle City Light,NG,Net generation,660,megawatthours
+,Seattle,2025-05-26T00,SCL,Seattle City Light,TI,Total interchange,-284,megawatthours
+,New York,2025-05-25T00,NYIS,New York Independent System Operator,D,Demand,15244,megawatthours
+,New York,2025-05-25T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15122,megawatthours
+,New York,2025-05-25T00,NYIS,New York Independent System Operator,NG,Net generation,14783,megawatthours
+,New York,2025-05-25T00,NYIS,New York Independent System Operator,TI,Total interchange,-461,megawatthours
+,Chicago,2025-05-25T00,PJM,"PJM Interconnection, LLC",D,Demand,78061,megawatthours
+,Chicago,2025-05-25T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,79564,megawatthours
+,Chicago,2025-05-25T00,PJM,"PJM Interconnection, LLC",NG,Net generation,84149,megawatthours
+,Chicago,2025-05-25T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1040,megawatthours
+,Houston,2025-05-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,74783,megawatthours
+,Houston,2025-05-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,73867,megawatthours
+,Houston,2025-05-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,74794,megawatthours
+,Houston,2025-05-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,12,megawatthours
+,Phoenix,2025-05-25T00,AZPS,Arizona Public Service Company,D,Demand,4551,megawatthours
+,Phoenix,2025-05-25T00,AZPS,Arizona Public Service Company,NG,Net generation,3137,megawatthours
+,Seattle,2025-05-25T00,SCL,Seattle City Light,D,Demand,911,megawatthours
+,Seattle,2025-05-25T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,914,megawatthours
+,Seattle,2025-05-25T00,SCL,Seattle City Light,NG,Net generation,520,megawatthours
+,Seattle,2025-05-25T00,SCL,Seattle City Light,TI,Total interchange,-391,megawatthours
+,New York,2025-05-24T00,NYIS,New York Independent System Operator,D,Demand,16438,megawatthours
+,New York,2025-05-24T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16064,megawatthours
+,New York,2025-05-24T00,NYIS,New York Independent System Operator,NG,Net generation,14880,megawatthours
+,New York,2025-05-24T00,NYIS,New York Independent System Operator,TI,Total interchange,-1558,megawatthours
+,Chicago,2025-05-24T00,PJM,"PJM Interconnection, LLC",D,Demand,81868,megawatthours
+,Chicago,2025-05-24T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,84072,megawatthours
+,Chicago,2025-05-24T00,PJM,"PJM Interconnection, LLC",NG,Net generation,87505,megawatthours
+,Chicago,2025-05-24T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1466,megawatthours
+,Houston,2025-05-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75678,megawatthours
+,Houston,2025-05-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,72614,megawatthours
+,Houston,2025-05-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75618,megawatthours
+,Houston,2025-05-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-60,megawatthours
+,Phoenix,2025-05-24T00,AZPS,Arizona Public Service Company,D,Demand,5045,megawatthours
+,Phoenix,2025-05-24T00,AZPS,Arizona Public Service Company,NG,Net generation,3790,megawatthours
+,Seattle,2025-05-24T00,SCL,Seattle City Light,D,Demand,1038,megawatthours
+,Seattle,2025-05-24T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1000,megawatthours
+,Seattle,2025-05-24T00,SCL,Seattle City Light,NG,Net generation,735,megawatthours
+,Seattle,2025-05-24T00,SCL,Seattle City Light,TI,Total interchange,-303,megawatthours
+,New York,2025-05-23T00,NYIS,New York Independent System Operator,D,Demand,17123,megawatthours
+,New York,2025-05-23T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16588,megawatthours
+,New York,2025-05-23T00,NYIS,New York Independent System Operator,NG,Net generation,15239,megawatthours
+,New York,2025-05-23T00,NYIS,New York Independent System Operator,TI,Total interchange,-1884,megawatthours
+,Chicago,2025-05-23T00,PJM,"PJM Interconnection, LLC",D,Demand,86512,megawatthours
+,Chicago,2025-05-23T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,88169,megawatthours
+,Chicago,2025-05-23T00,PJM,"PJM Interconnection, LLC",NG,Net generation,90610,megawatthours
+,Chicago,2025-05-23T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1630,megawatthours
+,Houston,2025-05-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,72875,megawatthours
+,Houston,2025-05-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71801,megawatthours
+,Houston,2025-05-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,72823,megawatthours
+,Houston,2025-05-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-52,megawatthours
+,Phoenix,2025-05-23T00,AZPS,Arizona Public Service Company,D,Demand,5341,megawatthours
+,Phoenix,2025-05-23T00,AZPS,Arizona Public Service Company,NG,Net generation,3816,megawatthours
+,Seattle,2025-05-23T00,SCL,Seattle City Light,D,Demand,990,megawatthours
+,Seattle,2025-05-23T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1011,megawatthours
+,Seattle,2025-05-23T00,SCL,Seattle City Light,NG,Net generation,675,megawatthours
+,Seattle,2025-05-23T00,SCL,Seattle City Light,TI,Total interchange,-315,megawatthours
+,New York,2025-05-22T00,NYIS,New York Independent System Operator,D,Demand,17007,megawatthours
+,New York,2025-05-22T00,NYIS,New York Independent System Operator,NG,Net generation,16092,megawatthours
+,New York,2025-05-22T00,NYIS,New York Independent System Operator,TI,Total interchange,-915,megawatthours
+,Chicago,2025-05-22T00,PJM,"PJM Interconnection, LLC",D,Demand,87940,megawatthours
+,Chicago,2025-05-22T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,90006,megawatthours
+,Chicago,2025-05-22T00,PJM,"PJM Interconnection, LLC",NG,Net generation,91583,megawatthours
+,Chicago,2025-05-22T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1266,megawatthours
+,Houston,2025-05-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,69765,megawatthours
+,Houston,2025-05-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,69098,megawatthours
+,Houston,2025-05-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,69858,megawatthours
+,Houston,2025-05-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,92,megawatthours
+,Phoenix,2025-05-22T00,AZPS,Arizona Public Service Company,D,Demand,5549,megawatthours
+,Phoenix,2025-05-22T00,AZPS,Arizona Public Service Company,NG,Net generation,4167,megawatthours
+,Seattle,2025-05-22T00,SCL,Seattle City Light,D,Demand,983,megawatthours
+,Seattle,2025-05-22T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1010,megawatthours
+,Seattle,2025-05-22T00,SCL,Seattle City Light,NG,Net generation,815,megawatthours
+,Seattle,2025-05-22T00,SCL,Seattle City Light,TI,Total interchange,-168,megawatthours
+,New York,2025-05-21T00,NYIS,New York Independent System Operator,D,Demand,16577,megawatthours
+,New York,2025-05-21T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16333,megawatthours
+,New York,2025-05-21T00,NYIS,New York Independent System Operator,NG,Net generation,16004,megawatthours
+,Chicago,2025-05-21T00,PJM,"PJM Interconnection, LLC",D,Demand,89163,megawatthours
+,Chicago,2025-05-21T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,90792,megawatthours
+,Chicago,2025-05-21T00,PJM,"PJM Interconnection, LLC",NG,Net generation,93925,megawatthours
+,Chicago,2025-05-21T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,388,megawatthours
+,Houston,2025-05-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70508,megawatthours
+,Houston,2025-05-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71469,megawatthours
+,Houston,2025-05-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70290,megawatthours
+,Houston,2025-05-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-217,megawatthours
+,Phoenix,2025-05-21T00,AZPS,Arizona Public Service Company,D,Demand,4955,megawatthours
+,Phoenix,2025-05-21T00,AZPS,Arizona Public Service Company,NG,Net generation,3191,megawatthours
+,Seattle,2025-05-21T00,SCL,Seattle City Light,D,Demand,1053,megawatthours
+,Seattle,2025-05-21T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1019,megawatthours
+,Seattle,2025-05-21T00,SCL,Seattle City Light,NG,Net generation,844,megawatthours
+,Seattle,2025-05-21T00,SCL,Seattle City Light,TI,Total interchange,-209,megawatthours
+,New York,2025-05-20T00,NYIS,New York Independent System Operator,D,Demand,16851,megawatthours
+,New York,2025-05-20T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16571,megawatthours
+,New York,2025-05-20T00,NYIS,New York Independent System Operator,NG,Net generation,16004,megawatthours
+,New York,2025-05-20T00,NYIS,New York Independent System Operator,TI,Total interchange,-847,megawatthours
+,Chicago,2025-05-20T00,PJM,"PJM Interconnection, LLC",D,Demand,93456,megawatthours
+,Chicago,2025-05-20T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,92836,megawatthours
+,Chicago,2025-05-20T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95574,megawatthours
+,Chicago,2025-05-20T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-109,megawatthours
+,Houston,2025-05-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,69591,megawatthours
+,Houston,2025-05-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,70981,megawatthours
+,Houston,2025-05-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,69788,megawatthours
+,Houston,2025-05-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,196,megawatthours
+,Phoenix,2025-05-20T00,AZPS,Arizona Public Service Company,D,Demand,4487,megawatthours
+,Phoenix,2025-05-20T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4697,megawatthours
+,Phoenix,2025-05-20T00,AZPS,Arizona Public Service Company,NG,Net generation,3048,megawatthours
+,Seattle,2025-05-20T00,SCL,Seattle City Light,D,Demand,1062,megawatthours
+,Seattle,2025-05-20T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1015,megawatthours
+,Seattle,2025-05-20T00,SCL,Seattle City Light,NG,Net generation,860,megawatthours
+,Seattle,2025-05-20T00,SCL,Seattle City Light,TI,Total interchange,-202,megawatthours
+,New York,2025-05-19T00,NYIS,New York Independent System Operator,D,Demand,16628,megawatthours
+,New York,2025-05-19T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16173,megawatthours
+,New York,2025-05-19T00,NYIS,New York Independent System Operator,NG,Net generation,15697,megawatthours
+,New York,2025-05-19T00,NYIS,New York Independent System Operator,TI,Total interchange,-931,megawatthours
+,Chicago,2025-05-19T00,PJM,"PJM Interconnection, LLC",D,Demand,89226,megawatthours
+,Chicago,2025-05-19T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,90364,megawatthours
+,Chicago,2025-05-19T00,PJM,"PJM Interconnection, LLC",NG,Net generation,91196,megawatthours
+,Chicago,2025-05-19T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,311,megawatthours
+,Houston,2025-05-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,67374,megawatthours
+,Houston,2025-05-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,69302,megawatthours
+,Houston,2025-05-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,67304,megawatthours
+,Houston,2025-05-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-70,megawatthours
+,Phoenix,2025-05-19T00,AZPS,Arizona Public Service Company,D,Demand,3799,megawatthours
+,Phoenix,2025-05-19T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4147,megawatthours
+,Phoenix,2025-05-19T00,AZPS,Arizona Public Service Company,NG,Net generation,3240,megawatthours
+,Phoenix,2025-05-19T00,AZPS,Arizona Public Service Company,TI,Total interchange,-559,megawatthours
+,Seattle,2025-05-19T00,SCL,Seattle City Light,D,Demand,981,megawatthours
+,Seattle,2025-05-19T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,918,megawatthours
+,Seattle,2025-05-19T00,SCL,Seattle City Light,NG,Net generation,400,megawatthours
+,Seattle,2025-05-19T00,SCL,Seattle City Light,TI,Total interchange,-581,megawatthours
+,New York,2025-05-18T00,NYIS,New York Independent System Operator,D,Demand,17838,megawatthours
+,New York,2025-05-18T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17301,megawatthours
+,New York,2025-05-18T00,NYIS,New York Independent System Operator,NG,Net generation,15724,megawatthours
+,New York,2025-05-18T00,NYIS,New York Independent System Operator,TI,Total interchange,-2114,megawatthours
+,Chicago,2025-05-18T00,PJM,"PJM Interconnection, LLC",D,Demand,94162,megawatthours
+,Chicago,2025-05-18T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,97025,megawatthours
+,Chicago,2025-05-18T00,PJM,"PJM Interconnection, LLC",NG,Net generation,96847,megawatthours
+,Chicago,2025-05-18T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,514,megawatthours
+,Houston,2025-05-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70849,megawatthours
+,Houston,2025-05-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,68513,megawatthours
+,Houston,2025-05-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70802,megawatthours
+,Houston,2025-05-18T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-47,megawatthours
+,Phoenix,2025-05-18T00,AZPS,Arizona Public Service Company,D,Demand,3798,megawatthours
+,Phoenix,2025-05-18T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4314,megawatthours
+,Phoenix,2025-05-18T00,AZPS,Arizona Public Service Company,NG,Net generation,2817,megawatthours
+,Phoenix,2025-05-18T00,AZPS,Arizona Public Service Company,TI,Total interchange,-981,megawatthours
+,Seattle,2025-05-18T00,SCL,Seattle City Light,D,Demand,985,megawatthours
+,Seattle,2025-05-18T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,959,megawatthours
+,Seattle,2025-05-18T00,SCL,Seattle City Light,NG,Net generation,807,megawatthours
+,Seattle,2025-05-18T00,SCL,Seattle City Light,TI,Total interchange,-178,megawatthours
+,New York,2025-05-17T00,NYIS,New York Independent System Operator,D,Demand,18176,megawatthours
+,New York,2025-05-17T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17916,megawatthours
+,New York,2025-05-17T00,NYIS,New York Independent System Operator,NG,Net generation,17138,megawatthours
+,New York,2025-05-17T00,NYIS,New York Independent System Operator,TI,Total interchange,-1038,megawatthours
+,Chicago,2025-05-17T00,PJM,"PJM Interconnection, LLC",D,Demand,103683,megawatthours
+,Chicago,2025-05-17T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,105926,megawatthours
+,Chicago,2025-05-17T00,PJM,"PJM Interconnection, LLC",NG,Net generation,104129,megawatthours
+,Chicago,2025-05-17T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,736,megawatthours
+,Houston,2025-05-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70662,megawatthours
+,Houston,2025-05-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,71643,megawatthours
+,Houston,2025-05-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70489,megawatthours
+,Houston,2025-05-17T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-172,megawatthours
+,Phoenix,2025-05-17T00,AZPS,Arizona Public Service Company,D,Demand,4196,megawatthours
+,Phoenix,2025-05-17T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4828,megawatthours
+,Phoenix,2025-05-17T00,AZPS,Arizona Public Service Company,NG,Net generation,3300,megawatthours
+,Phoenix,2025-05-17T00,AZPS,Arizona Public Service Company,TI,Total interchange,-896,megawatthours
+,Seattle,2025-05-17T00,SCL,Seattle City Light,D,Demand,1034,megawatthours
+,Seattle,2025-05-17T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1018,megawatthours
+,Seattle,2025-05-17T00,SCL,Seattle City Light,NG,Net generation,1073,megawatthours
+,Seattle,2025-05-17T00,SCL,Seattle City Light,TI,Total interchange,39,megawatthours
+,New York,2025-05-16T00,NYIS,New York Independent System Operator,D,Demand,18206,megawatthours
+,New York,2025-05-16T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17795,megawatthours
+,New York,2025-05-16T00,NYIS,New York Independent System Operator,NG,Net generation,17265,megawatthours
+,New York,2025-05-16T00,NYIS,New York Independent System Operator,TI,Total interchange,-941,megawatthours
+,Chicago,2025-05-16T00,PJM,"PJM Interconnection, LLC",D,Demand,109374,megawatthours
+,Chicago,2025-05-16T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,103463,megawatthours
+,Chicago,2025-05-16T00,PJM,"PJM Interconnection, LLC",NG,Net generation,110828,megawatthours
+,Chicago,2025-05-16T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,973,megawatthours
+,Houston,2025-05-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,70937,megawatthours
+,Houston,2025-05-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,72790,megawatthours
+,Houston,2025-05-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,70777,megawatthours
+,Houston,2025-05-16T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-160,megawatthours
+,Phoenix,2025-05-16T00,AZPS,Arizona Public Service Company,D,Demand,4211,megawatthours
+,Phoenix,2025-05-16T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4418,megawatthours
+,Phoenix,2025-05-16T00,AZPS,Arizona Public Service Company,NG,Net generation,2769,megawatthours
+,Phoenix,2025-05-16T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1442,megawatthours
+,Seattle,2025-05-16T00,SCL,Seattle City Light,D,Demand,1021,megawatthours
+,Seattle,2025-05-16T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1045,megawatthours
+,Seattle,2025-05-16T00,SCL,Seattle City Light,NG,Net generation,945,megawatthours
+,Seattle,2025-05-16T00,SCL,Seattle City Light,TI,Total interchange,-76,megawatthours
+,New York,2025-05-15T00,NYIS,New York Independent System Operator,D,Demand,17403,megawatthours
+,New York,2025-05-15T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16936,megawatthours
+,New York,2025-05-15T00,NYIS,New York Independent System Operator,NG,Net generation,16680,megawatthours
+,New York,2025-05-15T00,NYIS,New York Independent System Operator,TI,Total interchange,-723,megawatthours
+,Chicago,2025-05-15T00,PJM,"PJM Interconnection, LLC",D,Demand,96268,megawatthours
+,Chicago,2025-05-15T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,93578,megawatthours
+,Chicago,2025-05-15T00,PJM,"PJM Interconnection, LLC",NG,Net generation,98133,megawatthours
+,Chicago,2025-05-15T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1864,megawatthours
+,Houston,2025-05-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,75219,megawatthours
+,Houston,2025-05-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,78820,megawatthours
+,Houston,2025-05-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,75384,megawatthours
+,Houston,2025-05-15T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,164,megawatthours
+,Phoenix,2025-05-15T00,AZPS,Arizona Public Service Company,D,Demand,3797,megawatthours
+,Phoenix,2025-05-15T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4040,megawatthours
+,Phoenix,2025-05-15T00,AZPS,Arizona Public Service Company,NG,Net generation,2570,megawatthours
+,Phoenix,2025-05-15T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1227,megawatthours
+,Seattle,2025-05-15T00,SCL,Seattle City Light,D,Demand,1008,megawatthours
+,Seattle,2025-05-15T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1016,megawatthours
+,Seattle,2025-05-15T00,SCL,Seattle City Light,NG,Net generation,740,megawatthours
+,Seattle,2025-05-15T00,SCL,Seattle City Light,TI,Total interchange,-268,megawatthours
+,New York,2025-05-14T00,NYIS,New York Independent System Operator,D,Demand,17548,megawatthours
+,New York,2025-05-14T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17094,megawatthours
+,New York,2025-05-14T00,NYIS,New York Independent System Operator,NG,Net generation,15672,megawatthours
+,New York,2025-05-14T00,NYIS,New York Independent System Operator,TI,Total interchange,-1876,megawatthours
+,Chicago,2025-05-14T00,PJM,"PJM Interconnection, LLC",D,Demand,93534,megawatthours
+,Chicago,2025-05-14T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,92399,megawatthours
+,Chicago,2025-05-14T00,PJM,"PJM Interconnection, LLC",NG,Net generation,96631,megawatthours
+,Chicago,2025-05-14T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,3098,megawatthours
+,Houston,2025-05-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,73279,megawatthours
+,Houston,2025-05-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,73950,megawatthours
+,Houston,2025-05-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,73345,megawatthours
+,Houston,2025-05-14T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,67,megawatthours
+,Phoenix,2025-05-14T00,AZPS,Arizona Public Service Company,D,Demand,3857,megawatthours
+,Phoenix,2025-05-14T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4469,megawatthours
+,Phoenix,2025-05-14T00,AZPS,Arizona Public Service Company,NG,Net generation,3048,megawatthours
+,Phoenix,2025-05-14T00,AZPS,Arizona Public Service Company,TI,Total interchange,-809,megawatthours
+,Seattle,2025-05-14T00,SCL,Seattle City Light,D,Demand,1006,megawatthours
+,Seattle,2025-05-14T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1023,megawatthours
+,Seattle,2025-05-14T00,SCL,Seattle City Light,NG,Net generation,779,megawatthours
+,Seattle,2025-05-14T00,SCL,Seattle City Light,TI,Total interchange,-227,megawatthours
+,New York,2025-05-13T00,NYIS,New York Independent System Operator,D,Demand,17368,megawatthours
+,New York,2025-05-13T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16907,megawatthours
+,New York,2025-05-13T00,NYIS,New York Independent System Operator,NG,Net generation,16430,megawatthours
+,New York,2025-05-13T00,NYIS,New York Independent System Operator,TI,Total interchange,-938,megawatthours
+,Chicago,2025-05-13T00,PJM,"PJM Interconnection, LLC",D,Demand,95004,megawatthours
+,Chicago,2025-05-13T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,92521,megawatthours
+,Chicago,2025-05-13T00,PJM,"PJM Interconnection, LLC",NG,Net generation,96408,megawatthours
+,Chicago,2025-05-13T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1405,megawatthours
+,Houston,2025-05-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,65113,megawatthours
+,Houston,2025-05-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64630,megawatthours
+,Houston,2025-05-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,64990,megawatthours
+,Houston,2025-05-13T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-122,megawatthours
+,Phoenix,2025-05-13T00,AZPS,Arizona Public Service Company,D,Demand,5195,megawatthours
+,Phoenix,2025-05-13T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5724,megawatthours
+,Phoenix,2025-05-13T00,AZPS,Arizona Public Service Company,NG,Net generation,3089,megawatthours
+,Phoenix,2025-05-13T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2106,megawatthours
+,Seattle,2025-05-13T00,SCL,Seattle City Light,D,Demand,1011,megawatthours
+,Seattle,2025-05-13T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1014,megawatthours
+,Seattle,2025-05-13T00,SCL,Seattle City Light,NG,Net generation,837,megawatthours
+,Seattle,2025-05-13T00,SCL,Seattle City Light,TI,Total interchange,-174,megawatthours
+,New York,2025-05-12T00,NYIS,New York Independent System Operator,D,Demand,15815,megawatthours
+,New York,2025-05-12T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,14996,megawatthours
+,New York,2025-05-12T00,NYIS,New York Independent System Operator,NG,Net generation,13563,megawatthours
+,New York,2025-05-12T00,NYIS,New York Independent System Operator,TI,Total interchange,-2252,megawatthours
+,Chicago,2025-05-12T00,PJM,"PJM Interconnection, LLC",D,Demand,86832,megawatthours
+,Chicago,2025-05-12T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,84130,megawatthours
+,Chicago,2025-05-12T00,PJM,"PJM Interconnection, LLC",NG,Net generation,89860,megawatthours
+,Chicago,2025-05-12T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,3028,megawatthours
+,Houston,2025-05-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,54380,megawatthours
+,Houston,2025-05-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,56026,megawatthours
+,Houston,2025-05-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,54424,megawatthours
+,Houston,2025-05-12T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,45,megawatthours
+,Phoenix,2025-05-12T00,AZPS,Arizona Public Service Company,D,Demand,5108,megawatthours
+,Phoenix,2025-05-12T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5814,megawatthours
+,Phoenix,2025-05-12T00,AZPS,Arizona Public Service Company,NG,Net generation,2424,megawatthours
+,Phoenix,2025-05-12T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2684,megawatthours
+,Seattle,2025-05-12T00,SCL,Seattle City Light,D,Demand,920,megawatthours
+,Seattle,2025-05-12T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,949,megawatthours
+,Seattle,2025-05-12T00,SCL,Seattle City Light,NG,Net generation,783,megawatthours
+,Seattle,2025-05-12T00,SCL,Seattle City Light,TI,Total interchange,-137,megawatthours
+,New York,2025-05-11T00,NYIS,New York Independent System Operator,D,Demand,15463,megawatthours
+,New York,2025-05-11T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,14623,megawatthours
+,New York,2025-05-11T00,NYIS,New York Independent System Operator,NG,Net generation,13725,megawatthours
+,New York,2025-05-11T00,NYIS,New York Independent System Operator,TI,Total interchange,-1738,megawatthours
+,Chicago,2025-05-11T00,PJM,"PJM Interconnection, LLC",D,Demand,79918,megawatthours
+,Chicago,2025-05-11T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,79965,megawatthours
+,Chicago,2025-05-11T00,PJM,"PJM Interconnection, LLC",NG,Net generation,84991,megawatthours
+,Chicago,2025-05-11T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,5073,megawatthours
+,Houston,2025-05-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,53964,megawatthours
+,Houston,2025-05-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,53278,megawatthours
+,Houston,2025-05-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,54152,megawatthours
+,Houston,2025-05-11T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,187,megawatthours
+,Phoenix,2025-05-11T00,AZPS,Arizona Public Service Company,D,Demand,5194,megawatthours
+,Phoenix,2025-05-11T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5659,megawatthours
+,Phoenix,2025-05-11T00,AZPS,Arizona Public Service Company,NG,Net generation,3161,megawatthours
+,Phoenix,2025-05-11T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2033,megawatthours
+,Seattle,2025-05-11T00,SCL,Seattle City Light,D,Demand,896,megawatthours
+,Seattle,2025-05-11T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,932,megawatthours
+,Seattle,2025-05-11T00,SCL,Seattle City Light,NG,Net generation,761,megawatthours
+,Seattle,2025-05-11T00,SCL,Seattle City Light,TI,Total interchange,-135,megawatthours
+,New York,2025-05-10T00,NYIS,New York Independent System Operator,D,Demand,16666,megawatthours
+,New York,2025-05-10T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15918,megawatthours
+,New York,2025-05-10T00,NYIS,New York Independent System Operator,NG,Net generation,14753,megawatthours
+,New York,2025-05-10T00,NYIS,New York Independent System Operator,TI,Total interchange,-1913,megawatthours
+,Chicago,2025-05-10T00,PJM,"PJM Interconnection, LLC",D,Demand,82835,megawatthours
+,Chicago,2025-05-10T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,83949,megawatthours
+,Chicago,2025-05-10T00,PJM,"PJM Interconnection, LLC",NG,Net generation,89009,megawatthours
+,Chicago,2025-05-10T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,6174,megawatthours
+,Houston,2025-05-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,56550,megawatthours
+,Houston,2025-05-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,56428,megawatthours
+,Houston,2025-05-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,56648,megawatthours
+,Houston,2025-05-10T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,98,megawatthours
+,Phoenix,2025-05-10T00,AZPS,Arizona Public Service Company,D,Demand,5111,megawatthours
+,Phoenix,2025-05-10T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,5708,megawatthours
+,Phoenix,2025-05-10T00,AZPS,Arizona Public Service Company,NG,Net generation,3981,megawatthours
+,Phoenix,2025-05-10T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1130,megawatthours
+,Seattle,2025-05-10T00,SCL,Seattle City Light,D,Demand,1013,megawatthours
+,Seattle,2025-05-10T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1033,megawatthours
+,Seattle,2025-05-10T00,SCL,Seattle City Light,NG,Net generation,740,megawatthours
+,Seattle,2025-05-10T00,SCL,Seattle City Light,TI,Total interchange,-273,megawatthours
+,New York,2025-05-09T00,NYIS,New York Independent System Operator,D,Demand,17394,megawatthours
+,New York,2025-05-09T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16690,megawatthours
+,New York,2025-05-09T00,NYIS,New York Independent System Operator,NG,Net generation,14527,megawatthours
+,New York,2025-05-09T00,NYIS,New York Independent System Operator,TI,Total interchange,-2867,megawatthours
+,Chicago,2025-05-09T00,PJM,"PJM Interconnection, LLC",D,Demand,92036,megawatthours
+,Chicago,2025-05-09T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89438,megawatthours
+,Chicago,2025-05-09T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95869,megawatthours
+,Chicago,2025-05-09T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,3833,megawatthours
+,Houston,2025-05-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,56611,megawatthours
+,Houston,2025-05-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,58605,megawatthours
+,Houston,2025-05-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,56631,megawatthours
+,Houston,2025-05-09T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,21,megawatthours
+,Phoenix,2025-05-09T00,AZPS,Arizona Public Service Company,D,Demand,4328,megawatthours
+,Phoenix,2025-05-09T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4870,megawatthours
+,Phoenix,2025-05-09T00,AZPS,Arizona Public Service Company,NG,Net generation,4142,megawatthours
+,Phoenix,2025-05-09T00,AZPS,Arizona Public Service Company,TI,Total interchange,-186,megawatthours
+,Seattle,2025-05-09T00,SCL,Seattle City Light,D,Demand,986,megawatthours
+,Seattle,2025-05-09T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,985,megawatthours
+,Seattle,2025-05-09T00,SCL,Seattle City Light,NG,Net generation,775,megawatthours
+,Seattle,2025-05-09T00,SCL,Seattle City Light,TI,Total interchange,-211,megawatthours
+,New York,2025-05-08T00,NYIS,New York Independent System Operator,D,Demand,17036,megawatthours
+,New York,2025-05-08T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16788,megawatthours
+,New York,2025-05-08T00,NYIS,New York Independent System Operator,NG,Net generation,14632,megawatthours
+,New York,2025-05-08T00,NYIS,New York Independent System Operator,TI,Total interchange,-2404,megawatthours
+,Chicago,2025-05-08T00,PJM,"PJM Interconnection, LLC",D,Demand,90949,megawatthours
+,Chicago,2025-05-08T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,90135,megawatthours
+,Chicago,2025-05-08T00,PJM,"PJM Interconnection, LLC",NG,Net generation,93647,megawatthours
+,Chicago,2025-05-08T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,2698,megawatthours
+,Houston,2025-05-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,61028,megawatthours
+,Houston,2025-05-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,60580,megawatthours
+,Houston,2025-05-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,61094,megawatthours
+,Houston,2025-05-08T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,66,megawatthours
+,Seattle,2025-05-08T00,SCL,Seattle City Light,D,Demand,1014,megawatthours
+,Seattle,2025-05-08T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1008,megawatthours
+,Seattle,2025-05-08T00,SCL,Seattle City Light,NG,Net generation,684,megawatthours
+,Seattle,2025-05-08T00,SCL,Seattle City Light,TI,Total interchange,-330,megawatthours
+,New York,2025-05-07T00,NYIS,New York Independent System Operator,D,Demand,16984,megawatthours
+,New York,2025-05-07T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16822,megawatthours
+,New York,2025-05-07T00,NYIS,New York Independent System Operator,NG,Net generation,14789,megawatthours
+,New York,2025-05-07T00,NYIS,New York Independent System Operator,TI,Total interchange,-2195,megawatthours
+,Chicago,2025-05-07T00,PJM,"PJM Interconnection, LLC",D,Demand,89086,megawatthours
+,Chicago,2025-05-07T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89344,megawatthours
+,Chicago,2025-05-07T00,PJM,"PJM Interconnection, LLC",NG,Net generation,91568,megawatthours
+,Chicago,2025-05-07T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,2482,megawatthours
+,Houston,2025-05-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,56340,megawatthours
+,Houston,2025-05-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,58408,megawatthours
+,Houston,2025-05-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,56228,megawatthours
+,Houston,2025-05-07T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-112,megawatthours
+,Phoenix,2025-05-07T00,AZPS,Arizona Public Service Company,D,Demand,3626,megawatthours
+,Phoenix,2025-05-07T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3612,megawatthours
+,Phoenix,2025-05-07T00,AZPS,Arizona Public Service Company,NG,Net generation,3446,megawatthours
+,Phoenix,2025-05-07T00,AZPS,Arizona Public Service Company,TI,Total interchange,-180,megawatthours
+,Seattle,2025-05-07T00,SCL,Seattle City Light,D,Demand,1051,megawatthours
+,Seattle,2025-05-07T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1054,megawatthours
+,Seattle,2025-05-07T00,SCL,Seattle City Light,NG,Net generation,780,megawatthours
+,Seattle,2025-05-07T00,SCL,Seattle City Light,TI,Total interchange,-271,megawatthours
+,New York,2025-05-06T00,NYIS,New York Independent System Operator,D,Demand,17071,megawatthours
+,New York,2025-05-06T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17098,megawatthours
+,New York,2025-05-06T00,NYIS,New York Independent System Operator,NG,Net generation,15688,megawatthours
+,New York,2025-05-06T00,NYIS,New York Independent System Operator,TI,Total interchange,-1383,megawatthours
+,Chicago,2025-05-06T00,PJM,"PJM Interconnection, LLC",D,Demand,89589,megawatthours
+,Chicago,2025-05-06T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89212,megawatthours
+,Chicago,2025-05-06T00,PJM,"PJM Interconnection, LLC",NG,Net generation,90642,megawatthours
+,Chicago,2025-05-06T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1053,megawatthours
+,Houston,2025-05-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,52056,megawatthours
+,Houston,2025-05-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,56025,megawatthours
+,Houston,2025-05-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,52392,megawatthours
+,Houston,2025-05-06T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,335,megawatthours
+,Phoenix,2025-05-06T00,AZPS,Arizona Public Service Company,D,Demand,3653,megawatthours
+,Phoenix,2025-05-06T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3497,megawatthours
+,Phoenix,2025-05-06T00,AZPS,Arizona Public Service Company,NG,Net generation,1973,megawatthours
+,Phoenix,2025-05-06T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1680,megawatthours
+,Seattle,2025-05-06T00,SCL,Seattle City Light,D,Demand,1063,megawatthours
+,Seattle,2025-05-06T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1034,megawatthours
+,Seattle,2025-05-06T00,SCL,Seattle City Light,NG,Net generation,784,megawatthours
+,Seattle,2025-05-06T00,SCL,Seattle City Light,TI,Total interchange,-279,megawatthours
+,New York,2025-05-05T00,NYIS,New York Independent System Operator,D,Demand,16486,megawatthours
+,New York,2025-05-05T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15740,megawatthours
+,New York,2025-05-05T00,NYIS,New York Independent System Operator,NG,Net generation,14142,megawatthours
+,New York,2025-05-05T00,NYIS,New York Independent System Operator,TI,Total interchange,-2344,megawatthours
+,Chicago,2025-05-05T00,PJM,"PJM Interconnection, LLC",D,Demand,85327,megawatthours
+,Chicago,2025-05-05T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,85118,megawatthours
+,Chicago,2025-05-05T00,PJM,"PJM Interconnection, LLC",NG,Net generation,87994,megawatthours
+,Chicago,2025-05-05T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,2668,megawatthours
+,Houston,2025-05-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,55553,megawatthours
+,Houston,2025-05-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,53280,megawatthours
+,Houston,2025-05-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,55759,megawatthours
+,Houston,2025-05-05T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,206,megawatthours
+,Phoenix,2025-05-05T00,AZPS,Arizona Public Service Company,D,Demand,3607,megawatthours
+,Phoenix,2025-05-05T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3662,megawatthours
+,Phoenix,2025-05-05T00,AZPS,Arizona Public Service Company,NG,Net generation,2426,megawatthours
+,Phoenix,2025-05-05T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1181,megawatthours
+,Seattle,2025-05-05T00,SCL,Seattle City Light,D,Demand,959,megawatthours
+,Seattle,2025-05-05T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,953,megawatthours
+,Seattle,2025-05-05T00,SCL,Seattle City Light,NG,Net generation,810,megawatthours
+,Seattle,2025-05-05T00,SCL,Seattle City Light,TI,Total interchange,-149,megawatthours
+,New York,2025-05-04T00,NYIS,New York Independent System Operator,D,Demand,17094,megawatthours
+,New York,2025-05-04T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15988,megawatthours
+,New York,2025-05-04T00,NYIS,New York Independent System Operator,NG,Net generation,15001,megawatthours
+,New York,2025-05-04T00,NYIS,New York Independent System Operator,TI,Total interchange,-2093,megawatthours
+,Chicago,2025-05-04T00,PJM,"PJM Interconnection, LLC",D,Demand,88855,megawatthours
+,Chicago,2025-05-04T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89365,megawatthours
+,Chicago,2025-05-04T00,PJM,"PJM Interconnection, LLC",NG,Net generation,89518,megawatthours
+,Chicago,2025-05-04T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,663,megawatthours
+,Houston,2025-05-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,52639,megawatthours
+,Houston,2025-05-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,53069,megawatthours
+,Houston,2025-05-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,52884,megawatthours
+,Houston,2025-05-04T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,244,megawatthours
+,Phoenix,2025-05-04T00,AZPS,Arizona Public Service Company,D,Demand,4469,megawatthours
+,Phoenix,2025-05-04T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4513,megawatthours
+,Phoenix,2025-05-04T00,AZPS,Arizona Public Service Company,NG,Net generation,4010,megawatthours
+,Phoenix,2025-05-04T00,AZPS,Arizona Public Service Company,TI,Total interchange,-459,megawatthours
+,Seattle,2025-05-04T00,SCL,Seattle City Light,D,Demand,980,megawatthours
+,Seattle,2025-05-04T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,948,megawatthours
+,Seattle,2025-05-04T00,SCL,Seattle City Light,NG,Net generation,783,megawatthours
+,Seattle,2025-05-04T00,SCL,Seattle City Light,TI,Total interchange,-197,megawatthours
+,New York,2025-05-03T00,NYIS,New York Independent System Operator,D,Demand,17702,megawatthours
+,New York,2025-05-03T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16990,megawatthours
+,New York,2025-05-03T00,NYIS,New York Independent System Operator,NG,Net generation,16017,megawatthours
+,New York,2025-05-03T00,NYIS,New York Independent System Operator,TI,Total interchange,-1685,megawatthours
+,Chicago,2025-05-03T00,PJM,"PJM Interconnection, LLC",D,Demand,96422,megawatthours
+,Chicago,2025-05-03T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,94958,megawatthours
+,Chicago,2025-05-03T00,PJM,"PJM Interconnection, LLC",NG,Net generation,94384,megawatthours
+,Chicago,2025-05-03T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-2039,megawatthours
+,Houston,2025-05-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,52698,megawatthours
+,Houston,2025-05-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,55658,megawatthours
+,Houston,2025-05-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,52744,megawatthours
+,Houston,2025-05-03T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,46,megawatthours
+,Phoenix,2025-05-03T00,AZPS,Arizona Public Service Company,D,Demand,4365,megawatthours
+,Phoenix,2025-05-03T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4719,megawatthours
+,Phoenix,2025-05-03T00,AZPS,Arizona Public Service Company,NG,Net generation,3623,megawatthours
+,Phoenix,2025-05-03T00,AZPS,Arizona Public Service Company,TI,Total interchange,-742,megawatthours
+,Seattle,2025-05-03T00,SCL,Seattle City Light,D,Demand,1052,megawatthours
+,Seattle,2025-05-03T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1030,megawatthours
+,Seattle,2025-05-03T00,SCL,Seattle City Light,NG,Net generation,649,megawatthours
+,Seattle,2025-05-03T00,SCL,Seattle City Light,TI,Total interchange,-403,megawatthours
+,New York,2025-05-02T00,NYIS,New York Independent System Operator,D,Demand,16554,megawatthours
+,New York,2025-05-02T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16034,megawatthours
+,New York,2025-05-02T00,NYIS,New York Independent System Operator,NG,Net generation,15973,megawatthours
+,New York,2025-05-02T00,NYIS,New York Independent System Operator,TI,Total interchange,-581,megawatthours
+,Chicago,2025-05-02T00,PJM,"PJM Interconnection, LLC",D,Demand,95818,megawatthours
+,Chicago,2025-05-02T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,93838,megawatthours
+,Chicago,2025-05-02T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95579,megawatthours
+,Chicago,2025-05-02T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-238,megawatthours
+,Houston,2025-05-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,60447,megawatthours
+,Houston,2025-05-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64393,megawatthours
+,Houston,2025-05-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,60289,megawatthours
+,Houston,2025-05-02T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-157,megawatthours
+,Phoenix,2025-05-02T00,AZPS,Arizona Public Service Company,D,Demand,4350,megawatthours
+,Phoenix,2025-05-02T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4685,megawatthours
+,Phoenix,2025-05-02T00,AZPS,Arizona Public Service Company,NG,Net generation,3535,megawatthours
+,Phoenix,2025-05-02T00,AZPS,Arizona Public Service Company,TI,Total interchange,-815,megawatthours
+,Seattle,2025-05-02T00,SCL,Seattle City Light,D,Demand,1027,megawatthours
+,Seattle,2025-05-02T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1038,megawatthours
+,Seattle,2025-05-02T00,SCL,Seattle City Light,NG,Net generation,708,megawatthours
+,Seattle,2025-05-02T00,SCL,Seattle City Light,TI,Total interchange,-319,megawatthours
+,New York,2025-05-01T00,NYIS,New York Independent System Operator,D,Demand,16828,megawatthours
+,New York,2025-05-01T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16114,megawatthours
+,New York,2025-05-01T00,NYIS,New York Independent System Operator,NG,Net generation,15517,megawatthours
+,New York,2025-05-01T00,NYIS,New York Independent System Operator,TI,Total interchange,-1311,megawatthours
+,Chicago,2025-05-01T00,PJM,"PJM Interconnection, LLC",D,Demand,95073,megawatthours
+,Chicago,2025-05-01T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,92428,megawatthours
+,Chicago,2025-05-01T00,PJM,"PJM Interconnection, LLC",NG,Net generation,95926,megawatthours
+,Chicago,2025-05-01T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,852,megawatthours
+,Houston,2025-05-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,58338,megawatthours
+,Houston,2025-05-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,59897,megawatthours
+,Houston,2025-05-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,58426,megawatthours
+,Houston,2025-05-01T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,88,megawatthours
+,Phoenix,2025-05-01T00,AZPS,Arizona Public Service Company,D,Demand,4168,megawatthours
+,Phoenix,2025-05-01T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4434,megawatthours
+,Phoenix,2025-05-01T00,AZPS,Arizona Public Service Company,NG,Net generation,3350,megawatthours
+,Phoenix,2025-05-01T00,AZPS,Arizona Public Service Company,TI,Total interchange,-706,megawatthours
+,Seattle,2025-05-01T00,SCL,Seattle City Light,D,Demand,1055,megawatthours
+,Seattle,2025-05-01T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1024,megawatthours
+,Seattle,2025-05-01T00,SCL,Seattle City Light,NG,Net generation,558,megawatthours
+,Seattle,2025-05-01T00,SCL,Seattle City Light,TI,Total interchange,-497,megawatthours
+,New York,2025-04-30T00,NYIS,New York Independent System Operator,D,Demand,17372,megawatthours
+,New York,2025-04-30T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,17221,megawatthours
+,New York,2025-04-30T00,NYIS,New York Independent System Operator,NG,Net generation,16904,megawatthours
+,New York,2025-04-30T00,NYIS,New York Independent System Operator,TI,Total interchange,-468,megawatthours
+,Chicago,2025-04-30T00,PJM,"PJM Interconnection, LLC",D,Demand,94006,megawatthours
+,Chicago,2025-04-30T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,95183,megawatthours
+,Chicago,2025-04-30T00,PJM,"PJM Interconnection, LLC",NG,Net generation,94618,megawatthours
+,Chicago,2025-04-30T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,611,megawatthours
+,Houston,2025-04-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,62165,megawatthours
+,Houston,2025-04-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,63664,megawatthours
+,Houston,2025-04-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,62272,megawatthours
+,Houston,2025-04-30T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,108,megawatthours
+,Phoenix,2025-04-30T00,AZPS,Arizona Public Service Company,D,Demand,3608,megawatthours
+,Phoenix,2025-04-30T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4005,megawatthours
+,Phoenix,2025-04-30T00,AZPS,Arizona Public Service Company,NG,Net generation,3049,megawatthours
+,Phoenix,2025-04-30T00,AZPS,Arizona Public Service Company,TI,Total interchange,-559,megawatthours
+,Seattle,2025-04-30T00,SCL,Seattle City Light,D,Demand,1100,megawatthours
+,Seattle,2025-04-30T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1054,megawatthours
+,Seattle,2025-04-30T00,SCL,Seattle City Light,NG,Net generation,541,megawatthours
+,Seattle,2025-04-30T00,SCL,Seattle City Light,TI,Total interchange,-559,megawatthours
+,New York,2025-04-29T00,NYIS,New York Independent System Operator,D,Demand,16692,megawatthours
+,New York,2025-04-29T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16242,megawatthours
+,New York,2025-04-29T00,NYIS,New York Independent System Operator,NG,Net generation,15201,megawatthours
+,New York,2025-04-29T00,NYIS,New York Independent System Operator,TI,Total interchange,-1491,megawatthours
+,Chicago,2025-04-29T00,PJM,"PJM Interconnection, LLC",D,Demand,90930,megawatthours
+,Chicago,2025-04-29T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,88148,megawatthours
+,Chicago,2025-04-29T00,PJM,"PJM Interconnection, LLC",NG,Net generation,92361,megawatthours
+,Chicago,2025-04-29T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1431,megawatthours
+,Houston,2025-04-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,61755,megawatthours
+,Houston,2025-04-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,64423,megawatthours
+,Houston,2025-04-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,61605,megawatthours
+,Houston,2025-04-29T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-149,megawatthours
+,Phoenix,2025-04-29T00,AZPS,Arizona Public Service Company,D,Demand,3283,megawatthours
+,Phoenix,2025-04-29T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3601,megawatthours
+,Phoenix,2025-04-29T00,AZPS,Arizona Public Service Company,NG,Net generation,2930,megawatthours
+,Phoenix,2025-04-29T00,AZPS,Arizona Public Service Company,TI,Total interchange,-353,megawatthours
+,Seattle,2025-04-29T00,SCL,Seattle City Light,D,Demand,1121,megawatthours
+,Seattle,2025-04-29T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1082,megawatthours
+,Seattle,2025-04-29T00,SCL,Seattle City Light,NG,Net generation,568,megawatthours
+,Seattle,2025-04-29T00,SCL,Seattle City Light,TI,Total interchange,-553,megawatthours
+,New York,2025-04-28T00,NYIS,New York Independent System Operator,D,Demand,15477,megawatthours
+,New York,2025-04-28T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,14900,megawatthours
+,New York,2025-04-28T00,NYIS,New York Independent System Operator,NG,Net generation,14063,megawatthours
+,New York,2025-04-28T00,NYIS,New York Independent System Operator,TI,Total interchange,-1414,megawatthours
+,Chicago,2025-04-28T00,PJM,"PJM Interconnection, LLC",D,Demand,79655,megawatthours
+,Chicago,2025-04-28T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,80767,megawatthours
+,Chicago,2025-04-28T00,PJM,"PJM Interconnection, LLC",NG,Net generation,82514,megawatthours
+,Chicago,2025-04-28T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,2860,megawatthours
+,Houston,2025-04-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,62161,megawatthours
+,Houston,2025-04-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,61780,megawatthours
+,Houston,2025-04-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,62080,megawatthours
+,Houston,2025-04-28T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-81,megawatthours
+,Phoenix,2025-04-28T00,AZPS,Arizona Public Service Company,D,Demand,2886,megawatthours
+,Phoenix,2025-04-28T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3292,megawatthours
+,Phoenix,2025-04-28T00,AZPS,Arizona Public Service Company,NG,Net generation,2872,megawatthours
+,Phoenix,2025-04-28T00,AZPS,Arizona Public Service Company,TI,Total interchange,-14,megawatthours
+,Seattle,2025-04-28T00,SCL,Seattle City Light,D,Demand,940,megawatthours
+,Seattle,2025-04-28T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,980,megawatthours
+,Seattle,2025-04-28T00,SCL,Seattle City Light,NG,Net generation,256,megawatthours
+,Seattle,2025-04-28T00,SCL,Seattle City Light,TI,Total interchange,-684,megawatthours
+,New York,2025-04-27T00,NYIS,New York Independent System Operator,D,Demand,16259,megawatthours
+,New York,2025-04-27T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15472,megawatthours
+,New York,2025-04-27T00,NYIS,New York Independent System Operator,NG,Net generation,14640,megawatthours
+,New York,2025-04-27T00,NYIS,New York Independent System Operator,TI,Total interchange,-1619,megawatthours
+,Chicago,2025-04-27T00,PJM,"PJM Interconnection, LLC",D,Demand,81466,megawatthours
+,Chicago,2025-04-27T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,80477,megawatthours
+,Chicago,2025-04-27T00,PJM,"PJM Interconnection, LLC",NG,Net generation,82603,megawatthours
+,Chicago,2025-04-27T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1137,megawatthours
+,Houston,2025-04-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,59366,megawatthours
+,Houston,2025-04-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,60026,megawatthours
+,Houston,2025-04-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,59195,megawatthours
+,Houston,2025-04-27T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-171,megawatthours
+,Phoenix,2025-04-27T00,AZPS,Arizona Public Service Company,D,Demand,3272,megawatthours
+,Phoenix,2025-04-27T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3597,megawatthours
+,Phoenix,2025-04-27T00,AZPS,Arizona Public Service Company,NG,Net generation,2884,megawatthours
+,Phoenix,2025-04-27T00,AZPS,Arizona Public Service Company,TI,Total interchange,-388,megawatthours
+,Seattle,2025-04-27T00,SCL,Seattle City Light,D,Demand,943,megawatthours
+,Seattle,2025-04-27T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,922,megawatthours
+,Seattle,2025-04-27T00,SCL,Seattle City Light,NG,Net generation,317,megawatthours
+,Seattle,2025-04-27T00,SCL,Seattle City Light,TI,Total interchange,-626,megawatthours
+,New York,2025-04-26T00,NYIS,New York Independent System Operator,D,Demand,16801,megawatthours
+,New York,2025-04-26T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16200,megawatthours
+,New York,2025-04-26T00,NYIS,New York Independent System Operator,NG,Net generation,15102,megawatthours
+,New York,2025-04-26T00,NYIS,New York Independent System Operator,TI,Total interchange,-1699,megawatthours
+,Chicago,2025-04-26T00,PJM,"PJM Interconnection, LLC",D,Demand,88927,megawatthours
+,Chicago,2025-04-26T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,86584,megawatthours
+,Chicago,2025-04-26T00,PJM,"PJM Interconnection, LLC",NG,Net generation,88915,megawatthours
+,Chicago,2025-04-26T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-13,megawatthours
+,Houston,2025-04-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,61003,megawatthours
+,Houston,2025-04-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,61883,megawatthours
+,Houston,2025-04-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,60871,megawatthours
+,Houston,2025-04-26T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-131,megawatthours
+,Phoenix,2025-04-26T00,AZPS,Arizona Public Service Company,D,Demand,3815,megawatthours
+,Phoenix,2025-04-26T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4362,megawatthours
+,Phoenix,2025-04-26T00,AZPS,Arizona Public Service Company,NG,Net generation,2285,megawatthours
+,Phoenix,2025-04-26T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1530,megawatthours
+,Seattle,2025-04-26T00,SCL,Seattle City Light,D,Demand,1062,megawatthours
+,Seattle,2025-04-26T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1055,megawatthours
+,Seattle,2025-04-26T00,SCL,Seattle City Light,NG,Net generation,492,megawatthours
+,Seattle,2025-04-26T00,SCL,Seattle City Light,TI,Total interchange,-570,megawatthours
+,New York,2025-04-25T00,NYIS,New York Independent System Operator,D,Demand,16976,megawatthours
+,New York,2025-04-25T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16211,megawatthours
+,New York,2025-04-25T00,NYIS,New York Independent System Operator,NG,Net generation,16141,megawatthours
+,New York,2025-04-25T00,NYIS,New York Independent System Operator,TI,Total interchange,-835,megawatthours
+,Chicago,2025-04-25T00,PJM,"PJM Interconnection, LLC",D,Demand,92594,megawatthours
+,Chicago,2025-04-25T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,90399,megawatthours
+,Chicago,2025-04-25T00,PJM,"PJM Interconnection, LLC",NG,Net generation,90306,megawatthours
+,Chicago,2025-04-25T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-2287,megawatthours
+,Houston,2025-04-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,56681,megawatthours
+,Houston,2025-04-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,60833,megawatthours
+,Houston,2025-04-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,56727,megawatthours
+,Houston,2025-04-25T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,46,megawatthours
+,Phoenix,2025-04-25T00,AZPS,Arizona Public Service Company,D,Demand,3921,megawatthours
+,Phoenix,2025-04-25T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4402,megawatthours
+,Phoenix,2025-04-25T00,AZPS,Arizona Public Service Company,NG,Net generation,2369,megawatthours
+,Phoenix,2025-04-25T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1552,megawatthours
+,Seattle,2025-04-25T00,SCL,Seattle City Light,D,Demand,1020,megawatthours
+,Seattle,2025-04-25T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1040,megawatthours
+,Seattle,2025-04-25T00,SCL,Seattle City Light,NG,Net generation,608,megawatthours
+,Seattle,2025-04-25T00,SCL,Seattle City Light,TI,Total interchange,-412,megawatthours
+,New York,2025-04-24T00,NYIS,New York Independent System Operator,D,Demand,16517,megawatthours
+,New York,2025-04-24T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15900,megawatthours
+,New York,2025-04-24T00,NYIS,New York Independent System Operator,NG,Net generation,15422,megawatthours
+,New York,2025-04-24T00,NYIS,New York Independent System Operator,TI,Total interchange,-1095,megawatthours
+,Chicago,2025-04-24T00,PJM,"PJM Interconnection, LLC",D,Demand,91934,megawatthours
+,Chicago,2025-04-24T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,88974,megawatthours
+,Chicago,2025-04-24T00,PJM,"PJM Interconnection, LLC",NG,Net generation,91782,megawatthours
+,Chicago,2025-04-24T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-152,megawatthours
+,Houston,2025-04-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,58678,megawatthours
+,Houston,2025-04-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,59125,megawatthours
+,Houston,2025-04-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,58599,megawatthours
+,Houston,2025-04-24T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-79,megawatthours
+,Phoenix,2025-04-24T00,AZPS,Arizona Public Service Company,D,Demand,3843,megawatthours
+,Phoenix,2025-04-24T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4458,megawatthours
+,Phoenix,2025-04-24T00,AZPS,Arizona Public Service Company,NG,Net generation,2460,megawatthours
+,Phoenix,2025-04-24T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1383,megawatthours
+,Seattle,2025-04-24T00,SCL,Seattle City Light,D,Demand,1006,megawatthours
+,Seattle,2025-04-24T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1048,megawatthours
+,Seattle,2025-04-24T00,SCL,Seattle City Light,NG,Net generation,365,megawatthours
+,Seattle,2025-04-24T00,SCL,Seattle City Light,TI,Total interchange,-641,megawatthours
+,New York,2025-04-23T00,NYIS,New York Independent System Operator,D,Demand,16871,megawatthours
+,New York,2025-04-23T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15957,megawatthours
+,New York,2025-04-23T00,NYIS,New York Independent System Operator,NG,Net generation,15854,megawatthours
+,New York,2025-04-23T00,NYIS,New York Independent System Operator,TI,Total interchange,-1017,megawatthours
+,Chicago,2025-04-23T00,PJM,"PJM Interconnection, LLC",D,Demand,90254,megawatthours
+,Chicago,2025-04-23T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89787,megawatthours
+,Chicago,2025-04-23T00,PJM,"PJM Interconnection, LLC",NG,Net generation,89358,megawatthours
+,Chicago,2025-04-23T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,-896,megawatthours
+,Houston,2025-04-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,63476,megawatthours
+,Houston,2025-04-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,61593,megawatthours
+,Houston,2025-04-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,63433,megawatthours
+,Houston,2025-04-23T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-44,megawatthours
+,Phoenix,2025-04-23T00,AZPS,Arizona Public Service Company,D,Demand,4051,megawatthours
+,Phoenix,2025-04-23T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4434,megawatthours
+,Phoenix,2025-04-23T00,AZPS,Arizona Public Service Company,NG,Net generation,3186,megawatthours
+,Phoenix,2025-04-23T00,AZPS,Arizona Public Service Company,TI,Total interchange,-865,megawatthours
+,Seattle,2025-04-23T00,SCL,Seattle City Light,D,Demand,1049,megawatthours
+,Seattle,2025-04-23T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1047,megawatthours
+,Seattle,2025-04-23T00,SCL,Seattle City Light,NG,Net generation,267,megawatthours
+,Seattle,2025-04-23T00,SCL,Seattle City Light,TI,Total interchange,-782,megawatthours
+,New York,2025-04-22T00,NYIS,New York Independent System Operator,D,Demand,16992,megawatthours
+,New York,2025-04-22T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,16031,megawatthours
+,New York,2025-04-22T00,NYIS,New York Independent System Operator,NG,Net generation,15599,megawatthours
+,New York,2025-04-22T00,NYIS,New York Independent System Operator,TI,Total interchange,-1393,megawatthours
+,Chicago,2025-04-22T00,PJM,"PJM Interconnection, LLC",D,Demand,89244,megawatthours
+,Chicago,2025-04-22T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,89058,megawatthours
+,Chicago,2025-04-22T00,PJM,"PJM Interconnection, LLC",NG,Net generation,91487,megawatthours
+,Chicago,2025-04-22T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,2243,megawatthours
+,Houston,2025-04-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,60773,megawatthours
+,Houston,2025-04-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,59344,megawatthours
+,Houston,2025-04-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,60622,megawatthours
+,Houston,2025-04-22T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-152,megawatthours
+,Phoenix,2025-04-22T00,AZPS,Arizona Public Service Company,D,Demand,3860,megawatthours
+,Phoenix,2025-04-22T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,4108,megawatthours
+,Phoenix,2025-04-22T00,AZPS,Arizona Public Service Company,NG,Net generation,2697,megawatthours
+,Phoenix,2025-04-22T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1163,megawatthours
+,Seattle,2025-04-22T00,SCL,Seattle City Light,D,Demand,1087,megawatthours
+,Seattle,2025-04-22T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1094,megawatthours
+,Seattle,2025-04-22T00,SCL,Seattle City Light,NG,Net generation,617,megawatthours
+,Seattle,2025-04-22T00,SCL,Seattle City Light,TI,Total interchange,-470,megawatthours
+,New York,2025-04-21T00,NYIS,New York Independent System Operator,D,Demand,14987,megawatthours
+,New York,2025-04-21T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,14964,megawatthours
+,New York,2025-04-21T00,NYIS,New York Independent System Operator,NG,Net generation,12616,megawatthours
+,New York,2025-04-21T00,NYIS,New York Independent System Operator,TI,Total interchange,-2371,megawatthours
+,Chicago,2025-04-21T00,PJM,"PJM Interconnection, LLC",D,Demand,80384,megawatthours
+,Chicago,2025-04-21T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,84391,megawatthours
+,Chicago,2025-04-21T00,PJM,"PJM Interconnection, LLC",NG,Net generation,85263,megawatthours
+,Chicago,2025-04-21T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,4879,megawatthours
+,Houston,2025-04-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,54412,megawatthours
+,Houston,2025-04-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,54209,megawatthours
+,Houston,2025-04-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,54179,megawatthours
+,Houston,2025-04-21T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-233,megawatthours
+,Phoenix,2025-04-21T00,AZPS,Arizona Public Service Company,D,Demand,3233,megawatthours
+,Phoenix,2025-04-21T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3322,megawatthours
+,Phoenix,2025-04-21T00,AZPS,Arizona Public Service Company,NG,Net generation,1962,megawatthours
+,Phoenix,2025-04-21T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1271,megawatthours
+,Seattle,2025-04-21T00,SCL,Seattle City Light,D,Demand,1012,megawatthours
+,Seattle,2025-04-21T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,990,megawatthours
+,Seattle,2025-04-21T00,SCL,Seattle City Light,NG,Net generation,469,megawatthours
+,Seattle,2025-04-21T00,SCL,Seattle City Light,TI,Total interchange,-543,megawatthours
+,New York,2025-04-20T00,NYIS,New York Independent System Operator,D,Demand,16141,megawatthours
+,New York,2025-04-20T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15476,megawatthours
+,New York,2025-04-20T00,NYIS,New York Independent System Operator,NG,Net generation,14233,megawatthours
+,New York,2025-04-20T00,NYIS,New York Independent System Operator,TI,Total interchange,-1908,megawatthours
+,Chicago,2025-04-20T00,PJM,"PJM Interconnection, LLC",D,Demand,85122,megawatthours
+,Chicago,2025-04-20T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,87310,megawatthours
+,Chicago,2025-04-20T00,PJM,"PJM Interconnection, LLC",NG,Net generation,86251,megawatthours
+,Chicago,2025-04-20T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,1128,megawatthours
+,Houston,2025-04-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,54354,megawatthours
+,Houston,2025-04-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,57493,megawatthours
+,Houston,2025-04-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,54333,megawatthours
+,Houston,2025-04-20T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,-20,megawatthours
+,Phoenix,2025-04-20T00,AZPS,Arizona Public Service Company,D,Demand,2706,megawatthours
+,Phoenix,2025-04-20T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3072,megawatthours
+,Phoenix,2025-04-20T00,AZPS,Arizona Public Service Company,NG,Net generation,1152,megawatthours
+,Phoenix,2025-04-20T00,AZPS,Arizona Public Service Company,TI,Total interchange,-1554,megawatthours
+,Seattle,2025-04-20T00,SCL,Seattle City Light,D,Demand,977,megawatthours
+,Seattle,2025-04-20T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,934,megawatthours
+,Seattle,2025-04-20T00,SCL,Seattle City Light,NG,Net generation,627,megawatthours
+,Seattle,2025-04-20T00,SCL,Seattle City Light,TI,Total interchange,-350,megawatthours
+,New York,2025-04-19T00,NYIS,New York Independent System Operator,D,Demand,15990,megawatthours
+,New York,2025-04-19T00,NYIS,New York Independent System Operator,DF,Day-ahead demand forecast,15582,megawatthours
+,New York,2025-04-19T00,NYIS,New York Independent System Operator,NG,Net generation,14665,megawatthours
+,New York,2025-04-19T00,NYIS,New York Independent System Operator,TI,Total interchange,-1325,megawatthours
+,Chicago,2025-04-19T00,PJM,"PJM Interconnection, LLC",D,Demand,83777,megawatthours
+,Chicago,2025-04-19T00,PJM,"PJM Interconnection, LLC",DF,Day-ahead demand forecast,86215,megawatthours
+,Chicago,2025-04-19T00,PJM,"PJM Interconnection, LLC",NG,Net generation,87710,megawatthours
+,Chicago,2025-04-19T00,PJM,"PJM Interconnection, LLC",TI,Total interchange,3932,megawatthours
+,Houston,2025-04-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",D,Demand,59809,megawatthours
+,Houston,2025-04-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",DF,Day-ahead demand forecast,63533,megawatthours
+,Houston,2025-04-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",NG,Net generation,59839,megawatthours
+,Houston,2025-04-19T00,ERCO,"Electric Reliability Council of Texas, Inc.",TI,Total interchange,31,megawatthours
+,Phoenix,2025-04-19T00,AZPS,Arizona Public Service Company,D,Demand,3667,megawatthours
+,Phoenix,2025-04-19T00,AZPS,Arizona Public Service Company,DF,Day-ahead demand forecast,3463,megawatthours
+,Phoenix,2025-04-19T00,AZPS,Arizona Public Service Company,NG,Net generation,1352,megawatthours
+,Phoenix,2025-04-19T00,AZPS,Arizona Public Service Company,TI,Total interchange,-2315,megawatthours
+,Seattle,2025-04-19T00,SCL,Seattle City Light,D,Demand,1060,megawatthours
+,Seattle,2025-04-19T00,SCL,Seattle City Light,DF,Day-ahead demand forecast,1007,megawatthours
+,Seattle,2025-04-19T00,SCL,Seattle City Light,NG,Net generation,534,megawatthours
+,Seattle,2025-04-19T00,SCL,Seattle City Light,TI,Total interchange,-526,megawatthours

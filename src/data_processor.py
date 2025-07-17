@@ -42,13 +42,8 @@ def process_data():
     if 'tmin_f' in weather_df.columns and weather_df['tmin_f'].dtype != 'float64': # Check if conversion is needed
         weather_df['tmin_f'] = (weather_df['tmin_f'] / 10 * 9/5) + 32
 
-    # Map city names to EIA region codes for merging
-    config = load_config()
-    city_to_region_map = {city['name']: city['eia_region_code'] for city in config['cities']}
-    weather_df['region'] = weather_df['city'].map(city_to_region_map)
-
     # Merge dataframes
-    merged_df = pd.merge(weather_df, energy_df, on=['date', 'region'], how='inner')
+    merged_df = pd.merge(weather_df, energy_df, on=['date', 'city'], how='inner')
 
     # Save to parquet
     output_filename = f"merged_{pd.Timestamp.now().strftime('%Y%m%d')}.parquet"
