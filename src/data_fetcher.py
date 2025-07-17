@@ -55,7 +55,7 @@ def get_weather_data(city_name, date, api_key):
                         wsf2 = entry.get('value')
                 return {
                     "date": date,
-                    "city": city_config['name'],
+                    "city": city_name,
                     "tmax_f": tmax,
                     "tmin_f": tmin,
                     "prcp": prcp,
@@ -79,7 +79,7 @@ def get_weather_data(city_name, date, api_key):
             elif e.response.status_code == 429:
                 logging.warning(f"Rate limit exceeded for NOAA API. Retrying... {e}")
             else:
-                logging.error(f"HTTP error fetching weather data for {city_config['name']}: {e}")
+                logging.error(f"HTTP error fetching weather data for {city_name}: {e}")
             time.sleep(2 ** i) # Exponential backoff
         except requests.exceptions.ConnectionError as e:
             logging.error(f"Network connection error for NOAA API: {e}")
@@ -91,18 +91,19 @@ def get_weather_data(city_name, date, api_key):
             logging.error(f"An unexpected error occurred with NOAA API: {e}")
             time.sleep(2 ** i)
     return None
+    return None
 
-def get_energy_data(city, date, api_key):
+def get_energy_data(city_name, date, api_key):
     """Fetches hourly energy demand data for a given city and date from EIA."""
     config = load_config()
     base_url = config["api_endpoints"]["eia"]
-    city_config = next((c for c in config["cities"] if c["name"] == city), None)
+    city_config = next((c for c in config["cities"] if c["name"] == city_name), None)
     if not city_config:
-        logging.warning(f"No config found for city: {city}")
+        logging.warning(f"No config found for city: {city_name}")
         return None
     region = city_config["eia_region_code"]
     if not region:
-        logging.warning(f"No region found for city: {city}")
+        logging.warning(f"No region found for city: {city_name}")
         return None
 
     start_of_day = f"{date}T00"
@@ -119,33 +120,46 @@ def get_energy_data(city, date, api_key):
         "frequency": "hourly"
     }
     
-    try:
-        response = requests.get(base_url, params=params)
-        response.raise_for_status()
-        data = response.json().get('response', {}).get('data', [])
-        if data:
-            return [{**item, 'city': city} for item in data]
-        else:
-            logging.info(f"No energy data found for {city} on {date}")
-            return None
-    except requests.exceptions.HTTPError as e:
-        logging.error(f"HTTP error fetching energy data for {city}: {e}")
-        # Save error response for debugging
-        raw_responses_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw_responses')
-        os.makedirs(raw_responses_path, exist_ok=True)
-        error_filename = f"eia_response_{city}_{datetime.now().strftime('%Y-%m-%d')}_http_error.json"
-        with open(os.path.join(raw_responses_path, error_filename), 'w') as f:
-            f.write(response.text)
-        return None
-    except requests.exceptions.ConnectionError as e:
-        logging.error(f"Connection error fetching energy data for {city}: {e}")
-        # Save connection error details
-        raw_responses_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw_responses')
-        os.makedirs(raw_responses_path, exist_ok=True)
-        error_filename = f"eia_response_{city}_{datetime.now().strftime('%Y-%m-%d')}_connection_error.json"
-        with open(os.path.join(raw_responses_path, error_filename), 'w') as f:
-            f.write(str(e))
-        return None
+    retries = 3
+    for i in range(retries):
+        try:
+            response = requests.get(base_url, params=params, timeout=30)
+            response.raise_for_status()
+            data = response.json().get('response', {}).get('data', [])
+            if data:
+                processed_data = []
+                for item in data:
+                    item_date = item['period'].split('T')[0] # Extract date from period
+                    processed_data.append({
+                        'date': item_date,
+                        'city': city_name,
+                        'demand_mwh': item['value'] # Rename 'value' to 'demand_mwh'
+                    })
+                return processed_data
+            else:
+                logging.info(f"No energy data found for {city_name} on {date}")
+                return None
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 401:
+                logging.error(f"Authentication error for EIA API. Check your API key: {e}")
+                return None
+            elif e.response.status_code == 404:
+                logging.warning(f"EIA API endpoint not found: {e}")
+            elif e.response.status_code == 429:
+                logging.warning(f"Rate limit exceeded for EIA API. Retrying... {e}")
+            else:
+                logging.error(f"HTTP error fetching energy data for {city_name}: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.ConnectionError as e:
+            logging.error(f"Network connection error for EIA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.Timeout as e:
+            logging.error(f"Timeout error for EIA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.RequestException as e:
+            logging.error(f"An unexpected error occurred with EIA API: {e}")
+            time.sleep(2 ** i)
+    return None
 
 def save_to_csv(data, data_type):
     """Appends data to a CSV file."""
@@ -161,7 +175,7 @@ def save_to_csv(data, data_type):
         if data_type == 'weather':
             fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'prcp', 'snow', 'snwd', 'awnd', 'tsun', 'wdf2', 'wsf2', 'timestamp_utc']
         elif data_type == 'energy':
-            fieldnames = ['date', 'city', 'period', 'respondent', 'respondent-name', 'type', 'type-name', 'value', 'value-units']
+            fieldnames = ['date', 'city', 'demand_mwh']
         else:
             return
 
