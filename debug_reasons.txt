@@ -1,0 +1,292 @@
+import requests
+import yaml
+import os
+import logging
+import time
+import csv
+from datetime import datetime, timedelta
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def load_config():
+    """Loads the configuration from config.yaml."""
+    config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
+    with open(config_path, 'r') as f:
+        return yaml.safe_load(f)
+
+def get_weather_data(city, date, api_key):
+    """Fetches weather data for a given city and date from the NOAA API."""
+    config = load_config()
+    base_url = config['api_endpoints']['noaa']
+    url = f"{base_url}?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
+    headers = {'token': api_key}
+    retries = 3
+    for i in range(retries):
+        try:
+            response = requests.get(url, headers=headers)
+            response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
+            data = response.json()
+            if 'results' in data:
+                tmax, tmin, prcp, snow, snwd, awnd, tsun, wdf2, wsf2 = None, None, None, None, None, None, None, None, None
+                for entry in data['results']:
+                    if entry.get('datatype') == 'TMAX':
+                        tmax = entry.get('value')
+                    elif entry.get('datatype') == 'TMIN':
+                        tmin = entry.get('value')
+                    elif entry.get('datatype') == 'PRCP':
+                        prcp = entry.get('value')
+                    elif entry.get('datatype') == 'SNOW':
+                        snow = entry.get('value')
+                    elif entry.get('datatype') == 'SNWD':
+                        snwd = entry.get('value')
+                    elif entry.get('datatype') == 'AWND':
+                        awnd = entry.get('value')
+                    elif entry.get('datatype') == 'TSUN':
+                        tsun = entry.get('value')
+                    elif entry.get('datatype') == 'WDF2':
+                        wdf2 = entry.get('value')
+                    elif entry.get('datatype') == 'WSF2':
+                        wsf2 = entry.get('value')
+                return {
+                    "date": date,
+                    "city": city['name'],
+                    "tmax_f": tmax,
+                    "tmin_f": tmin,
+                    "prcp": prcp,
+                    "snow": snow,
+                    "snwd": snwd,
+                    "awnd": awnd,
+                    "tsun": tsun,
+                    "wdf2": wdf2,
+                    "wsf2": wsf2,
+                    "timestamp_utc": f"{date}T12:00:00Z"
+                }
+            else:
+                logging.warning(f"No weather data for {city['name']} on {date}")
+                return None
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 401:
+                logging.error(f"Authentication error for NOAA API. Check your API token: {e}")
+                return None # No point in retrying if authentication fails
+            elif e.response.status_code == 404:
+                logging.warning(f"NOAA API endpoint not found: {e}")
+            elif e.response.status_code == 429:
+                logging.warning(f"Rate limit exceeded for NOAA API. Retrying... {e}")
+            else:
+                logging.error(f"HTTP error fetching weather data for {city['name']}: {e}")
+            time.sleep(2 ** i) # Exponential backoff
+        except requests.exceptions.ConnectionError as e:
+            logging.error(f"Network connection error for NOAA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.Timeout as e:
+            logging.error(f"Timeout error for NOAA API: {e}")
+            time.sleep(2 ** i)
+        except requests.exceptions.RequestException as e:
+            logging.error(f"An unexpected error occurred with NOAA API: {e}")
+            time.sleep(2 ** i)
+    return None
+
+def get_energy_data(city, date, api_key):
+    """Fetches energy data for a given city and date from the EIA API."""
+    config = load_config()
+    base_url = config['api_endpoints']['eia']
+    
+    # Enhanced debugging and multiple URL format attempts
+    url_attempts = []
+    
+    # Attempt 1: Daily frequency (most likely to work)
+    url_daily = f"{base_url}?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={city['eia_region_code']}&start={date}&end={date}"
+    url_attempts.append(("daily", url_daily))
+    
+    # Attempt 2: Hourly frequency with date range
+    url_hourly = f"{base_url}?api_key={api_key}&frequency=hourly&data[0]=D&facets[respondent][]={city['eia_region_code']}&start={date}T00&end={date}T23"
+    url_attempts.append(("hourly", url_hourly))
+    
+    # Attempt 3: Different parameter structure
+    url_alt = f"{base_url}?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent]={city['eia_region_code']}&start={date}&end={date}"
+    url_attempts.append(("alternative", url_alt))
+    
+    for attempt_type, url in url_attempts:
+        logging.info(f"Attempting {attempt_type} format for {city['name']}")
+        print(f"EIA API URL ({attempt_type}): {url}")
+        
+        retries = 3
+        for i in range(retries):
+            try:
+                response = requests.get(url, timeout=30)
+                response.raise_for_status()
+                data = response.json()
+                
+                # Enhanced debugging output
+                print(f"EIA API Raw Response ({attempt_type}): {data}")
+                print(f"Response keys: {list(data.keys()) if isinstance(data, dict) else 'Not a dict'}")
+                
+                # Check multiple possible response structures
+                energy_data = None
+                
+                # Structure 1: response.data
+                if 'response' in data and 'data' in data['response'] and data['response']['data']:
+                    energy_data = data['response']['data']
+                    print(f"Found data in response.data: {len(energy_data)} entries")
+                
+                # Structure 2: data array directly
+                elif 'data' in data and data['data']:
+                    energy_data = data['data']
+                    print(f"Found data in data array: {len(energy_data)} entries")
+                
+                # Structure 3: series data
+                elif 'series' in data and data['series']:
+                    energy_data = data['series']
+                    print(f"Found data in series: {len(energy_data)} entries")
+                
+                if energy_data:
+                    # Print structure of first entry for debugging
+                    if len(energy_data) > 0:
+                        first_entry = energy_data[0]
+                        print(f"First entry structure: {first_entry}")
+                        print(f"First entry keys: {list(first_entry.keys()) if isinstance(first_entry, dict) else 'Not a dict'}")
+                    
+                    # Try to extract the actual values
+                    extracted_data = []
+                    for entry in energy_data:
+                        if isinstance(entry, dict):
+                            # Multiple ways to extract the value
+                            value = (entry.get('value') or 
+                                   entry.get('demand') or 
+                                   entry.get('generation') or 
+                                   entry.get('D') or
+                                   entry.get('data'))
+                            
+                            # Extract timestamp if available
+                            timestamp = (entry.get('period') or 
+                                       entry.get('datetime') or 
+                                       entry.get('timestamp') or 
+                                       f"{date}T12:00:00Z")
+                            
+                            extracted_data.append({
+                                "date": date,
+                                "region": city['eia_region_code'],
+                                "demand_mwh": value,
+                                "timestamp_utc": timestamp,
+                                "raw_entry": entry  # Keep raw entry for debugging
+                            })
+                    
+                    if extracted_data:
+                        logging.info(f"Successfully extracted {len(extracted_data)} energy records for {city['name']}")
+                        return extracted_data
+                    else:
+                        logging.warning(f"Data found but couldn't extract values for {city['name']}")
+                        # Return raw data for manual inspection
+                        return [{
+                            "date": date,
+                            "region": city['eia_region_code'],
+                            "demand_mwh": None,
+                            "timestamp_utc": f"{date}T12:00:00Z",
+                            "raw_response": data,
+                            "attempt_type": attempt_type
+                        }]
+                else:
+                    logging.warning(f"No energy data structure found for {city['name']} using {attempt_type} format")
+                    continue
+                    
+            except requests.exceptions.HTTPError as e:
+                if e.response.status_code == 401:
+                    logging.error(f"Authentication error for EIA API. Check your API key: {e}")
+                    return None
+                elif e.response.status_code == 404:
+                    logging.warning(f"EIA API endpoint not found ({attempt_type}): {e}")
+                    continue  # Try next URL format
+                elif e.response.status_code == 429:
+                    logging.warning(f"Rate limit exceeded for EIA API. Retrying... {e}")
+                    time.sleep(2 ** i)
+                    continue
+                else:
+                    logging.error(f"HTTP error fetching energy data for {city['name']} ({attempt_type}): {e}")
+                    time.sleep(2 ** i)
+            except requests.exceptions.ConnectionError as e:
+                logging.error(f"Network connection error for EIA API ({attempt_type}): {e}")
+                time.sleep(2 ** i)
+            except requests.exceptions.Timeout as e:
+                logging.error(f"Timeout error for EIA API ({attempt_type}): {e}")
+                time.sleep(2 ** i)
+            except requests.exceptions.RequestException as e:
+                logging.error(f"An unexpected error occurred with EIA API ({attempt_type}): {e}")
+                time.sleep(2 ** i)
+    
+    logging.error(f"Failed to fetch energy data for {city['name']} after trying all URL formats")
+    return None
+
+def test_eia_api_directly(api_key, region_code, date):
+    """Test function to directly call EIA API with various parameters."""
+    print(f"Testing EIA API for region {region_code} on {date}")
+    
+    # Test different endpoints and parameters
+    test_urls = [
+        f"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={region_code}&start={date}&end={date}",
+        f"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key={api_key}&frequency=hourly&data[0]=D&facets[respondent][]={region_code}&start={date}T00&end={date}T23",
+        f"https://api.eia.gov/v2/electricity/rto/daily-region-data/data/?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={region_code}&start={date}&end={date}",
+        f"https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key={api_key}&frequency=daily&data[0]=NG&facets[respondent][]={region_code}&start={date}&end={date}",
+    ]
+    
+    for i, url in enumerate(test_urls):
+        print(f"\n--- Test {i+1} ---")
+        print(f"URL: {url}")
+        try:
+            response = requests.get(url, timeout=30)
+            print(f"Status Code: {response.status_code}")
+            if response.status_code == 200:
+                data = response.json()
+                print(f"Response: {data}")
+                if 'response' in data and 'data' in data['response']:
+                    print(f"Data count: {len(data['response']['data'])}")
+            else:
+                print(f"Error: {response.text}")
+        except Exception as e:
+            print(f"Exception: {e}")
+
+def save_to_csv(data, data_type):
+    """Appends data to a CSV file."""
+    raw_data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
+    if not os.path.exists(raw_data_path):
+        os.makedirs(raw_data_path)
+
+    filename = f"{data_type}_data.csv"
+    filepath = os.path.join(raw_data_path, filename)
+    file_exists = os.path.isfile(filepath)
+
+    with open(filepath, 'a', newline='') as f:
+        if data_type == 'weather':
+            fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'prcp', 'snow', 'snwd', 'awnd', 'tsun', 'wdf2', 'wsf2', 'timestamp_utc']
+        elif data_type == 'energy':
+            fieldnames = ['date', 'region', 'demand_mwh', 'timestamp_utc']
+        else:
+            return
+
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+        if not file_exists:
+            writer.writeheader()
+
+        if isinstance(data, list):
+            writer.writerows(data)
+        else:
+            writer.writerow(data)
+    logging.info(f"Saved {data_type} data to {filepath}")
+
+# Additional debugging function
+def debug_eia_response_structure():
+    """Helper function to understand EIA API response structure."""
+    config = load_config()
+    api_key = config['eia_api_key']
+    
+    # Test with one city
+    test_city = config['cities'][0]  # New York
+    test_date = "2024-01-15"  # Use a date that should have data
+    
+    print("=== EIA API Response Structure Debug ===")
+    test_eia_api_directly(api_key, test_city['eia_region_code'], test_date)
+
+if __name__ == "__main__":
+    # Run debug function
+    debug_eia_response_structure()

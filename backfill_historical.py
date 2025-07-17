@@ -37,12 +37,12 @@ def backfill_historical_data():
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
             # Fetch and save weather data
-            weather_data = get_weather_data(city, date, api_keys["noaa"])
+            weather_data = get_weather_data(city['name'], date, api_keys["noaa"])
             if weather_data:
                 save_to_csv(weather_data, "weather")
 
             # Fetch and save energy data
-            energy_data = get_energy_data(city, date, api_keys["eia"])
+            energy_data = get_energy_data(city['name'], date, api_keys["eia"])
             if energy_data:
                 save_to_csv(energy_data, "energy")
 
@@ -77,7 +77,7 @@ def backfill_weather_only():
     for i in range(90):
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
-            weather_data = get_weather_data(city, date, api_keys["noaa"])
+            weather_data = get_weather_data(city['name'], date, api_keys["noaa"])
             if weather_data:
                 save_to_csv(weather_data, "weather")
 
@@ -95,7 +95,7 @@ def backfill_energy_only():
     for i in range(90):
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
-            energy_data = get_energy_data(city, date, api_keys["eia"])
+            energy_data = get_energy_data(city['name'], date, api_keys["eia"])
             if energy_data:
                 save_to_csv(energy_data, "energy")
 

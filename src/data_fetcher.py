@@ -4,7 +4,7 @@ import os
 import logging
 import time
 import csv
-from datetime import datetime, timedelta
+from datetime import datetime
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -15,16 +15,21 @@ def load_config():
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-def get_weather_data(city, date, api_key):
+def get_weather_data(city_name, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
     config = load_config()
+    city_config = next((c for c in config["cities"] if c["name"] == city_name), None)
+    if not city_config:
+        logging.warning(f"No config found for city: {city_name}")
+        return None
+
     base_url = config['api_endpoints']['noaa']
-    url = f"{base_url}?datasetid=GHCND&stationid={city['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
+    url = f"{base_url}?datasetid=GHCND&stationid={city_config['noaa_station_id']}&startdate={date}&enddate={date}&datatype=TMAX,TMIN,PRCP,SNOW,SNWD,AWND,TSUN,WDF2,WSF2&units=standard"
     headers = {'token': api_key}
     retries = 3
     for i in range(retries):
         try:
-            response = requests.get(url, headers=headers)
+            response = requests.get(url, headers=headers, timeout=30)
             response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
             data = response.json()
             if 'results' in data:
@@ -50,7 +55,7 @@ def get_weather_data(city, date, api_key):
                         wsf2 = entry.get('value')
                 return {
                     "date": date,
-                    "city": city['name'],
+                    "city": city_config['name'],
                     "tmax_f": tmax,
                     "tmin_f": tmin,
                     "prcp": prcp,
@@ -63,7 +68,7 @@ def get_weather_data(city, date, api_key):
                     "timestamp_utc": f"{date}T12:00:00Z"
                 }
             else:
-                logging.warning(f"No weather data for {city['name']} on {date}")
+                logging.warning(f"No weather data for {city_name} on {date}")
                 return None
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 401:
@@ -74,7 +79,7 @@ def get_weather_data(city, date, api_key):
             elif e.response.status_code == 429:
                 logging.warning(f"Rate limit exceeded for NOAA API. Retrying... {e}")
             else:
-                logging.error(f"HTTP error fetching weather data for {city['name']}: {e}")
+                logging.error(f"HTTP error fetching weather data for {city_config['name']}: {e}")
             time.sleep(2 ** i) # Exponential backoff
         except requests.exceptions.ConnectionError as e:
             logging.error(f"Network connection error for NOAA API: {e}")
@@ -88,47 +93,59 @@ def get_weather_data(city, date, api_key):
     return None
 
 def get_energy_data(city, date, api_key):
-    """Fetches energy data for a given city and date from the EIA API."""
+    """Fetches hourly energy demand data for a given city and date from EIA."""
     config = load_config()
-    base_url = config['api_endpoints']['eia']
-    url = f"{base_url}?api_key={api_key}&frequency=daily&data[0]=D&facets[respondent][]={city['eia_region_code']}&start={date}&end={date}"
-    retries = 3
-    for i in range(retries):
-        try:
-            response = requests.get(url)
-            response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
-            data = response.json()
-            if 'response' in data and 'data' in data['response'] and len(data['response']) > 0:
-                return [{
-                    "date": date,
-                    "region": city['eia_region_code'],
-                    "demand_mwh": entry.get('value'),
-                    "timestamp_utc": f"{date}T12:00:00Z"
-                } for entry in data['response']['data']]
-            else:
-                logging.warning(f"No energy data for {city['name']} on {date}")
-                return None
-        except requests.exceptions.HTTPError as e:
-            if e.response.status_code == 401:
-                logging.error(f"Authentication error for EIA API. Check your API key: {e}")
-                return None # No point in retrying if authentication fails
-            elif e.response.status_code == 404:
-                logging.warning(f"EIA API endpoint not found: {e}")
-            elif e.response.status_code == 429:
-                logging.warning(f"Rate limit exceeded for EIA API. Retrying... {e}")
-            else:
-                logging.error(f"HTTP error fetching energy data for {city['name']}: {e}")
-            time.sleep(2 ** i) # Exponential backoff
-        except requests.exceptions.ConnectionError as e:
-            logging.error(f"Network connection error for EIA API: {e}")
-            time.sleep(2 ** i)
-        except requests.exceptions.Timeout as e:
-            logging.error(f"Timeout error for EIA API: {e}")
-            time.sleep(2 ** i)
-        except requests.exceptions.RequestException as e:
-            logging.error(f"An unexpected error occurred with EIA API: {e}")
-            time.sleep(2 ** i)
-    return None
+    base_url = config["api_endpoints"]["eia"]
+    city_config = next((c for c in config["cities"] if c["name"] == city), None)
+    if not city_config:
+        logging.warning(f"No config found for city: {city}")
+        return None
+    region = city_config["eia_region_code"]
+    if not region:
+        logging.warning(f"No region found for city: {city}")
+        return None
+
+    start_of_day = f"{date}T00"
+    end_of_day = f"{date}T23"
+    
+    params = {
+        "api_key": api_key,
+        "facets[respondent][]": region,
+        "data[]": "value",
+        "start": start_of_day,
+        "end": end_of_day,
+        "sort[0][column]": "period",
+        "sort[0][direction]": "asc",
+        "frequency": "hourly"
+    }
+    
+    try:
+        response = requests.get(base_url, params=params)
+        response.raise_for_status()
+        data = response.json().get('response', {}).get('data', [])
+        if data:
+            return [{**item, 'city': city} for item in data]
+        else:
+            logging.info(f"No energy data found for {city} on {date}")
+            return None
+    except requests.exceptions.HTTPError as e:
+        logging.error(f"HTTP error fetching energy data for {city}: {e}")
+        # Save error response for debugging
+        raw_responses_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw_responses')
+        os.makedirs(raw_responses_path, exist_ok=True)
+        error_filename = f"eia_response_{city}_{datetime.now().strftime('%Y-%m-%d')}_http_error.json"
+        with open(os.path.join(raw_responses_path, error_filename), 'w') as f:
+            f.write(response.text)
+        return None
+    except requests.exceptions.ConnectionError as e:
+        logging.error(f"Connection error fetching energy data for {city}: {e}")
+        # Save connection error details
+        raw_responses_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw_responses')
+        os.makedirs(raw_responses_path, exist_ok=True)
+        error_filename = f"eia_response_{city}_{datetime.now().strftime('%Y-%m-%d')}_connection_error.json"
+        with open(os.path.join(raw_responses_path, error_filename), 'w') as f:
+            f.write(str(e))
+        return None
 
 def save_to_csv(data, data_type):
     """Appends data to a CSV file."""
@@ -144,7 +161,7 @@ def save_to_csv(data, data_type):
         if data_type == 'weather':
             fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'prcp', 'snow', 'snwd', 'awnd', 'tsun', 'wdf2', 'wsf2', 'timestamp_utc']
         elif data_type == 'energy':
-            fieldnames = ['date', 'region', 'demand_mwh', 'timestamp_utc']
+            fieldnames = ['date', 'city', 'period', 'respondent', 'respondent-name', 'type', 'type-name', 'value', 'value-units']
         else:
             return
 
@@ -158,3 +175,19 @@ def save_to_csv(data, data_type):
         else:
             writer.writerow(data)
     logging.info(f"Saved {data_type} data to {filepath}")
+
+if __name__ == "__main__":
+    config = load_config()
+    api_keys = {
+        "noaa": config["noaa_token"],
+        "eia": config["eia_api_key"]
+    }
+    test_city = "New York"
+    test_date = "2025-07-15"
+    
+    # Test energy data fetching
+    energy_data = get_energy_data(test_city, test_date, api_keys["eia"])
+    if energy_data:
+        print("\nEnergy data fetched successfully:")
+        print(energy_data)
+        save_to_csv(energy_data, "energy")
