@@ -133,7 +133,9 @@ def get_energy_data(city_name, date, api_key):
                     processed_data.append({
                         'date': item_date,
                         'city': city_name,
-                        'demand_mwh': item['value'] # Rename 'value' to 'demand_mwh'
+                        'region': item['respondent'],
+                        'demand_mwh': item['value'], # Rename 'value' to 'demand_mwh'
+                        'timestamp_utc': item['period']
                     })
                 return processed_data
             else:
@@ -175,7 +177,7 @@ def save_to_csv(data, data_type):
         if data_type == 'weather':
             fieldnames = ['date', 'city', 'tmax_f', 'tmin_f', 'prcp', 'snow', 'snwd', 'awnd', 'tsun', 'wdf2', 'wsf2', 'timestamp_utc']
         elif data_type == 'energy':
-            fieldnames = ['date', 'city', 'demand_mwh']
+            fieldnames = ['date', 'city', 'region', 'demand_mwh', 'timestamp_utc']
         else:
             return
 

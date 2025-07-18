@@ -42,8 +42,11 @@ def process_data():
     if 'tmin_f' in weather_df.columns and weather_df['tmin_f'].dtype != 'float64': # Check if conversion is needed
         weather_df['tmin_f'] = (weather_df['tmin_f'] / 10 * 9/5) + 32
 
+    # Aggregate hourly energy data to daily total
+    daily_energy_df = energy_df.groupby(['date', 'city', 'region'])['demand_mwh'].sum().reset_index()
+
     # Merge dataframes
-    merged_df = pd.merge(weather_df, energy_df, on=['date', 'city'], how='inner')
+    merged_df = pd.merge(weather_df, daily_energy_df, on=['date', 'city'], how='inner')
 
     # Save to parquet
     output_filename = f"merged_{pd.Timestamp.now().strftime('%Y%m%d')}.parquet"
