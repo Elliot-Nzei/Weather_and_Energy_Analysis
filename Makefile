@@ -1,7 +1,7 @@
 # Makefile for the Weather and Energy Analysis project
 
 # Phony targets prevent conflicts with files of the same name
-.PHONY: install run backfill backfill_weather backfill_energy
+.PHONY: install run backfill backfill_weather backfill_energy clear_failed_fetches
 
 # Default target
 all: install run
@@ -30,4 +30,9 @@ backfill_weather:
 backfill_energy:
 	@echo "Backfilling energy data only..."
 	python backfill_historical.py --energy-only
+
+# Clear the failed fetches JSON file
+clear_failed_fetches:
+	@echo "Clearing failed fetches..."
+	python backfill_historical.py --clear-failed-fetches
 

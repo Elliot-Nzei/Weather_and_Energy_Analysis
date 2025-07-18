@@ -3,6 +3,7 @@ import sys
 from datetime import datetime, timedelta
 import pandas as pd
 import logging
+import json
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -14,6 +15,25 @@ from data_fetcher import load_config, get_weather_data, get_energy_data, save_to
 from data_processor import process_data
 from quality_checks import perform_quality_checks
 from analysis import analyze_data
+
+FAILED_FETCHES_FILE = os.path.join(os.path.dirname(__file__), 'data', 'raw_responses', 'failed_fetches.json')
+
+def load_failed_fetches():
+    if os.path.exists(FAILED_FETCHES_FILE):
+        with open(FAILED_FETCHES_FILE, 'r') as f:
+            # Convert list of lists back to set of tuples
+            return set(tuple(item) for item in json.load(f))
+    return set()
+
+def save_failed_fetches(failed_fetches):
+    with open(FAILED_FETCHES_FILE, 'w') as f:
+        # Convert set of tuples to list of lists for JSON serialization
+        json.dump(list(failed_fetches), f)
+
+def clear_failed_fetches():
+    if os.path.exists(FAILED_FETCHES_FILE):
+        os.remove(FAILED_FETCHES_FILE)
+        logging.info(f"Cleared failed fetches file: {FAILED_FETCHES_FILE}")
 
 def backfill_historical_data():
     """Fetches the last 90 days of historical data, processes it, performs quality checks, and statistical analysis."""
@@ -32,19 +52,37 @@ def backfill_historical_data():
     if os.path.exists(energy_csv_path):
         os.remove(energy_csv_path)
 
+    failed_fetches = load_failed_fetches()
+
     today = datetime.now()
     for i in range(90):
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
-            # Fetch and save weather data
-            weather_data = get_weather_data(city['name'], date, api_keys["noaa"])
-            if weather_data:
-                save_to_csv(weather_data, "weather")
+            city_name = city['name']
+            
+            # Check and fetch weather data
+            weather_key = (city_name, date, "weather")
+            if weather_key in failed_fetches:
+                logging.info(f"Skipping weather data for {city_name} on {date} due to previous failure.")
+            else:
+                weather_data = get_weather_data(city_name, date, api_keys["noaa"])
+                if weather_data:
+                    save_to_csv(weather_data, "weather")
+                else:
+                    failed_fetches.add(weather_key)
 
-            # Fetch and save energy data
-            energy_data = get_energy_data(city['name'], date, api_keys["eia"])
-            if energy_data:
-                save_to_csv(energy_data, "energy")
+            # Check and fetch energy data
+            energy_key = (city_name, date, "energy")
+            if energy_key in failed_fetches:
+                logging.info(f"Skipping energy data for {city_name} on {date} due to previous failure.")
+            else:
+                energy_data = get_energy_data(city_name, date, api_keys["eia"])
+                if energy_data:
+                    save_to_csv(energy_data, "energy")
+                else:
+                    failed_fetches.add(energy_key)
+    
+    save_failed_fetches(failed_fetches)
 
     # Process and merge data
     merged_df = process_data()
@@ -73,13 +111,24 @@ def backfill_weather_only():
     weather_csv_path = os.path.join(raw_data_path, 'weather_data.csv')
     if os.path.exists(weather_csv_path):
         os.remove(weather_csv_path)
+    
+    failed_fetches = load_failed_fetches()
+
     today = datetime.now()
     for i in range(90):
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
-            weather_data = get_weather_data(city['name'], date, api_keys["noaa"])
-            if weather_data:
-                save_to_csv(weather_data, "weather")
+            city_name = city['name']
+            weather_key = (city_name, date, "weather")
+            if weather_key in failed_fetches:
+                logging.info(f"Skipping weather data for {city_name} on {date} due to previous failure.")
+            else:
+                weather_data = get_weather_data(city_name, date, api_keys["noaa"])
+                if weather_data:
+                    save_to_csv(weather_data, "weather")
+                else:
+                    failed_fetches.add(weather_key)
+    save_failed_fetches(failed_fetches)
 
 def backfill_energy_only():
     """Fetches the last 90 days of energy data for configured cities and saves to CSV."""
@@ -91,13 +140,24 @@ def backfill_energy_only():
     energy_csv_path = os.path.join(raw_data_path, 'energy_data.csv')
     if os.path.exists(energy_csv_path):
         os.remove(energy_csv_path)
+    
+    failed_fetches = load_failed_fetches()
+
     today = datetime.now()
     for i in range(90):
         date = (today - timedelta(days=i)).strftime('%Y-%m-%d')
         for city in config["cities"]:
-            energy_data = get_energy_data(city['name'], date, api_keys["eia"])
-            if energy_data:
-                save_to_csv(energy_data, "energy")
+            city_name = city['name']
+            energy_key = (city_name, date, "energy")
+            if energy_key in failed_fetches:
+                logging.info(f"Skipping energy data for {city_name} on {date} due to previous failure.")
+            else:
+                energy_data = get_energy_data(city_name, date, api_keys["eia"])
+                if energy_data:
+                    save_to_csv(energy_data, "energy")
+                else:
+                    failed_fetches.add(energy_key)
+    save_failed_fetches(failed_fetches)
 
 if __name__ == "__main__":
     import sys
@@ -106,6 +166,8 @@ if __name__ == "__main__":
             backfill_weather_only()
         elif sys.argv[1] == '--energy-only':
             backfill_energy_only()
+        elif sys.argv[1] == '--clear-failed-fetches':
+            clear_failed_fetches()
         else:
             backfill_historical_data()
     else:
