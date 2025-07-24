@@ -1,13 +1,14 @@
 PS C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis> make backfill
 "Backfilling historical data (weather and energy)..."
 python backfill_historical.py
-2025-07-17 17:07:32,465 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:08:10,230 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:08:54,117 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:08:58,123 - WARNING - No config found for city: {'name': 'New York', 'state': 'New York', 'noaa_station_id': 'GHCND:USW00094728', 'eia_region_code': 'NYIS'}
-2025-07-17 17:09:51,558 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:10:28,147 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:11:07,534 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-2025-07-17 17:11:11,544 - WARNING - No config found for city: {'name': 'Chicago', 'state': 'Illinois', 'noaa_station_id': 'GHCND:USW00094846', 'eia_region_code': 'PJM'}
-2025-07-17 17:11:48,583 - ERROR - Timeout error for NOAA API: HTTPSConnectionPool(host='www.ncdc.noaa.gov', port=443): Read timed out. (read timeout=None)
-
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\backfill_historical.py", line 174, in <module>
+    backfill_historical_data()
+  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\backfill_historical.py", line 68, in backfill_historical_data
+    weather_data = get_weather_data(city_name, date, api_keys["noaa"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\src\data_fetcher.py", line 22, in get_weather_data
+    city_name = city["name"]
+                ~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+make: *** [Makefile:22: backfill] Error 1

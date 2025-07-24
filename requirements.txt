@@ -3,3 +3,4 @@ PyYAML
 pandas
 streamlit
 plotly
+scipy

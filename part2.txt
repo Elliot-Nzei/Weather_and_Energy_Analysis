@@ -1,0 +1,19 @@
+Part 2: Data Quality Assurance
+Objective
+Ensure data is clean, consistent, and usable for statistical analysis and visualization.
+You Will Build
+src/data_processor.py: Cleans and merges data
+src/quality_checks.py: Contains quality check logic
+Daily quality report written to data/processed/
+Checks Performed
+Missing data detection
+Outlier detection (temps < -50°F or > 130°F, negative demand)
+Staleness check: Flag records older than 48 hours
+Synchronization: Ensure each city has data for the same date
+Processing Steps
+Convert temperature from tenths of Celsius to Fahrenheit
+Merge weather and energy datasets using city/region-date as key
+Generate and store data quality metrics and flags
+Output Format
+data/processed/merged_20240115.parquet
+Columns: date, city, tmax_f, tmin_f, demand_mwh, is_outlier, data_quality_score

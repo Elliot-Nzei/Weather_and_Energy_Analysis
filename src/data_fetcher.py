@@ -16,9 +16,10 @@ def load_config():
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-def get_weather_data(city_name, date, api_key):
+def get_weather_data(city, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
     config = load_config()
+    city_name = city["name"]
     city_config = next((c for c in config["cities"] if c["name"] == city_name), None)
     if not city_config:
         logging.warning(f"No config found for city: {city_name}")
@@ -33,7 +34,7 @@ def get_weather_data(city_name, date, api_key):
             response = requests.get(url, headers=headers, timeout=60)
             response.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
             data = response.json()
-            if 'results' in data:
+            if 'results' in data and data['results']:
                 tmax, tmin, prcp, snow, snwd, awnd, tsun, wdf2, wsf2 = None, None, None, None, None, None, None, None, None
                 for entry in data['results']:
                     if entry.get('datatype') == 'TMAX':
@@ -95,9 +96,10 @@ def get_weather_data(city_name, date, api_key):
     logging.error(f"Failed to fetch weather data for {city_name} on {date} after {retries} retries.")
     return None
 
-def get_energy_data(city_name, date, api_key):
+def get_energy_data(city, date, api_key):
     """Fetches hourly energy demand data for a given city and date from EIA."""
     config = load_config()
+    city_name = city["name"]
     base_url = config["api_endpoints"]["eia"]
     city_config = next((c for c in config["cities"] if c["name"] == city_name), None)
     if not city_config:
@@ -190,10 +192,11 @@ def save_to_csv(data, data_type):
         if not file_exists:
             writer.writeheader()
 
-        if isinstance(data, list):
-            writer.writerows(data)
-        else:
-            writer.writerow(data)
+        if data:
+            if isinstance(data, list):
+                writer.writerows(data)
+            else:
+                writer.writerow(data)
     logging.info(f"Saved {data_type} data to {filepath}")
 
 if __name__ == "__main__":

@@ -65,7 +65,7 @@ def backfill_historical_data():
             if weather_key in failed_fetches:
                 logging.info(f"Skipping weather data for {city_name} on {date} due to previous failure.")
             else:
-                weather_data = get_weather_data(city_name, date, api_keys["noaa"])
+                weather_data = get_weather_data(city, date, api_keys["noaa"])
                 if weather_data:
                     save_to_csv(weather_data, "weather")
                 else:
@@ -76,7 +76,7 @@ def backfill_historical_data():
             if energy_key in failed_fetches:
                 logging.info(f"Skipping energy data for {city_name} on {date} due to previous failure.")
             else:
-                energy_data = get_energy_data(city_name, date, api_keys["eia"])
+                energy_data = get_energy_data(city, date, api_keys["eia"])
                 if energy_data:
                     save_to_csv(energy_data, "energy")
                 else:
@@ -123,7 +123,7 @@ def backfill_weather_only():
             if weather_key in failed_fetches:
                 logging.info(f"Skipping weather data for {city_name} on {date} due to previous failure.")
             else:
-                weather_data = get_weather_data(city_name, date, api_keys["noaa"])
+                weather_data = get_weather_data(city, date, api_keys["noaa"])
                 if weather_data:
                     save_to_csv(weather_data, "weather")
                 else:
@@ -152,7 +152,7 @@ def backfill_energy_only():
             if energy_key in failed_fetches:
                 logging.info(f"Skipping energy data for {city_name} on {date} due to previous failure.")
             else:
-                energy_data = get_energy_data(city_name, date, api_keys["eia"])
+                energy_data = get_energy_data(city, date, api_keys["eia"])
                 if energy_data:
                     save_to_csv(energy_data, "energy")
                 else:
