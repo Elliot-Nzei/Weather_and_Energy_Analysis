@@ -26,6 +26,8 @@ def load_failed_fetches():
     return set()
 
 def save_failed_fetches(failed_fetches):
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(FAILED_FETCHES_FILE), exist_ok=True)
     with open(FAILED_FETCHES_FILE, 'w') as f:
         # Convert set of tuples to list of lists for JSON serialization
         json.dump(list(failed_fetches), f)

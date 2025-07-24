@@ -1,0 +1,24 @@
+Part 3: Statistical Analysis 
+ 
+Objective 
+Uncover trends, patterns, and correlations between temperature and electricity usage. You Will Build 
+ 
+src/analysis.py: Central module for correlation and pattern discovery 
+Correlation analysis: Compute Pearson correlation and R-squared 
+Temporal trend analysis: Weekly and seasonal trends 
+Heatmap dataset preparation: Temperature vs weekday usage mapping 
+ 
+ 
+Analytical Goals 
+Determine correlation strength between temp and usage  
+Measure city-by-city seasonal differences 
+Detect weekend-vs-weekday usage trends 
+Prepare datasets for heatmap visualizations 
+ 
+ 
+Output Files  
+data/analytics/ 
+correlations.json — Correlation coefficients and R-squared per city 
+timeseries.parquet — Joined daily time series for plotting 
+heatmap.parquet — Average usage grouped by temp range and day 
+summary_stats.json — Calculated insights and descriptive statistics 
