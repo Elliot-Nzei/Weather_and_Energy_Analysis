@@ -1,0 +1,22 @@
+{
+  "Seattle": {
+    "pearson_correlation": 0.20791917711043056,
+    "r_squared": 0.04323038421027859
+  },
+  "New York": {
+    "pearson_correlation": 0.7881100869607505,
+    "r_squared": 0.6211175091692817
+  },
+  "Phoenix": {
+    "pearson_correlation": 0.733776653507346,
+    "r_squared": 0.5384281772324397
+  },
+  "Houston": {
+    "pearson_correlation": 0.7688650122627619,
+    "r_squared": 0.5911534070818171
+  },
+  "Chicago": {
+    "pearson_correlation": 0.682649848233612,
+    "r_squared": 0.46601081529337346
+  }
+}

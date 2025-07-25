@@ -1,0 +1,17 @@
+{
+  "overall_demand_mwh_mean": 121011.5995145631,
+  "overall_demand_mwh_std": 129680.00364480296,
+  "overall_tmax_f_mean": 83.96116504854369,
+  "overall_tmin_f_mean": 65.08009708737865,
+  "demand_by_city": {
+    "Chicago": 327187.3209876543,
+    "Houston": 208325.92857142858,
+    "New York": 56073.135802469136,
+    "Phoenix": 13392.638554216868,
+    "Seattle": 2430.3012048192772
+  },
+  "demand_weekday_vs_weekend": {
+    "Weekday": 122321.92491467576,
+    "Weekend": 117785.33613445378
+  }
+}
