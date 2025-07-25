@@ -1,14 +1,7 @@
-PS C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis> make backfill
-"Backfilling historical data (weather and energy)..."
-python backfill_historical.py
-Traceback (most recent call last):
-  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\backfill_historical.py", line 174, in <module>
-    backfill_historical_data()
-  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\backfill_historical.py", line 68, in backfill_historical_data
-    weather_data = get_weather_data(city_name, date, api_keys["noaa"])
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\USER\Documents\AI_Training\WORK\Weather_and_Energy_Analysis\src\data_fetcher.py", line 22, in get_weather_data
-    city_name = city["name"]
-                ~~~~^^^^^^^^
-TypeError: string indices must be integers, not 'str'
-make: *** [Makefile:22: backfill] Error 1
+File "/mount/src/weather_and_energy_analysis/dashboards/app.py", line 70, in <module>
+    date_range = st.sidebar.date_input("Select Date Range",
+                                       value=(min_date, max_date),
+                                       min_value=min_date,
+                                       max_date=max_date)
+File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
+    result = non_optional_func(*args, **kwargs)

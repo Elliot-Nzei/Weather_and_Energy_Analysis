@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import os
 import json
+from datetime import datetime, date
 
 # Set page config
 st.set_page_config(layout="wide", page_title="Weather and Energy Analysis")
@@ -15,13 +16,13 @@ def load_data():
     processed_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'processed')
 
     # Load merged data with quality flags
+    df = pd.DataFrame() # Initialize df as empty DataFrame
     processed_files = [f for f in os.listdir(processed_path) if f.startswith('merged_with_quality_flags_') and f.endswith('.parquet')]
     if processed_files:
         latest_processed_file = max(processed_files, key=lambda f: os.path.getmtime(os.path.join(processed_path, f)))
         df = pd.read_parquet(os.path.join(processed_path, latest_processed_file))
-        df['date'] = pd.to_datetime(df['date'])
-    else:
-        df = pd.DataFrame()
+        df['date'] = pd.to_datetime(df['date'], errors='coerce') # Coerce invalid dates to NaT
+        df = df.dropna(subset=['date']) # Drop rows where date is NaT
 
     # Load analytics data
     correlations = {}
@@ -34,7 +35,8 @@ def load_data():
     timeseries_filepath = os.path.join(analytics_path, 'timeseries.parquet')
     if os.path.exists(timeseries_filepath):
         timeseries_df = pd.read_parquet(timeseries_filepath)
-        timeseries_df['date'] = pd.to_datetime(timeseries_df.index)
+        timeseries_df['date'] = pd.to_datetime(timeseries_df.index, errors='coerce')
+        timeseries_df = timeseries_df.dropna(subset=['date'])
 
     heatmap_df = pd.DataFrame()
     heatmap_filepath = os.path.join(analytics_path, 'heatmap.parquet')
@@ -64,13 +66,28 @@ st.title("US Weather and Energy Analysis Dashboard")
 st.sidebar.header("Filters")
 
 # Date Range Filter
-if not df.empty:
-    min_date = df['date'].min().date()
-    max_date = df['date'].max().date()
+if not df.empty and not df['date'].empty:
+    min_available_date = df['date'].min().date()
+    max_available_date = df['date'].max().date()
+    
+    # Ensure min_available_date and max_available_date are valid dates
+    if pd.isna(min_available_date) or pd.isna(max_available_date):
+        st.warning("Date data is invalid or missing. Displaying all available data.")
+        # Fallback to a default range if dates are invalid
+        min_date_value = date(2023, 1, 1) # A reasonable default start date
+        max_date_value = date.today() # Default to today
+        min_date_limit = min_date_value
+        max_date_limit = max_date_value
+    else:
+        min_date_value = min_available_date
+        max_date_value = max_available_date
+        min_date_limit = min_available_date
+        max_date_limit = max_available_date
+
     date_range = st.sidebar.date_input("Select Date Range", 
-                                       value=(min_date, max_date),
-                                       min_value=min_date,
-                                       max_date=max_date)
+                                       value=(min_date_value, max_date_value),
+                                       min_value=min_date_limit,
+                                       max_value=max_date_limit)
     if len(date_range) == 2:
         filtered_df = df[(df['date'].dt.date >= date_range[0]) & (df['date'].dt.date <= date_range[1])]
         filtered_timeseries_df = timeseries_df[(timeseries_df['date'].dt.date >= date_range[0]) & (timeseries_df['date'].dt.date <= date_range[1])]
