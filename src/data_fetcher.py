@@ -11,10 +11,16 @@ import random
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def load_config():
-    """Loads the configuration from config.yaml."""
+    """Loads the configuration from config.yaml and overrides API keys with environment variables."""
     config_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'config.yaml')
     with open(config_path, 'r') as f:
-        return yaml.safe_load(f)
+        config = yaml.safe_load(f)
+    
+    # Override API keys with environment variables if available
+    config["noaa_token"] = os.environ.get("NOAA_API_KEY", config.get("noaa_token"))
+    config["eia_api_key"] = os.environ.get("EIA_API_KEY", config.get("eia_api_key"))
+    
+    return config
 
 def get_weather_data(city, date, api_key):
     """Fetches weather data for a given city and date from the NOAA API."""
@@ -205,7 +211,7 @@ if __name__ == "__main__":
         "noaa": config["noaa_token"],
         "eia": config["eia_api_key"]
     }
-    test_city = "New York"
+    test_city = {"name": "New York", "state": "New York", "noaa_station_id": "GHCND:USW00094728", "eia_region_code": "NYIS"}
     test_date = "2025-07-15"
     
     # Test energy data fetching

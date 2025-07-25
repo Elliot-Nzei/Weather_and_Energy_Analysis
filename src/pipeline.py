@@ -24,16 +24,12 @@ def run_pipeline():
     
     yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
 
-    # Clear old raw data files
+    # Ensure raw data directory exists
     raw_data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'raw')
-    weather_csv_path = os.path.join(raw_data_path, 'weather_data.csv')
-    energy_csv_path = os.path.join(raw_data_path, 'energy_data.csv')
-    if os.path.exists(weather_csv_path):
-        os.remove(weather_csv_path)
-    if os.path.exists(energy_csv_path):
-        os.remove(energy_csv_path)
+    if not os.path.exists(raw_data_path):
+        os.makedirs(raw_data_path)
 
-    # Create empty weather data file with headers
+    # Ensure weather data file exists with headers (will not overwrite existing data)
     save_to_csv(None, "weather")
 
     # Fetch new data

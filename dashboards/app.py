@@ -70,7 +70,7 @@ if not df.empty:
     date_range = st.sidebar.date_input("Select Date Range", 
                                        value=(min_date, max_date),
                                        min_value=min_date,
-                                       max_value=max_date)
+                                       max_date=max_date)
     if len(date_range) == 2:
         filtered_df = df[(df['date'].dt.date >= date_range[0]) & (df['date'].dt.date <= date_range[1])]
         filtered_timeseries_df = timeseries_df[(timeseries_df['date'].dt.date >= date_range[0]) & (timeseries_df['date'].dt.date <= date_range[1])]
@@ -115,7 +115,7 @@ if not filtered_timeseries_df.empty:
                 title=f'Temperature and Energy Demand for {city_for_timeseries}',
                 xaxis_title='Date',
                 yaxis_title='Max Temp (°F)',
-                yaxis2=dict(title='Demand (MWh)', overlaying='y', side='right'),
+                yaxis2=dict(title='Demand (Mwh)', overlaying='y', side='right'),
                 hovermode='x unified'
             )
             st.plotly_chart(fig_ts, use_container_width=True)
