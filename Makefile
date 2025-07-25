@@ -1,7 +1,7 @@
 # Makefile for the Weather and Energy Analysis project
 
 # Phony targets prevent conflicts with files of the same name
-.PHONY: install run backfill backfill_weather backfill_energy clear_failed_fetches
+.PHONY: install run analyze backfill backfill_weather backfill_energy clear_failed_fetches
 
 # Default target
 all: install run
@@ -15,6 +15,11 @@ install:
 run:
 	@echo "Running the data pipeline..."
 	python src/pipeline.py
+
+# Run the analysis script
+analyze:
+	@echo "Running the analysis script..."
+	python src/analysis.py
 
 # Run the backfill script for historical data (both weather and energy)
 backfill:

@@ -1,0 +1,89 @@
+Part 4: Streamlit Visualization Dashboard 
+ 
+Objective 
+Create a fully interactive dashboard that lets users explore temperature vs electricity 
+demand in real-time. 
+ 
+You Will Build 
+dashboards/app.py — Main Streamlit application 
+Includes 4 scrollable sections: 
+ 
+1. Geographic Overview 
+Interactive US map 
+Shows city name, temperature, energy usage, and daily change 
+Color-coded: Red = high usage, Green = low usage 
+Shows last data update timestamp 
+ 
+ 
+2. Time Series Analysis 
+Dual-axis line chart of temp and usage 
+Dropdown to select one city or all cities 
+Weekend shading 
+Legend, labeled axes, and smoothing trendlines 
+ 
+ 
+3. Correlation Analysis 
+Scatterplot of temp vs usage 
+One color per city 
+Regression line with R-squared and correlation shown 
+Hover tooltips for city, date, and values 
+ 
+ 
+4. Heatmap 
+Temp ranges on y-axis: <50°F, 50-60°F, 60-70°F, 70-80°F, 80-90°F, >90°F 
+Weekdays on x-axis 
+Colors from blue (low) to red (high usage) 
+Numeric values shown in cells 
+Filter by city 
+ 
+ 
+ 
+Dashboard Features 
+Sidebar filters for date range and city multiselect 
+Auto-refresh every hour 
+Mobile-compatible layout 
+Chart export as PNG 
+ 
+ 
+--- 
+ 
+project1-energy-analysis/ 
+│ 
+├── README.md                  ← Summary, setup steps, and business context 
+├── AI_USAGE.md                ← Documentation of AI tools, prompts, errors, and fixes 
+├── pyproject.toml             ← Dependency declarations for reproducibility 
+├── video_link.md              ← Paste your Loom or YouTube video URL here 
+│ 
+├── config/                    ← Configuration directory 
+│   └── config.yaml            ← Stores API keys, region codes, and city metadata 
+│ 
+├── src/                       ← Core pipeline source code 
+│   ├── data_fetcher.py        ← Fetches weather and energy data from NOAA and EIA APIs 
+│   ├── data_processor.py      ← Cleans, transforms, and merges raw data 
+│   ├── quality_checks.py      ← Implements missing data, outlier, and freshness checks 
+│   ├── analysis.py            ← Performs correlation, trend, and heatmap analysis 
+│   └── pipeline.py            ← Main orchestration script that runs the whole workflow 
+│ 
+├── dashboards/                ← Streamlit-based interactive visualizations 
+│   └── app.py                 ← Streamlit dashboard application (with 4 views) 
+│ 
+├── logs/                      ← Logs directory for execution and debugging 
+│   └── pipeline.log           ← Logs pipeline run results, errors, timestamps 
+│ 
+├── data/                      ← Stores all intermediate and final data files 
+│   ├── raw/                   ← Unprocessed API responses (JSON format) 
+│   │   ├── weather_YYYYMMDD.json 
+│   │   └── energy_YYYYMMDD.json 
+│   ├── processed/             ← Cleaned, merged datasets (Parquet format) 
+│   │   └── merged_YYYYMMDD.parquet 
+│   └── analytics/             ← Output of analysis and modeling 
+│       ├── correlations.json          ← Correlation coefficients and R-squared 
+│       ├── timeseries.parquet         ← Timeseries data for dashboard 
+│       ├── heatmap.parquet            ← Data matrix for heatmap view 
+│       └── summary_stats.json         ← Descriptive insights and statistical summaries 
+│ 
+├── notebooks/                 ← Optional exploratory analysis in notebook format 
+│   └── exploration.ipynb      ← Jupyter notebook for early data exploration 
+│ 
+└── tests/                     ← Unit and integration tests 
+    └── test_pipeline.py       ← Tests key functions like fetching, processing, and analysis 

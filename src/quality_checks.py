@@ -24,8 +24,8 @@ def perform_quality_checks(df):
     df['is_outlier'] = df['is_temp_outlier'] | df['is_demand_outlier']
 
     # 3. Staleness check
-    current_time = datetime.utcnow()
-    df['timestamp_utc'] = pd.to_datetime(df['timestamp_utc'])
+    current_time = datetime.now() # Make current_time timezone-naive
+    df['timestamp_utc'] = pd.to_datetime(df['timestamp_utc']) # This should be timezone-naive from CSV
     df['is_stale'] = (current_time - df['timestamp_utc']) > timedelta(hours=48)
 
     # 4. Synchronization check
