@@ -47,9 +47,15 @@ def load_data():
         with open(summary_stats_filepath, 'r') as f:
             summary_stats = json.load(f)
 
-    return df, correlations, timeseries_df, heatmap_df, summary_stats
+    top_cities_by_demand = {}
+    top_cities_filepath = os.path.join(analytics_path, 'top_cities_by_demand.json')
+    if os.path.exists(top_cities_filepath):
+        with open(top_cities_filepath, 'r') as f:
+            top_cities_by_demand = json.load(f)
 
-df, correlations, timeseries_df, heatmap_df, summary_stats = load_data()
+    return df, correlations, timeseries_df, heatmap_df, summary_stats, top_cities_by_demand
+
+df, correlations, timeseries_df, heatmap_df, summary_stats, top_cities_by_demand = load_data()
 
 # --- Dashboard Layout ---
 st.title("US Weather and Energy Analysis Dashboard")
@@ -148,6 +154,15 @@ if not heatmap_df.empty:
         st.plotly_chart(fig_heatmap, use_container_width=True)
 else:
     st.info("No heatmap data available. Please run the analysis pipeline.")
+
+# 5. Top Cities by Energy Consumption
+st.header("5. Top Cities by Energy Consumption")
+if top_cities_by_demand:
+    top_cities_df = pd.DataFrame(top_cities_by_demand.items(), columns=['City', 'Average Demand (MWh)'])
+    top_cities_df = top_cities_df.sort_values(by='Average Demand (MWh)', ascending=False)
+    st.dataframe(top_cities_df)
+else:
+    st.info("No top cities by energy consumption data available. Please run the analysis pipeline.")
 
 # Summary Statistics
 st.header("Summary Statistics")

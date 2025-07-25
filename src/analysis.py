@@ -71,6 +71,13 @@ def analyze_data():
     heatmap_data.to_parquet(heatmap_filepath, index=True)
     logging.info(f"Heatmap data saved to {heatmap_filepath}")
 
+    # --- Top Cities by Energy Consumption ---
+    top_cities_by_demand = df.groupby('city')['demand_mwh'].mean().nlargest(5).to_dict()
+    top_cities_filepath = os.path.join(analytics_data_path, 'top_cities_by_demand.json')
+    with open(top_cities_filepath, 'w') as f:
+        json.dump(top_cities_by_demand, f, indent=2)
+    logging.info(f"Top cities by demand saved to {top_cities_filepath}")
+
     # --- Calculated insights and descriptive statistics ---
     summary_stats = {
         "overall_demand_mwh_mean": df['demand_mwh'].mean(),
