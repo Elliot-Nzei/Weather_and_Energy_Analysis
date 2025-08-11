@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -7,191 +9,157 @@ import json
 from datetime import datetime, date
 
 # Set page config
-st.set_page_config(layout="wide", page_title="Weather and Energy Analysis")
+st.set_page_config(layout="wide", page_title="Weather and Energy Analysis", page_icon="⚡")
 
 # --- Helper Functions to Load Data ---
 @st.cache_data
-def load_data():
+def load_all_data():
     analytics_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'analytics')
     processed_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'processed')
 
     # Load merged data with quality flags
-    df = pd.DataFrame() # Initialize df as empty DataFrame
+    df = pd.DataFrame()
     processed_files = [f for f in os.listdir(processed_path) if f.startswith('merged_with_quality_flags_') and f.endswith('.parquet')]
     if processed_files:
         latest_processed_file = max(processed_files, key=lambda f: os.path.getmtime(os.path.join(processed_path, f)))
         df = pd.read_parquet(os.path.join(processed_path, latest_processed_file))
-        df['date'] = pd.to_datetime(df['date'], errors='coerce') # Coerce invalid dates to NaT
-        df = df.dropna(subset=['date']) # Drop rows where date is NaT
+        df['date'] = pd.to_datetime(df['date'], errors='coerce').dt.date
+        df = df.dropna(subset=['date'])
 
     # Load analytics data
-    correlations = {}
-    correlations_filepath = os.path.join(analytics_path, 'correlations.json')
-    if os.path.exists(correlations_filepath):
-        with open(correlations_filepath, 'r') as f:
-            correlations = json.load(f)
+    def load_json_file(filename):
+        filepath = os.path.join(analytics_path, filename)
+        if os.path.exists(filepath):
+            with open(filepath, 'r') as f:
+                return json.load(f)
+        return {}
 
-    timeseries_df = pd.DataFrame()
-    timeseries_filepath = os.path.join(analytics_path, 'timeseries.parquet')
-    if os.path.exists(timeseries_filepath):
-        timeseries_df = pd.read_parquet(timeseries_filepath)
-        timeseries_df['date'] = pd.to_datetime(timeseries_df.index, errors='coerce')
+    correlations = load_json_file('correlations.json')
+    summary_stats = load_json_file('summary_stats.json')
+    top_cities_by_demand = load_json_file('top_cities_by_demand.json')
+
+    # Load parquet data
+    def load_parquet_file(filename):
+        filepath = os.path.join(analytics_path, filename)
+        if os.path.exists(filepath):
+            return pd.read_parquet(filepath)
+        return pd.DataFrame()
+
+    timeseries_df = load_parquet_file('timeseries.parquet')
+    if not timeseries_df.empty:
+        timeseries_df['date'] = pd.to_datetime(timeseries_df.index, errors='coerce').date
         timeseries_df = timeseries_df.dropna(subset=['date'])
 
-    heatmap_df = pd.DataFrame()
-    heatmap_filepath = os.path.join(analytics_path, 'heatmap.parquet')
-    if os.path.exists(heatmap_filepath):
-        heatmap_df = pd.read_parquet(heatmap_filepath)
-
-    summary_stats = {}
-    summary_stats_filepath = os.path.join(analytics_path, 'summary_stats.json')
-    if os.path.exists(summary_stats_filepath):
-        with open(summary_stats_filepath, 'r') as f:
-            summary_stats = json.load(f)
-
-    top_cities_by_demand = {}
-    top_cities_filepath = os.path.join(analytics_path, 'top_cities_by_demand.json')
-    if os.path.exists(top_cities_filepath):
-        with open(top_cities_filepath, 'r') as f:
-            top_cities_by_demand = json.load(f)
+    heatmap_df = load_parquet_file('heatmap.parquet')
 
     return df, correlations, timeseries_df, heatmap_df, summary_stats, top_cities_by_demand
 
-df, correlations, timeseries_df, heatmap_df, summary_stats, top_cities_by_demand = load_data()
+# --- Initialize Session State ---
+if 'data_loaded' not in st.session_state:
+    st.session_state.df, st.session_state.correlations, st.session_state.timeseries_df, \
+    st.session_state.heatmap_df, st.session_state.summary_stats, st.session_state.top_cities_by_demand = load_all_data()
+    st.session_state.data_loaded = True
 
 # --- Dashboard Layout ---
-st.title("US Weather and Energy Analysis Dashboard")
+st.markdown("<h1 style='text-align: center; color: #2c3e50;'>⚡ US Weather and Energy Analysis Dashboard ⚡</h1>", unsafe_allow_html=True)
+st.markdown("---_---")
 
-# Sidebar for filters
-st.sidebar.header("Filters")
+# --- Sidebar for filters ---
+with st.sidebar:
+    st.image("https://www.eia.gov/todayinenergy/images/2017.03.31/main.png", use_container_width=True)
+    st.markdown("<h2 style='text-align: center;'>Filters</h2>", unsafe_allow_html=True)
 
-# Date Range Filter
-if not df.empty and not df['date'].empty:
-    min_available_date = df['date'].min().date()
-    max_available_date = df['date'].max().date()
-    
-    # Ensure min_available_date and max_available_date are valid dates
-    if pd.isna(min_available_date) or pd.isna(max_available_date):
-        st.warning("Date data is invalid or missing. Displaying all available data.")
-        # Fallback to a default range if dates are invalid
-        min_date_value = date(2023, 1, 1) # A reasonable default start date
-        max_date_value = date.today() # Default to today
-        min_date_limit = min_date_value
-        max_date_limit = max_date_value
+    # Date Range Filter
+    if not st.session_state.df.empty:
+        min_date = st.session_state.df['date'].min()
+        max_date = st.session_state.df['date'].max()
+        date_range = st.date_input("Select Date Range", value=(min_date, max_date), min_value=min_date, max_value=max_date)
     else:
-        min_date_value = min_available_date
-        max_date_value = max_available_date
-        min_date_limit = min_available_date
-        max_date_limit = max_available_date
+        date_range = st.date_input("Select Date Range", value=(date(2023, 1, 1), date.today()))
 
-    date_range = st.sidebar.date_input("Select Date Range", 
-                                       value=(min_date_value, max_date_value),
-                                       min_value=min_date_limit,
-                                       max_value=max_date_limit)
+    # City Multiselect Filter
+    all_cities = st.session_state.df['city'].unique().tolist() if not st.session_state.df.empty else []
+    selected_cities = st.multiselect("Select Cities", all_cities, default=all_cities)
+
+# --- Filter Data based on Selection ---
+if st.session_state.data_loaded and not st.session_state.df.empty:
     if len(date_range) == 2:
-        filtered_df = df[(df['date'].dt.date >= date_range[0]) & (df['date'].dt.date <= date_range[1])]
-        filtered_timeseries_df = timeseries_df[(timeseries_df['date'].dt.date >= date_range[0]) & (timeseries_df['date'].dt.date <= date_range[1])]
+        filtered_df = st.session_state.df[(st.session_state.df['date'] >= date_range[0]) & (st.session_state.df['date'] <= date_range[1])]
+        filtered_timeseries_df = st.session_state.timeseries_df[(st.session_state.timeseries_df['date'] >= date_range[0]) & (st.session_state.timeseries_df['date'] <= date_range[1])]
     else:
-        filtered_df = df
-        filtered_timeseries_df = timeseries_df
+        filtered_df = st.session_state.df
+        filtered_timeseries_df = st.session_state.timeseries_df
+
+    if selected_cities:
+        filtered_df = filtered_df[filtered_df['city'].isin(selected_cities)]
+        filtered_timeseries_df = filtered_timeseries_df[filtered_timeseries_df['city'].isin(selected_cities)]
 else:
-    st.warning("No data available to display. Please run the data pipeline.")
+    st.warning("No data available to display. Please run the data pipeline first by running `make backfill`.")
     filtered_df = pd.DataFrame()
     filtered_timeseries_df = pd.DataFrame()
 
-# City Multiselect Filter
-all_cities = df['city'].unique().tolist() if not df.empty else []
-selected_cities = st.sidebar.multiselect("Select Cities", all_cities, default=all_cities)
-
-if not filtered_df.empty:
-    filtered_df = filtered_df[filtered_df['city'].isin(selected_cities)]
-    filtered_timeseries_df = filtered_timeseries_df[filtered_timeseries_df['city'].isin(selected_cities)]
-
 # --- Display Sections ---
-
-# 1. Geographic Overview (Placeholder - requires geographical data/coordinates)
-st.header("1. Geographic Overview")
 if not filtered_df.empty:
-    st.write("Interactive US Map (Placeholder - requires city coordinates)")
-    # Example: Display a table of current data for selected cities
-    st.dataframe(filtered_df[['date', 'city', 'tmax_f', 'demand_mwh']].tail(5))
-else:
-    st.info("No data to display for Geographic Overview.")
+    # --- Key Metrics ---
+    st.markdown("###  KPIs")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Avg. Demand (MWh)", f"{filtered_df['demand_mwh'].mean():,.0f}")
+    with col2:
+        st.metric("Avg. Max Temp (°F)", f"{filtered_df['tmax_f'].mean():.1f}°F")
+    with col3:
+        st.metric("Correlation (Tmax vs Demand)", f"{filtered_df.groupby('city').apply(lambda x: x['tmax_f'].corr(x['demand_mwh'])).mean():.2f}")
+    with col4:
+        st.metric("Total Records", f"{len(filtered_df):,}")
 
-# 2. Time Series Analysis
-st.header("2. Time Series Analysis")
-if not filtered_timeseries_df.empty:
-    city_for_timeseries = st.selectbox("Select City for Time Series", selected_cities)
-    if city_for_timeseries:
-        city_ts_df = filtered_timeseries_df[filtered_timeseries_df['city'] == city_for_timeseries]
-        if not city_ts_df.empty:
-            fig_ts = go.Figure()
-            fig_ts.add_trace(go.Scatter(x=city_ts_df['date'], y=city_ts_df['tmax_f'], mode='lines', name='Max Temp (°F)', yaxis='y1'))
-            fig_ts.add_trace(go.Scatter(x=city_ts_df['date'], y=city_ts_df['demand_mwh'], mode='lines', name='Demand (MWh)', yaxis='y2'))
-            fig_ts.update_layout(
-                title=f'Temperature and Energy Demand for {city_for_timeseries}',
-                xaxis_title='Date',
-                yaxis_title='Max Temp (°F)',
-                yaxis2=dict(title='Demand (Mwh)', overlaying='y', side='right'),
-                hovermode='x unified'
-            )
+    st.markdown("---_---")
+
+    # --- Tabbed Layout for Visualizations ---
+    tab1, tab2, tab3, tab4 = st.tabs(["Time Series Analysis", "Correlation Analysis", "Heatmap", "Data Quality"])
+
+    with tab1:
+        st.markdown("### 📈 Time Series Analysis")
+        if not filtered_timeseries_df.empty:
+            fig_ts = px.line(filtered_timeseries_df, x='date', y='demand_mwh', color='city', title='Energy Demand Over Time')
             st.plotly_chart(fig_ts, use_container_width=True)
+
+            fig_temp = px.line(filtered_timeseries_df, x='date', y='tmax_f', color='city', title='Max Temperature Over Time')
+            st.plotly_chart(fig_temp, use_container_width=True)
         else:
-            st.info(f"No time series data for {city_for_timeseries} in the selected date range.")
+            st.info("No time series data to display for the selected filters.")
+
+    with tab2:
+        st.markdown("### 🔗 Correlation Analysis")
+        if st.session_state.correlations:
+            corr_df = pd.DataFrame.from_dict(st.session_state.correlations, orient='index')
+            st.dataframe(corr_df)
+
+            st.markdown("#### Scatterplot: Temperature vs. Energy Demand")
+            fig_scatter = px.scatter(filtered_df, x='tmax_f', y='demand_mwh', color='city', hover_data=['date', 'tmin_f'], title='Temperature vs. Energy Demand by City')
+            st.plotly_chart(fig_scatter, use_container_width=True)
+        else:
+            st.info("No correlation data available.")
+
+    with tab3:
+        st.markdown("### 🔥 Heatmap: Average Demand by Temperature Range and Day Type")
+        if not st.session_state.heatmap_df.empty:
+            city_heatmap = st.selectbox("Select City for Heatmap", selected_cities)
+            if city_heatmap:
+                city_heatmap_df = st.session_state.heatmap_df.loc[city_heatmap]
+                fig_heatmap = px.imshow(city_heatmap_df, labels=dict(x="Day Type", y="Temperature Range", color="Average Demand (MWh)"), title=f'Average Energy Demand for {city_heatmap}')
+                st.plotly_chart(fig_heatmap, use_container_width=True)
+        else:
+            st.info("No heatmap data available.")
+
+    with tab4:
+        st.markdown("### ✅ Data Quality")
+        st.dataframe(filtered_df.describe())
+        st.markdown("#### Data Quality Score")
+        st.dataframe(filtered_df[['city', 'data_quality_score']].groupby('city').mean())
+
 else:
-    st.info("No data to display for Time Series Analysis.")
+    st.info("Select filters to view data.")
 
-# 3. Correlation Analysis
-st.header("3. Correlation Analysis")
-if correlations:
-    st.write("Pearson Correlation and R-squared between Max Temperature and Energy Demand:")
-    corr_df = pd.DataFrame.from_dict(correlations, orient='index')
-    st.dataframe(corr_df)
-
-    if not filtered_df.empty:
-        st.subheader("Scatterplot: Temperature vs. Energy Demand")
-        fig_scatter = px.scatter(filtered_df, x='tmax_f', y='demand_mwh', color='city',
-                                 hover_data=['date', 'tmin_f'],
-                                 title='Temperature vs. Energy Demand by City')
-        st.plotly_chart(fig_scatter, use_container_width=True)
-else:
-    st.info("No correlation data available. Please run the analysis pipeline.")
-
-# 4. Heatmap
-st.header("4. Heatmap: Average Demand by Temperature Range and Day Type")
-if not heatmap_df.empty:
-    selected_city_heatmap = st.selectbox("Select City for Heatmap", heatmap_df.index.get_level_values('city').unique())
-    if selected_city_heatmap:
-        city_heatmap_df = heatmap_df.loc[selected_city_heatmap]
-        fig_heatmap = px.imshow(city_heatmap_df,
-                                 labels=dict(x="Day Type", y="Temperature Range", color="Average Demand (MWh)"),
-                                 x=city_heatmap_df.columns,
-                                 y=city_heatmap_df.index,
-                                 title=f'Average Energy Demand for {selected_city_heatmap}')
-        st.plotly_chart(fig_heatmap, use_container_width=True)
-else:
-    st.info("No heatmap data available. Please run the analysis pipeline.")
-
-# 5. Top Cities by Energy Consumption
-st.header("5. Top Cities by Energy Consumption")
-if top_cities_by_demand:
-    top_cities_df = pd.DataFrame(top_cities_by_demand.items(), columns=['City', 'Average Demand (MWh)'])
-    top_cities_df = top_cities_df.sort_values(by='Average Demand (MWh)', ascending=False)
-    st.dataframe(top_cities_df)
-else:
-    st.info("No top cities by energy consumption data available. Please run the analysis pipeline.")
-
-# Summary Statistics
-st.header("Summary Statistics")
-if summary_stats:
-    st.json(summary_stats)
-else:
-    st.info("No summary statistics available.")
-
-# Instructions to run
-st.sidebar.markdown("""
----
-### How to Run
-1. Ensure you have run `make backfill` to generate data.
-2. Run `streamlit run dashboards/app.py` in your terminal.
-""")
+# --- Footer ---
+st.markdown("---_---")
+st.markdown("<p style='text-align: center; color: grey;'>Developed by Elliot Nzei</p>", unsafe_allow_html=True)

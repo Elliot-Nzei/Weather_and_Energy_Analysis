@@ -32,11 +32,12 @@ def process_data():
         else:
             # Convert date columns to datetime objects
             weather_df['date'] = pd.to_datetime(weather_df['date'])
-            # Convert temperature from tenths of Celsius to Fahrenheit if necessary
-            if 'tmax_f' in weather_df.columns and weather_df['tmax_f'].dtype != 'float64':
-                weather_df['tmax_f'] = (weather_df['tmax_f'] / 10 * 9/5) + 32
-            if 'tmin_f' in weather_df.columns and weather_df['tmin_f'].dtype != 'float64':
-                weather_df['tmin_f'] = (weather_df['tmin_f'] / 10 * 9/5) + 32
+            # Temperature is already in Fahrenheit, so no conversion is needed.
+            # Ensure the temperature columns are numeric
+            if 'tmax_f' in weather_df.columns:
+                weather_df['tmax_f'] = pd.to_numeric(weather_df['tmax_f'], errors='coerce')
+            if 'tmin_f' in weather_df.columns:
+                weather_df['tmin_f'] = pd.to_numeric(weather_df['tmin_f'], errors='coerce')
 
     except pd.errors.EmptyDataError:
         logging.warning("weather_data.csv is empty. Creating an empty DataFrame with expected columns.")

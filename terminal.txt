@@ -1,7 +1,82 @@
-File "/mount/src/weather_and_energy_analysis/dashboards/app.py", line 70, in <module>
-    date_range = st.sidebar.date_input("Select Date Range",
-                                       value=(min_date, max_date),
-                                       min_value=min_date,
-                                       max_date=max_date)
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
-    result = non_optional_func(*args, **kwargs)
+## ✅ Step 1: Add `config/config.yaml` to `.gitignore`
+
+Open your `.gitignore` file (create it at the root if it doesn’t exist) and add:
+
+```
+# Ignore config file
+config/config.yaml
+```
+
+This prevents Git from tracking that file.
+
+---
+
+## ✅ Step 2: Use `.env` Instead of `config.yaml` (Optional but Recommended)
+
+If you want to stop using `config.yaml` directly and manage secrets or settings via `.env`, do this:
+
+1. **Install `python-dotenv` (if using Python):**
+
+```bash
+pip install python-dotenv
+```
+
+2. **Create a `.env` file:**
+
+```env
+# .env
+DB_USER=myuser
+DB_PASS=secret
+API_KEY=xyz123
+```
+
+3. **Add `.env` to `.gitignore`:**
+
+```bash
+# Ignore env file
+.env
+```
+
+4. **Load `.env` from your Python code:**
+
+```python
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # loads from .env by default
+
+db_user = os.getenv("DB_USER")
+db_pass = os.getenv("DB_PASS")
+```
+
+---
+
+## ✅ Step 3: If You Must Keep `config.yaml`, Use a Template Instead
+
+If your app depends on a `config.yaml`, do this instead:
+
+1. Rename the real config:
+
+```bash
+mv config/config.yaml config/config.yaml.local
+```
+
+2. Create a template file:
+
+```yaml
+# config/config.template.yaml
+db_user: your_db_user
+db_pass: your_password
+```
+
+3. Instruct team members to copy the template:
+
+```bash
+cp config/config.template.yaml config/config.yaml
+```
+
+4. Add to `.gitignore`:
+
+```gitignore
+config/config.yaml
+```
