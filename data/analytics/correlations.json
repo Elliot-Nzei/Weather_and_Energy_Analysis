@@ -1,22 +1,22 @@
 {
   "Seattle": {
-    "pearson_correlation": 0.20791917711043056,
-    "r_squared": 0.04323038421027859
+    "pearson_correlation": 0.13547569768015044,
+    "r_squared": 0.018353664661923518
   },
   "New York": {
-    "pearson_correlation": 0.7881100869607505,
-    "r_squared": 0.6211175091692817
+    "pearson_correlation": 0.8229958976228412,
+    "r_squared": 0.6773222475040261
   },
   "Phoenix": {
-    "pearson_correlation": 0.733776653507346,
-    "r_squared": 0.5384281772324397
+    "pearson_correlation": 0.6791393938379691,
+    "r_squared": 0.4612303162626041
   },
   "Houston": {
-    "pearson_correlation": 0.7688650122627619,
-    "r_squared": 0.5911534070818171
+    "pearson_correlation": 0.5491584991501584,
+    "r_squared": 0.30157505718885447
   },
   "Chicago": {
-    "pearson_correlation": 0.6800534724290019,
-    "r_squared": 0.4624727253627433
+    "pearson_correlation": 0.649929880824128,
+    "r_squared": 0.42240884998806516
   }
 }

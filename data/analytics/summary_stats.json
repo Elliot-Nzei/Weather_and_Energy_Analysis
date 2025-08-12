@@ -1,17 +1,17 @@
 {
-  "overall_demand_mwh_mean": 120708.26277372263,
-  "overall_demand_mwh_std": 129691.62768368272,
-  "overall_tmax_f_mean": 83.99756690997567,
-  "overall_tmin_f_mean": 65.14355231143553,
+  "overall_demand_mwh_mean": 129135.29426433916,
+  "overall_demand_mwh_std": 137456.6434439536,
+  "overall_tmax_f_mean": 86.84634760705289,
+  "overall_tmin_f_mean": 68.11838790931989,
   "demand_by_city": {
-    "Chicago": 328206.125,
-    "Houston": 208325.92857142858,
-    "New York": 56073.135802469136,
-    "Phoenix": 13392.638554216868,
-    "Seattle": 2430.3012048192772
+    "Chicago": 349432.2658227848,
+    "Houston": 220491.8780487805,
+    "New York": 60469.08974358974,
+    "Phoenix": 14619.172839506173,
+    "Seattle": 2432.4444444444443
   },
   "demand_weekday_vs_weekend": {
-    "Weekday": 122321.92491467576,
-    "Weekend": 116701.45762711864
+    "Weekday": 130367.47703180212,
+    "Weekend": 126180.14406779662
   }
 }
